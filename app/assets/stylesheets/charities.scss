@@ -1,0 +1,63 @@
+main.container-fluid {
+  margin: auto;
+
+  section.title-logo {
+    font-family: Pacifico;
+    text-align: center;
+    padding: 20px 0;
+
+      h1 {
+        font-size: 100px;
+      }
+
+      p {
+        font-size: 25px;
+      }
+  }
+
+  section.description {
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+
+    img {
+      height: 35px;
+
+    }
+  }
+
+  button {
+    margin: 32px auto;
+    display: block;
+    background-color: #9ad3de;
+    border: none;
+
+    :hover {
+      background-color: #9ad3de;
+      border: none;
+    }
+
+    .glyphicon-triangle-bottom {
+      font-size: 50px;
+    }
+  }
+
+
+  section.charities-list {
+    background-color: #89bdd3;
+    margin: 0;
+
+    header.section-header {
+      text-align: center;
+      margin-bottom: 50px;
+
+        h2 {
+          margin: 0;
+        }
+    }
+
+    .charity-container {
+      padding-top: 10px;
+    }
+  }
+}
