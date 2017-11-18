@@ -1,4 +1,3 @@
-
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -23,7 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-=======
-# charityspree
-Charity Spree. A platform that promotes charitable activity through the incentive of achievements
-
