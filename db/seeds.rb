@@ -12,7 +12,7 @@ puts "Seeding Data ..."
 ## CHARITIES
 
 puts "Re-creating Charities ..."
-
+Donation.destroy_all
 Charity.destroy_all
 
 charity1 = Charity.create!({
@@ -43,36 +43,42 @@ user1 = User.create!({
   first_name: Faker::Internet.user_name,
   last_name: Faker::Internet.user_name,
   email: Faker::Internet.email,
-  password: Faker::Internet.password(6)
+  password: '1234567890',
+  password_confirmation: '1234567890'
 })
+
+
 user2 = User.create!({
   first_name: Faker::Internet.user_name,
   last_name: Faker::Internet.user_name,
   email: Faker::Internet.email,
-  password: Faker::Internet.password(6)
+  password: '1234567890',
+  password_confirmation: '1234567890'
 })
 
 ## ACHIEVEMENTS
+puts "Re-creating Achievements ..."
+Achievement.destroy_all
 
-user1.achievements.create!({
+achievement1 = Achievement.create!({
   title: 'Join Us, Join Us',
   description: 'Register on Charity Spree',
   progress: 1,
   image: 'app/assets/images/001-medieval-2.png'
 })
-user1.achievements.create!({
+achievement2 = Achievement.create!({
   title: 'Loose Change',
   description: 'Donate your first dollar to a charity of your choice',
   progress: 1,
   image: 'app/assets/images/002-arrow.png'
 })
-user1.achievements.create!({
+achievement3 = Achievement.create!({
   title: 'Big Spender',
   description: 'Donate five dollars to a charity of your choice',
   progress: 5,
   image: 'app/assets/images/003-war.png'
 })
-user2.achievements.create!({
+achievement4 = Achievement.create!({
   title: 'Join Us, Join Us',
   description: 'Register on Charity Spree',
   progress: 1,
@@ -80,9 +86,10 @@ user2.achievements.create!({
 })
 
 ## DONATIONS
+puts "Re-creating Donations ..."
 
-user1.donations.create!(amount: 1, charity_id: 1)
-user1.donations.create!(amount: 5, charity_id: 2)
+user1.donations.create!(quantity: 1, charity_id: charity1.id)
+user1.donations.create!(quantity: 5, charity_id: charity2.id)
 
 
 
