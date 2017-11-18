@@ -1,4 +1,4 @@
-main.container-fluid {
+main section.charities-index {
   margin: auto;
 
   section.title-logo {
@@ -6,13 +6,13 @@ main.container-fluid {
     text-align: center;
     padding: 20px 0;
 
-      h1 {
-        font-size: 100px;
-      }
+    h1 {
+      font-size: 100px;
+    }
 
-      p {
-        font-size: 25px;
-      }
+    p {
+      font-size: 25px;
+    }
   }
 
   section.description {
@@ -51,18 +51,55 @@ main.container-fluid {
       text-align: center;
       margin-bottom: 50px;
 
-        h2 {
-          margin: 0;
-        }
+      h2 {
+        margin: 0;
+      }
     }
 
     .charity-container {
       padding-top: 10px;
 
-      .pick {
+      .choose {
         text-align: left;
         margin: 0;
+
+        a{
+          color: #000;
+        }
       }
     }
+  }
+}
+
+main section.charities-show {
+  width: 100%;
+
+  section.charity {
+    float: left;
+    width: 50%;
+    text-align: justify;
+
+    .charity-name {
+      font-family: Pacifico;
+      font-size: 50px;
+      text-decoration: underline;
+    }
+
+    .choose {
+      font-size: 20px;
+      float: right;
+
+      a{
+        color: #000;
+      }
+    }
+  }
+
+  section.achievements-legend {
+    display: inline-block;
+    text-align: justify;
+    float: right;
+    width: 20%;
+    border: 1px solid #000;
   }
 }
