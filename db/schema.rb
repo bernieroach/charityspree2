@@ -34,24 +34,24 @@ ActiveRecord::Schema.define(version: 20171117201807) do
   end
 
   create_table "donations", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "charities_id"
+    t.bigint "user_id"
+    t.bigint "charity_id"
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["charities_id"], name: "index_donations_on_charities_id"
-    t.index ["users_id"], name: "index_donations_on_users_id"
+    t.index ["charity_id"], name: "index_donations_on_charity_id"
+    t.index ["user_id"], name: "index_donations_on_user_id"
   end
 
   create_table "user_achievements", force: :cascade do |t|
-    t.bigint "achievements_id"
-    t.bigint "users_id"
+    t.bigint "achievement_id"
+    t.bigint "user_id"
     t.boolean "achieved"
     t.integer "progress"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["achievements_id"], name: "index_user_achievements_on_achievements_id"
-    t.index ["users_id"], name: "index_user_achievements_on_users_id"
+    t.index ["achievement_id"], name: "index_user_achievements_on_achievement_id"
+    t.index ["user_id"], name: "index_user_achievements_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,8 +63,8 @@ ActiveRecord::Schema.define(version: 20171117201807) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "donations", "charities", column: "charities_id"
-  add_foreign_key "donations", "users", column: "users_id"
-  add_foreign_key "user_achievements", "achievements", column: "achievements_id"
-  add_foreign_key "user_achievements", "users", column: "users_id"
+  add_foreign_key "donations", "charities"
+  add_foreign_key "donations", "users"
+  add_foreign_key "user_achievements", "achievements"
+  add_foreign_key "user_achievements", "users"
 end
