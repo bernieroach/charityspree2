@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ // Vendor
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// App
+@import "charities";
+
+// Font
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+// Global
+body {
+  background-color: #9ad3de;
+  padding-top: 70px;
+}

@@ -8,86 +8,84 @@
 
 puts "Seeding Data ..."
 
-# Helper functions
-def open_asset(file_name)
-  File.open(Rails.root.join('db', 'seed_assets', file_name))
-end
 
-# Only run on development (local) instances not on production, etc.
-unless Rails.env.development?
-  puts "Development seeds only (for now)!"
-  exit 0
-end
-
-
-#####    CHARITIES    #####
+## CHARITIES
 
 puts "Re-creating Charities ..."
 
 Charity.destroy_all
 
-Charity.create!({
-  name:  'Habitat for Humanity',
-  description: Faker::Hipster.paragraph(6),
-  image: open_asset('habitat.jpg'),
-  amount: 5200
+charity1 = Charity.create!({
+  name: 'Amnesty International',
+  description: 'Amnesty International (commonly known as Amnesty or AI) is a London-based non-governmental organisation focused on human rights. The organisation claims to have over 7 million members and supporters around the world.',
+  amount: 0,
+  image: '004-medieval-1.png'
+})
+charity2 = Charity.create!({
+  name: 'Doctors Without Borders',
+  description: 'Médecins Sans Frontières (MSF), also known in English as Doctors Without Borders, is an international humanitarian non-governmental organization (NGO) best known for its projects in war-torn regions and developing countries affected by endemic diseases.',
+  amount: 0,
+  image: '002-arrow.png'
+})
+charity3 = Charity.create!({
+  name: 'Against Malaria Foundation',
+  description: 'The Against Malaria Foundation (AMF) is a United Kingdom-based charity that provides long-lasting insecticidal nets (LLINs) to populations at high risk of malaria, primarily in Africa. As of July 2016, the foundation has raised $86.6 million and distributed or committed to fund 19.3 million LLINs since its founding in 2004.',
+  amount: 0,
+  image: '003-war.png'
 })
 
-Charity.create!({
-  name:  'Canadian Cancer Society',
-  description: Faker::Hipster.paragraph(6),
-  image: open_asset('css.jpg'),
-  amount: 4800
+## USERS
+
+puts "Re-creating Users ..."
+User.destroy_all
+
+user1 = User.create!({
+  first_name: Faker::Internet.user_name,
+  last_name: Faker::Internet.user_name,
+  email: Faker::Internet.email,
+  password: Faker::Internet.password(6)
+})
+user2 = User.create!({
+  first_name: Faker::Internet.user_name,
+  last_name: Faker::Internet.user_name,
+  email: Faker::Internet.email,
+  password: Faker::Internet.password(6)
 })
 
-Charity.create!({
-  name:  'Deworm the World Initiative',
-  description: Faker::Hipster.paragraph(6),
-  image: open_asset('deworm.jpg'),
-  amount: 3100
+## ACHIEVEMENTS
+
+user1.achievements.create!({
+  title: 'Join Us, Join Us',
+  description: 'Register on Charity Spree',
+  progress: 1,
+  image: 'app/assets/images/001-medieval-2.png'
+})
+user1.achievements.create!({
+  title: 'Loose Change',
+  description: 'Donate your first dollar to a charity of your choice',
+  progress: 1,
+  image: 'app/assets/images/002-arrow.png'
+})
+user1.achievements.create!({
+  title: 'Big Spender',
+  description: 'Donate five dollars to a charity of your choice',
+  progress: 5,
+  image: 'app/assets/images/003-war.png'
+})
+user2.achievements.create!({
+  title: 'Join Us, Join Us',
+  description: 'Register on Charity Spree',
+  progress: 1,
+  image: 'app/assets/images/001-medieval-2.png'
 })
 
-Charity.create!({
-  name:  'Agains Malaria Foundation',
-  description: Faker::Hipster.paragraph(6),
-  image: open_asset('malaria.jpg'),
-  amount: 4500
-})
+## DONATIONS
 
-Charity.create!({
-  name:  'Schistosomiasis Control Initiative',
-  description: Faker::Hipster.paragraph(6),
-  image: open_asset('sci.jpg'),
-  amount: 2300
-})
-
-Charity.create!({
-  name:  'Sightsavers',
-  description: Faker::Hipster.paragraph(6),
-  image: open_asset('sightsavers.jpg'),
-  amount: 1700
-})
+user1.donations.create!(amount: 1, charity_id: 1)
+user1.donations.create!(amount: 5, charity_id: 2)
 
 
-#######   ACHIEVEMENTS   ######
 
-puts "Re-creating Achievements ..."
-
-Achievement.destroy_all
-
-Achievement.create!({
-  title:  'Give your first 1 dollars',
-  description: Faker::Hipster.paragraph(2),
-  image: Faker::Avatar.image("my-own-slug", "50x50", "jpg"),
-  progress: 1
-})
-
-Achievement.create!({
-  title:  'Donate to unlock this 100 dollars achivement',
-  description: Faker::Hipster.paragraph(2),
-  image: Faker::Avatar.image("my-own-slug", "50x50", "jpg"),
-  progress: 100
-})
 
 
 puts "DONE!"
