@@ -22,9 +22,18 @@ main section.charities-index {
 
     img {
       height: 35px;
+    }
 
+    h3 {
+      padding: 10px 0;
     }
   }
+
+  .btn-default {
+      &:hover {
+        background-color: #9ad3de;
+      }
+    }
 
   button {
     margin: 32px auto;
@@ -32,24 +41,19 @@ main section.charities-index {
     background-color: #9ad3de;
     border: none;
 
-    :hover {
-      background-color: #9ad3de;
-      border: none;
-    }
-
     .glyphicon-triangle-bottom {
       font-size: 50px;
     }
   }
 
 
-  section.charities-list {
+  section#charities-list {
     background-color: #89bdd3;
     margin: 0;
 
     header.section-header {
       text-align: center;
-      margin-bottom: 50px;
+      padding: 50px 0;
 
       h2 {
         margin: 0;
@@ -78,6 +82,7 @@ main section.charities-show {
     float: left;
     width: 50%;
     text-align: justify;
+    margin-left: 20px;
 
     .charity-name {
       font-family: Pacifico;
