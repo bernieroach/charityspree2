@@ -2,9 +2,9 @@
   <section class="charity">
     <h1 class="charity-name"><%= @charity.name %></h1>
     <p class="charity-description"><%= @charity.description %></p>
-    <div type="button" class="choose btn btn-primary">
-      <%= link_to 'Donate', charities_path %>
-    </div>
+    <%= link_to charities_path do %>
+      <div type="button" class="choose btn btn-primary">Donate</div>
+    <% end %>
   </section>
 
   <section class="achievements-legend">
