@@ -3248,3 +3248,134 @@ Processing by CharitiesController#show as HTML
 Completed 200 OK in 3216ms (Views: 3195.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-18 23:46:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 3066ms (Views: 2973.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:01:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.7ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3365ms (Views: 3331.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:01:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (1.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3312ms (Views: 3285.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:02:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 288ms (Views: 253.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:03:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 376ms (Views: 351.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:05:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.7ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 3292ms (Views: 3242.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:05:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 3073ms (Views: 3046.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:06:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 3045ms (Views: 3018.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:06:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 2865ms (Views: 2842.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:07:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 2825ms (Views: 2802.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:07:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 2839ms (Views: 2818.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:08:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 3207ms (Views: 3187.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 00:09:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 365ms (Views: 318.1ms | ActiveRecord: 0.5ms)
+
+
