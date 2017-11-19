@@ -64,25 +64,25 @@ achievement1 = Achievement.create!({
   title: 'Join Us, Join Us',
   description: 'Register on Charity Spree',
   progress: 1,
-  image: 'app/assets/images/001-medieval-2.png'
+  image: '001-medieval-2.png'
 })
 achievement2 = Achievement.create!({
   title: 'Loose Change',
   description: 'Donate your first dollar to a charity of your choice',
   progress: 1,
-  image: 'app/assets/images/002-arrow.png'
+  image: '002-arrow.png'
 })
 achievement3 = Achievement.create!({
   title: 'Big Spender',
   description: 'Donate five dollars to a charity of your choice',
   progress: 5,
-  image: 'app/assets/images/003-war.png'
+  image: '003-war.png'
 })
 achievement4 = Achievement.create!({
   title: 'Join Us, Join Us',
   description: 'Register on Charity Spree',
   progress: 1,
-  image: 'app/assets/images/001-medieval-2.png'
+  image: '001-medieval-2.png'
 })
 
 ## DONATIONS

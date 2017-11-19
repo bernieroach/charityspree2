@@ -9,6 +9,13 @@
 
   <section class="achievements-legend">
     <h3>Achievements</h4>
+    <% @achievements.each do |achievement | %>
+      <p>
+        <a href=""><%= achievement.title %></a>
+        <%= achievement.description %>
+        <%= image_tag achievement.image %>
+      </p>
+    <% end %>
     <p>
       <a href="#">Register on Charity Spree</a>
       <%= image_tag "001-medieval-2.png" %>
