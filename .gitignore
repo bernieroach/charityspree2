@@ -51,4 +51,4 @@ build-iPhoneSimulator/
 
 
 .DS_Store
-development.log
+/log/development.log
