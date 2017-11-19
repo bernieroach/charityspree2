@@ -1,3 +1,9 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 <p> here we put the user information </p>
+<p> First Name: <%= @user.first_name %> </p>
+<p> Last Name:  <%= @user.last_name %> </p>
+<p> Email: <%= @user.email %> </p>
+<p> User ID (test) <%= @user.id %>
+<p> gravatar test for image </p>
+<p> <%= gravatar_for @user %> </p>
