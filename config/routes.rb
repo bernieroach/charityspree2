@@ -3,6 +3,8 @@
 Rails.application.routes.draw do
   root to: 'charities#index'
 
+    resources :about, only: [:index]
+
     resources :charities, only: [:index, :show]
 
 end

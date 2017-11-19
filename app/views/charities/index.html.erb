@@ -35,9 +35,9 @@
           <%= image_tag charity.image %>
           <h3><%= charity.name %></h3>
           <p><%= charity.description %></p>
-          <div type="button" class="choose btn btn-primary">
-            <%= link_to 'Choose', charity %>
-          </div>
+          <%= link_to charity do %>
+            <div type="button" class="choose btn btn-primary">Choose</div>
+          <% end %>
         </div>
       <% end %>
       </div>
