@@ -76,15 +76,18 @@ main section.charities-index {
 }
 
 main section.charities-show {
-  width: 100%;
 
   section.charity {
+    background-color: #89bdd3;
+    border: 1px solid #000;
     float: left;
     width: 50%;
     text-align: justify;
-    margin-left: 20px;
+    margin-left: 50px;
+    padding: 35px 35px;
 
     .charity-name {
+      margin-bottom: 30px;
       font-family: Pacifico;
       font-size: 50px;
       text-decoration: underline;
@@ -101,13 +104,14 @@ main section.charities-show {
   }
 
   section.achievements-legend {
+    background-color: #89bdd3;
     display: inline-block;
     text-align: justify;
     float: right;
     width: 20%;
     border: 1px solid #000;
-    margin-right: 40px;
-    padding-left: 10px;
+    margin-right: 50px;
+    padding: 10px 10px;
 
     img {
       height: 20px;
