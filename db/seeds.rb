@@ -78,12 +78,6 @@ achievement3 = Achievement.create!({
   progress: 5,
   image: '003-war.png'
 })
-achievement4 = Achievement.create!({
-  title: 'Join Us, Join Us',
-  description: 'Register on Charity Spree',
-  progress: 1,
-  image: '001-medieval-2.png'
-})
 
 ## DONATIONS
 puts "Re-creating Donations ..."
