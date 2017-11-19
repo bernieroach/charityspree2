@@ -30,4 +30,19 @@ body {
   padding-top: 70px;
 }
 
+.navbar-inverse {
+  background-color: #e3e3e3;
+  border-color: #080808;
 
+  .navbar-brand {
+    color: #000;
+
+    &:hover {
+      color: #000;
+    }
+
+    img {
+      height: 20px;
+    }
+  }
+}
