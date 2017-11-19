@@ -3,16 +3,20 @@
   <head>
     <title>Charity Spree</title>
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag       'nature.png' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </head>
 
   <body>
 
+    <%= render 'layouts/top_nav' %>
+
     <main class="container-fluid">
       <%= yield %>
     </main>
+
+    <%= yield :end_of_body %>
 
   </body>
 </html>

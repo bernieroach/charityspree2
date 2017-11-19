@@ -1,4 +1,4 @@
-main.container-fluid {
+main section.charities-index {
   margin: auto;
 
   section.title-logo {
@@ -6,25 +6,37 @@ main.container-fluid {
     text-align: center;
     padding: 20px 0;
 
-      h1 {
-        font-size: 100px;
-      }
+    h1 {
+      font-size: 100px;
+      margin-bottom: 25px;
+    }
 
-      p {
-        font-size: 25px;
-      }
+    p {
+      font-size: 25px;
+    }
   }
 
   section.description {
     text-align: center;
     margin: 0;
-    padding: 20px 0;
+    padding: 12px 0;
 
     img {
       height: 35px;
+    }
 
+    h3 {
+      font-size: 30px;
+      font-family: Helvetica;
+      padding: 10px 0;
     }
   }
+
+  .btn-default {
+      &:hover {
+        background-color: #9ad3de;
+      }
+    }
 
   button {
     margin: 32px auto;
@@ -32,32 +44,83 @@ main.container-fluid {
     background-color: #9ad3de;
     border: none;
 
-    :hover {
-      background-color: #9ad3de;
-      border: none;
-    }
-
     .glyphicon-triangle-bottom {
       font-size: 50px;
     }
   }
 
 
-  section.charities-list {
+  section#charities-list {
     background-color: #89bdd3;
     margin: 0;
 
     header.section-header {
+      border: 1px solid #000;
       text-align: center;
-      margin-bottom: 50px;
+      padding: 50px 0;
 
-        h2 {
-          margin: 0;
-        }
+      h2 {
+        margin: 0;
+      }
     }
 
     .charity-container {
-      padding-top: 10px;
+      padding: 100px 0 240px 0;
+
+      .choose {
+        text-align: left;
+        margin: 0;
+
+        a{
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+main section.charities-show {
+
+  section.charity {
+    background-color: #89bdd3;
+    border: 1px solid #000;
+    float: left;
+    width: 50%;
+    text-align: justify;
+    margin-left: 50px;
+    margin-top: 40px;
+    padding: 35px 35px;
+
+    .charity-name {
+      margin-bottom: 30px;
+      font-family: Pacifico;
+      font-size: 50px;
+      text-decoration: underline;
+    }
+
+    .choose {
+      font-size: 20px;
+      float: right;
+
+      a{
+        color: #000;
+      }
+    }
+  }
+
+  section.achievements-legend {
+    background-color: #89bdd3;
+    display: inline-block;
+    text-align: justify;
+    float: right;
+    width: 20%;
+    border: 1px solid #000;
+    margin-top: 40px;
+    margin-right: 50px;
+    padding: 10px 10px;
+
+    img {
+      height: 20px;
     }
   }
 }
