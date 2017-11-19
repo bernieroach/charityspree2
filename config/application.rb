@@ -11,6 +11,9 @@ module Charityspree
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 
+    # Fix for a bug I was getting in the console -- will investigate
+    config.web_console.whitelisted_ips = '10.0.2.2'
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

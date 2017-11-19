@@ -52,6 +52,7 @@ main section.charities-index {
     margin: 0;
 
     header.section-header {
+      border-bottom: 1px solid #000;
       text-align: center;
       padding: 50px 0;
 
@@ -61,7 +62,7 @@ main section.charities-index {
     }
 
     .charity-container {
-      padding-top: 10px;
+      padding-top: 40px;
 
       .choose {
         text-align: left;
