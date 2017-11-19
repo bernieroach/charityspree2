@@ -1,20 +1,41 @@
 <section class="charities-show">
   <section class="charity">
     <h1 class="charity-name"><%= @charity.name %></h1>
-    <h3 class="charity-description"><%= @charity.description %></h3>
+    <p class="charity-description"><%= @charity.description %></p>
     <div type="button" class="choose btn btn-primary">
       <%= link_to 'Donate', charities_path %>
     </div>
   </section>
 
   <section class="achievements-legend">
-    <h4>Achievements</h4>
-    <p>Register on Charity Spree</p>
-    <p>Donate your first dollar</p>
-    <p>Donate your fifth dollar</p>
-    <p>Donate your tenth dollar</p>
-    <p>Donate your twentieth dollar</p>
-    <p>Donate your fiftieth dollar</p>
-    <p>Donate your hundredth dollar</p>
+    <h3>Achievements</h4>
+    <p>
+      <a href="#">Register on Charity Spree</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
+    <p>
+      <a href="#">Donate your first dollar</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
+    <p>
+      <a href="#">Donate your fifth dollar</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
+    <p>
+      <a href="#">Donate your tenth dollar</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
+    <p>
+      <a href="#">Donate your twentieth dollar</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
+    <p>
+      <a href="#">Donate your fiftieth dollar</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
+    <p>
+      <a href="#">Donate your hundredth dollar</a>
+      <%= image_tag "001-medieval-2.png" %>
+    </p>
   </section>
 </section>
