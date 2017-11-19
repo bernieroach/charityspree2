@@ -13,3 +13,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+// Scroll to a certain element
+// Select all links with hashes
