@@ -8,6 +8,7 @@ main section.charities-index {
 
     h1 {
       font-size: 100px;
+      margin-bottom: 25px;
     }
 
     p {
@@ -18,13 +19,15 @@ main section.charities-index {
   section.description {
     text-align: center;
     margin: 0;
-    padding: 20px 0;
+    padding: 12px 0;
 
     img {
       height: 35px;
     }
 
     h3 {
+      font-size: 30px;
+      font-family: Helvetica;
       padding: 10px 0;
     }
   }
@@ -52,7 +55,7 @@ main section.charities-index {
     margin: 0;
 
     header.section-header {
-      border-bottom: 1px solid #000;
+      border: 1px solid #000;
       text-align: center;
       padding: 50px 0;
 
@@ -62,7 +65,7 @@ main section.charities-index {
     }
 
     .charity-container {
-      padding-top: 40px;
+      padding: 100px 0;
 
       .choose {
         text-align: left;
