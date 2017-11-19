@@ -5,7 +5,12 @@ Rails.application.routes.draw do
 
   root to: 'charities#index'
 
-    get  '/signup',  to: 'users#new'
+  get  '/signup',  to: 'users#new'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+
     resources :charities, only: [:index, :show]
     resources :users
 

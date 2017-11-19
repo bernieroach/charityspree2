@@ -7639,3 +7639,244 @@ Processing by CharitiesController#index as HTML
 Completed 200 OK in 190ms (Views: 178.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:27:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 163.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:36:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <h1>Users#show</h1>
+    2: <p>Find me in app/views/users/show.html.erb</p>
+    3: <p> here we put the user information </p>
+    4: <p> First Name: <%= @user.first_name %> </p>
+    5: <p> Last Name:  <%= @user.last_name %> </p>
+    6: <p> Email: <%= @user.last_name %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+  
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__3917845894360974605_70152673449780'
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:37:40 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 890ms (Views: 819.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:38:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `last_email' for #<User:0x007f7d70014380>
+Did you mean?  last_name):
+    3: <p> here we put the user information </p>
+    4: <p> First Name: <%= @user.first_name %> </p>
+    5: <p> Last Name:  <%= @user.last_name %> </p>
+    6: <p> Email: <%= @user.last_email %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb__1142815194963084217_70088340196700'
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:38:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 180ms (Views: 163.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:41:19 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 172ms (Views: 156.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:48:32 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (168.3ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `gravatar_for' for #<#<Class:0x00000002e7a098>:0x00000002f0f350>):
+    6: <p> Email: <%= @user.email %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+    8: <p> gravatar test for image </p>
+    9: <p> <%= gravatar_for @user %> </p>
+  
+app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__1142815194963084217_24737800'
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:49:03 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x00000002d8fa70>):
+    6: <p> Email: <%= @user.email %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+    8: <p> gravatar test for image </p>
+    9: <p> <%= gravatar_for @user %> </p>
+  
+app/helpers/users_helper.rb:6:in `gravatar_for'
+app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__2562997942016697249_23790980'
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:49:36 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 873ms (Views: 800.1ms | ActiveRecord: 4.9ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "example@railstutorial.org"], ["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "first_name" = $2, "last_name" = $3, "password_digest" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["email", "bernieroach@gmail.com"], ["first_name", "Bernie"], ["last_name", "Roach"], ["password_digest", "$2a$10$Z/UOqLDFMrexGHIywiekAuXEWK2ZW0p50mv37/3sh6This9mhzIvK"], ["updated_at", "2017-11-19 19:00:26.046749"], ["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 19:00:58 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 178ms (Views: 154.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 19:01:01 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 176ms (Views: 158.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "example@railstutorial.org"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "first_name" = $2, "last_name" = $3, "password_digest" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["email", "example@railstutorial.org"], ["first_name", "BernieTest"], ["last_name", "RoachTest"], ["password_digest", "$2a$10$yc0Gt4oYmWYctPzIcIMTreW.d092zKmBbCXjanvD1rVWr2tL4j7IO"], ["updated_at", "2017-11-19 19:02:12.129579"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 19:02:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 162ms (Views: 149.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:36:19 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (3306.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3604ms (Views: 3560.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 19:36:29 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 211ms (Views: 197.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-19 19:36:55 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2A/UhTtzYynBVhD2jBbhaGRcAGf8t0Jsyk/wp4c5iSaQRJZn1SUVTqNewWHF+osSSuHiXp0gLCxUmSqL9e5V0g==", "user"=>{"first_name"=>"Signup", "email"=>"testsignup@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "testsignup@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "testsignup@gmail.com"], ["first_name", "Signup"], ["password_digest", "$2a$10$gn2Dmom9Fh.3Cjw2wQrZ1elG9FHc1tkvpNIOg454m3h0Xm5DmyXvK"], ["created_at", "2017-11-19 19:36:55.712543"], ["updated_at", "2017-11-19 19:36:55.712543"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 127ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:36:55 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (44.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 221ms (Views: 207.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 19:37:47 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 181ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-19 19:38:16 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iviTEaaaue50Ov0iqJgXWNPQRUGmoLflqk5JGWP7y2PCs9HzSMzPiRYyLLXhdH0i/W2neMc32aU0mJM1ESwXlw==", "user"=>{"first_name"=>"Test ", "last_name"=>"Signup2 ", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "testsignup2@gmail.com"], ["first_name", "Test "], ["last_name", "Signup2 "], ["password_digest", "$2a$10$fMEiFSlKxwCGxJEywIPbAeIflVKAeYw9Vx1uD7hrdUHVWxGpIgMsC"], ["created_at", "2017-11-19 19:38:16.552197"], ["updated_at", "2017-11-19 19:38:16.552197"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 75ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:38:16 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 181ms (Views: 169.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 19:39:15 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 199.0ms | ActiveRecord: 0.0ms)
+
+
