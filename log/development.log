@@ -7253,3 +7253,208 @@ Processing by CharitiesController#index as HTML
 Completed 200 OK in 423ms (Views: 369.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:39:08 +0000
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (13.0ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (7020.5ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 7602ms (Views: 7524.1ms | ActiveRecord: 19.2ms)
+
+
+  [1m[36mAchievement Load (4.1ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/charities/4" for 10.0.2.2 at 2017-11-19 17:00:44 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (244.1ms)
+Completed 500 Internal Server Error in 430ms (ActiveRecord: 10.4ms)
+
+
+  
+ActionView::Template::Error (The asset "app/assets/images/001-medieval-2.png" is not present in the asset pipeline.):
+    13:       <p>
+    14:         <a href=""><%= achievement.title %></a>
+    15:         <%= achievement.description %>
+    16:         <%= image_tag achievement.image %>
+    17:       </p>
+    18:     <% end %>
+    19:     <p>
+  
+app/views/charities/show.html.erb:16:in `block in _app_views_charities_show_html_erb__2376338628710692065_25974720'
+app/views/charities/show.html.erb:12:in `_app_views_charities_show_html_erb__2376338628710692065_25974720'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (119.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "charity_spree"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "charity_spree"[0m
+  [1m[35m (417.6ms)[0m  [1m[35mCREATE DATABASE "charity_spree" ENCODING = 'unicode'[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE "charity_spree" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "achievements" CASCADE[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "achievements" ("id" bigserial primary key, "title" character varying, "description" text, "image" character varying, "progress" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "charities" CASCADE[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "charities" ("id" bigserial primary key, "name" character varying, "description" text, "image" character varying, "amount" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "donations" CASCADE[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "donations" ("id" bigserial primary key, "user_id" bigint, "charity_id" bigint, "quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_donations_on_charity_id" ON "donations"  ("charity_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_donations_on_user_id" ON "donations"  ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_achievements" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "user_achievements" ("id" bigserial primary key, "achievement_id" bigint, "user_id" bigint, "achieved" boolean, "progress" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE  INDEX  "index_user_achievements_on_achievement_id" ON "user_achievements"  ("achievement_id")[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE  INDEX  "index_user_achievements_on_user_id" ON "user_achievements"  ("user_id")[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_e24057f6ad"
+FOREIGN KEY ("charity_id")
+  REFERENCES "charities" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_5470822a00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "user_achievements" ADD CONSTRAINT "fk_rails_c44f5b3b25"
+FOREIGN KEY ("achievement_id")
+  REFERENCES "achievements" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mALTER TABLE "user_achievements" ADD CONSTRAINT "fk_rails_4efde02858"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171117201807)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171117201804),
+(20171117201806),
+(20171117201803),
+(20171117201805);
+
+[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-11-19 17:07:11.626651"], ["updated_at", "2017-11-19 17:07:11.626651"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "achievements" CASCADE[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "achievements" ("id" bigserial primary key, "title" character varying, "description" text, "image" character varying, "progress" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "charities" CASCADE[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "charities" ("id" bigserial primary key, "name" character varying, "description" text, "image" character varying, "amount" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "donations" CASCADE[0m
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "donations" ("id" bigserial primary key, "user_id" bigint, "charity_id" bigint, "quantity" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_donations_on_charity_id" ON "donations"  ("charity_id")[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_donations_on_user_id" ON "donations"  ("user_id")[0m
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "user_achievements" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "user_achievements" ("id" bigserial primary key, "achievement_id" bigint, "user_id" bigint, "achieved" boolean, "progress" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE  INDEX  "index_user_achievements_on_achievement_id" ON "user_achievements"  ("achievement_id")[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_user_achievements_on_user_id" ON "user_achievements"  ("user_id")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "first_name" character varying, "last_name" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_e24057f6ad"
+FOREIGN KEY ("charity_id")
+  REFERENCES "charities" ("id")
+[0m
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "donations" ADD CONSTRAINT "fk_rails_5470822a00"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.1ms)[0m  [1m[35mALTER TABLE "user_achievements" ADD CONSTRAINT "fk_rails_c44f5b3b25"
+FOREIGN KEY ("achievement_id")
+  REFERENCES "achievements" ("id")
+[0m
+  [1m[35m (1.8ms)[0m  [1m[35mALTER TABLE "user_achievements" ADD CONSTRAINT "fk_rails_4efde02858"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mDonation Load (1.0ms)[0m  [1m[34mSELECT "donations".* FROM "donations"[0m
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "charities" ("name", "description", "image", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Amnesty International"], ["description", "Amnesty International (commonly known as Amnesty or AI) is a London-based non-governmental organisation focused on human rights. The organisation claims to have over 7 million members and supporters around the world."], ["image", "004-medieval-1.png"], ["amount", 0], ["created_at", "2017-11-19 17:07:11.871540"], ["updated_at", "2017-11-19 17:07:11.871540"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "charities" ("name", "description", "image", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Doctors Without Borders"], ["description", "Médecins Sans Frontières (MSF), also known in English as Doctors Without Borders, is an international humanitarian non-governmental organization (NGO) best known for its projects in war-torn regions and developing countries affected by endemic diseases."], ["image", "002-arrow.png"], ["amount", 0], ["created_at", "2017-11-19 17:07:11.877050"], ["updated_at", "2017-11-19 17:07:11.877050"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "charities" ("name", "description", "image", "amount", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Against Malaria Foundation"], ["description", "The Against Malaria Foundation (AMF) is a United Kingdom-based charity that provides long-lasting insecticidal nets (LLINs) to populations at high risk of malaria, primarily in Africa. As of July 2016, the foundation has raised $86.6 million and distributed or committed to fund 19.3 million LLINs since its founding in 2004."], ["image", "003-war.png"], ["amount", 0], ["created_at", "2017-11-19 17:07:11.881641"], ["updated_at", "2017-11-19 17:07:11.881641"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "kurt.boyle@reichert.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "kurt.boyle@reichert.net"], ["first_name", "esteban_satterfield"], ["last_name", "karlie.kerluke"], ["password_digest", "$2a$10$R6hvV51bA6Iwww9nUUtgB.5fIXscChJH7ObjbjwDnIf3Bn7z7dRIa"], ["created_at", "2017-11-19 17:07:12.492518"], ["updated_at", "2017-11-19 17:07:12.492518"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "meagan_weinat@bartonosinski.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "meagan_weinat@bartonosinski.com"], ["first_name", "mariane.daugherty"], ["last_name", "eloise"], ["password_digest", "$2a$10$nWXeeHtzDaGzDU7k.vLO0Ob60ZWDCwUQFpJtIY4gl6rmViHM09r2S"], ["created_at", "2017-11-19 17:07:12.572088"], ["updated_at", "2017-11-19 17:07:12.572088"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "achievements" ("title", "description", "image", "progress", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Join Us, Join Us"], ["description", "Register on Charity Spree"], ["image", "001-medieval-2.png"], ["progress", 1], ["created_at", "2017-11-19 17:07:12.599836"], ["updated_at", "2017-11-19 17:07:12.599836"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "achievements" ("title", "description", "image", "progress", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Loose Change"], ["description", "Donate your first dollar to a charity of your choice"], ["image", "002-arrow.png"], ["progress", 1], ["created_at", "2017-11-19 17:07:12.604591"], ["updated_at", "2017-11-19 17:07:12.604591"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "achievements" ("title", "description", "image", "progress", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Big Spender"], ["description", "Donate five dollars to a charity of your choice"], ["image", "003-war.png"], ["progress", 5], ["created_at", "2017-11-19 17:07:12.609065"], ["updated_at", "2017-11-19 17:07:12.609065"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "achievements" ("title", "description", "image", "progress", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Join Us, Join Us"], ["description", "Register on Charity Spree"], ["image", "001-medieval-2.png"], ["progress", 1], ["created_at", "2017-11-19 17:07:12.615224"], ["updated_at", "2017-11-19 17:07:12.615224"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "donations" ("user_id", "charity_id", "quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["charity_id", 1], ["quantity", 1], ["created_at", "2017-11-19 17:07:12.740661"], ["updated_at", "2017-11-19 17:07:12.740661"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "donations" ("user_id", "charity_id", "quantity", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["charity_id", 2], ["quantity", 5], ["created_at", "2017-11-19 17:07:12.748439"], ["updated_at", "2017-11-19 17:07:12.748439"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/charities/4" for 10.0.2.2 at 2017-11-19 17:07:24 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCharity Load (1.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 59ms (ActiveRecord: 6.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Charity with 'id'=4):
+  
+app/controllers/charities_controller.rb:7:in `show'
+Started GET "/" for 10.0.2.2 at 2017-11-19 17:07:37 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (1441.5ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 2067ms (Views: 2032.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/charities/2" for 10.0.2.2 at 2017-11-19 17:07:41 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharity Load (2.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (64.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 448ms (Views: 371.9ms | ActiveRecord: 7.6ms)
+
+
