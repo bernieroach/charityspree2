@@ -25,5 +25,9 @@ Things you may want to cover:
 * ...
 =======
 # charityspree
+<<<<<<< HEAD
+Charity Spree. A platform that promotes charitable activity through the incentive of achievements.
+=======
 Charity Spree. A platform that promotes charitable activity through the incentive of achievements
 
+>>>>>>> 3a1ddcde00f248aa17f49a41978a290e541e6041
