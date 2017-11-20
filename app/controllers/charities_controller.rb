@@ -6,5 +6,6 @@ class CharitiesController < ApplicationController
   def show
     @charity = Charity.find(params[:id])
     @achievements = Achievement.all
+    @donation = Donation.new
   end
 end

@@ -1,4 +1,4 @@
-class DonatesController < ApplicationController
+class DonationsController < ApplicationController
   before_action :authorize
   def new
   end
@@ -25,8 +25,18 @@ class DonatesController < ApplicationController
         :source => params[:stripeToken],
         :currency    => 'cad'
       )
+
+    @donation = Donation.new(
+      user_id: current_user.id,
+      charity_id: params[:charity_id],
+      quantity: params[:amount]
+    )
+    @donation.save
+
+    redirect_to root_path
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_donate_path
+
   end
 end
