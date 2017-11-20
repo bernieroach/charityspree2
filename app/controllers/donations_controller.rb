@@ -1,4 +1,4 @@
-class DonatesController < ApplicationController
+class DonationsController < ApplicationController
   before_action :authorize
   def new
   end
@@ -18,21 +18,25 @@ class DonatesController < ApplicationController
 
     @amount = (@amount * 100).to_i # Must be an integer!
 
-require "stripe"
 
+     Stripe::Charge.create(
+        :amount      => @amount,
+        :description => 'Custom donation',
+        :source => params[:stripeToken],
+        :currency    => 'cad'
+      )
 
-  # Amount in cents
-  @amount = 500
+    @donation = Donation.new(
+      user_id: current_user.id,
+      charity_id: params[:charity_id],
+      quantity: params[:amount]
+    )
+    @donation.save
 
-
-  charge = Stripe::Charge.create(
-    :source    => params[:stripeToken],
-    :amount      => @amount,
-    :description => 'Rails Stripe customer',
-    :currency    => 'usd'
-  )
+    redirect_to root_path
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_donate_path
+
   end
 end
