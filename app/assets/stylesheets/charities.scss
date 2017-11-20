@@ -28,24 +28,24 @@ main section.charities-index {
     margin: 0;
     padding-top: 225px;
     padding-bottom: 20px;
-    background-color: #E76D83;
+    background-color: #FFFFEF;
 
     img {
       height: 35px;
     }
 
     h3 {
+      font-family: Pacifico;
       font-size: 30px;
-      font-family: Helvetica;
       padding: 10px 0;
     }
   }
 
   .btn-primary {
-    background-color: #E76D83;
+    background-color: #FFFFEF;
 
     &:hover {
-      background-color: #E76D83;
+      background-color: #FFFFEF;
     }
   }
 
@@ -90,12 +90,19 @@ main section.charities-index {
       padding: 50px 0;
 
       h2 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
         margin: 0;
       }
     }
 
     .charity-container {
       padding: 100px 0 240px 0;
+      font-family: 'Open Sans', sans-serif;
+
+      h3  {
+        font-weight: bold;
+      }
 
       .choose {
         text-align: left;
