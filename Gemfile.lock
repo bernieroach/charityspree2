@@ -70,6 +70,9 @@ GEM
     crass (1.0.3)
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubi (1.7.0)
     execjs (2.7.0)
     faker (1.8.4)
@@ -210,6 +213,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  dotenv-rails
   faker
   jbuilder (~> 2.5)
   jquery-rails

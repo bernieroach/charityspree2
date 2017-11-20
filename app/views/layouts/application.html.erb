@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>Charity Spree</title>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag       'nature.png' %>
@@ -17,6 +18,6 @@
     </main>
 
     <%= yield :end_of_body %>
-
+    <script src="https://checkout.stripe.com/checkout.js"></script>
   </body>
 </html>

@@ -19,13 +19,13 @@
     </article>
     <article>
       <%= hidden_field_tag(:stripeToken) %>
+      <%= hidden_field_tag "currentUser" , current_user %>
     </article>
     <button id='donateButton' class="choose btn btn-primary">Donate</button>
     <% end %>
 
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-
     <script>
+
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',
       locale: 'auto',
@@ -41,7 +41,7 @@
       e.preventDefault();
 
       $('#error_explanation').html('');
-
+      console.log("currentUser", $('input#currentUser').val())
       var amount = $('input#amount').val();
       amount = amount.replace(/\$/g, '').replace(/\,/g, '')
 
