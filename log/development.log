@@ -13919,3 +13919,137 @@ ActionView::Template::Error (undefined method `id' for nil:NilClass):
     10:  <a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
   
 app/views/users/show.html.erb:10:in `_app_views_users_show_html_erb__3431382682168532206_8393860'
+Started GET "/users/1" for 10.0.2.2 at 2017-11-20 14:04:38 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-20 14:04:39 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 2342ms (Views: 2308.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-20 14:04:49 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 620ms (Views: 578.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-20 14:05:15 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bvxT9WE6Sagrogh3UhShAlBqcS/3upIf/3wPLQRojoCYQyR8OS+eE5oBtMFLejXUz0FKzu8dg+3zsBh+1sTHdw==", "user"=>{"first_name"=>"Riley", "last_name"=>"Gowan", "email"=>"t.rileygowan@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "t.rileygowan@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "t.rileygowan@gmail.com"], ["first_name", "Riley"], ["last_name", "Gowan"], ["password_digest", "$2a$10$SkMYhXlYZ.CgGYOoN8aa/eYXsDtp8Wre7vwZWoSymlCRVBYQOYK9u"], ["created_at", "2017-11-20 14:05:15.656044"], ["updated_at", "2017-11-20 14:05:15.656044"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 183ms (ActiveRecord: 9.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 14:05:15 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (164.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (10.6ms)
+Completed 200 OK in 792ms (Views: 723.6ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:05:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 591ms (Views: 547.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:07:18 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 647ms (Views: 617.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:10:43 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 579ms (Views: 547.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:14:24 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 588ms (Views: 560.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:15:45 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 555ms (Views: 530.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:15:59 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 655ms (Views: 620.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:17:18 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 572ms (Views: 539.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 14:18:26 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 635ms (Views: 592.3ms | ActiveRecord: 0.7ms)
+
+

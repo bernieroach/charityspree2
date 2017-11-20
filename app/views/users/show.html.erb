@@ -1,10 +1,37 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p> here we put the user information </p>
-<p> First Name: <%= @user.first_name %> </p>
-<p> Last Name:  <%= @user.last_name %> </p>
+<section class="container">
+  <div class="row">
+    <figure class="col">
+      <%= gravatar_for @user %>
+    </figure>
+    <div class="col">
+      <p><%= @user.first_name %> <%= @user.last_name %></p>
+    </div>
+  </div>
 <p> Email: <%= @user.email %> </p>
 <p> User ID (test) <%= @user.id %>
-<p> gravatar test for image </p>
-<p> <%= gravatar_for @user %> </p>
- <a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
+<a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
+
+</section>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3">
+      1 of 2
+    </div>
+    <div class="col-sm-3">
+      1 of 2
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      1 of 3
+    </div>
+    <div class="col-sm-3">
+      1 of 3
+    </div>
+    <div class="col-sm-3">
+      1 of 3
+    </div>
+  </div>
+</div>
