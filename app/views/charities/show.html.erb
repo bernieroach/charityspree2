@@ -2,40 +2,20 @@
   <section class="charity">
     <h1 class="charity-name"><%= @charity.name %></h1>
     <p class="charity-description"><%= @charity.description %></p>
-    <div type="button" class="choose btn btn-primary">
-      <%= link_to 'Donate', charities_path %>
-    </div>
+    <%= link_to charities_path do %>
+      <div type="button" class="choose btn btn-primary">Donate</div>
+    <% end %>
   </section>
 
   <section class="achievements-legend">
     <h3>Achievements</h4>
-    <p>
-      <a href="#">Register on Charity Spree</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
-    <p>
-      <a href="#">Donate your first dollar</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
-    <p>
-      <a href="#">Donate your fifth dollar</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
-    <p>
-      <a href="#">Donate your tenth dollar</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
-    <p>
-      <a href="#">Donate your twentieth dollar</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
-    <p>
-      <a href="#">Donate your fiftieth dollar</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
-    <p>
-      <a href="#">Donate your hundredth dollar</a>
-      <%= image_tag "001-medieval-2.png" %>
-    </p>
+    <% @achievements.each do |achievement | %>
+      <p>
+        <a href=""><%= achievement.title %></a>
+        <br>
+        <%= achievement.description %>
+        <%= image_tag achievement.image %>
+      </p>
+    <% end %>
   </section>
 </section>
