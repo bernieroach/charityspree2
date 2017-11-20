@@ -14,6 +14,11 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
+
+      Achievement.all.find_each do |achievement|
+        user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
+      end
+
       redirect_to '/'
     else
       redirect_to '/signup'
@@ -27,7 +32,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
       redirect_to @user
       # Handle a successful update.
     else
