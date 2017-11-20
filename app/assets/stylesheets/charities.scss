@@ -26,7 +26,8 @@ main section.charities-index {
   section#description {
     text-align: center;
     margin: 0;
-    padding: 225px 0;
+    padding-top: 225px;
+    padding-bottom: 20px;
     background-color: #E76D83;
 
     img {
@@ -49,10 +50,10 @@ main section.charities-index {
   }
 
   .btn-default {
-    background-color: #9ad3de;
+    background-color: #bcf2ec;
 
     &:hover {
-      background-color: #9ad3de;
+      background-color: #bcf2ec;
     }
   }
 
@@ -67,10 +68,11 @@ main section.charities-index {
 
     .glyphicon-triangle-bottom {
       font-size: 50px;
+      padding-bottom: 30px;
     }
 
     #first {
-      background-color: #9ad3de;
+      background-color: #E76D83;
     }
 
     #second {
