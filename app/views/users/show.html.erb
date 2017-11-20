@@ -1,14 +1,28 @@
 <section class="container">
   <div class="row">
-    <figure class="col-sm-3">
-      <%= gravatar_for @user %>
-    </figure>
     <div class="col-sm-3">
-      <p><%= @user.first_name %> <%= @user.last_name %></p>
+      <%= gravatar_for @user %>
+    </div>
+    <div class="col-sm-9">
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
     </div>
   </div>
-<p> Email: <%= @user.email %> </p>
-<p> User ID (test) <%= @user.id %>
-<a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
-
+  <div class="row">
+    <div class="col-sm-3">
+      <button>Statistics</button>
+    </div>
+    <div class="col-sm-3">
+      <button>Pick A Charity</button>
+    </div>
+  </div>
+  <a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
+  <div class="row">
+    <% @user.user_achievements.each do | u_a| %>
+    <div class="col-sm-12">
+      <%= u_a.achievement.title %>
+      <%= u_a.achievement.description %>
+      <%= image_tag u_a.achievement.image %>
+    </div>
+    <% end %>
+  </div>
 </section>
