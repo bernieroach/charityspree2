@@ -15119,3 +15119,43 @@ Completed 200 OK in 635ms (Views: 592.3ms | ActiveRecord: 0.7ms)
 >>>>>>> 03bbbe7c618c580493c232e14f6e4e8b15070a57
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-20 15:02:18 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.0ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (14793.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (76.0ms)
+Completed 200 OK in 15851ms (Views: 15739.0ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/charities/2" for 10.0.2.2 at 2017-11-20 15:02:39 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (41.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (3.9ms)
+Completed 200 OK in 577ms (Views: 510.7ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/donates" for 10.0.2.2 at 2017-11-20 15:02:42 +0000
+Processing by DonatesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6LpcAet4LBiU1fPcFD6Ffnsyg4ldff6Z9zYOD+lroLdCnnI4X5K4iBSy3pqKfhtVunH0HvsLnoAHVx2u1N50XA==", "amount"=>"", "stripeToken"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/donates/new
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/donates/new" for 10.0.2.2 at 2017-11-20 15:02:43 +0000
+Processing by DonatesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering donates/new.html.erb within layouts/application
+  Rendered donates/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 516ms (Views: 493.7ms | ActiveRecord: 0.5ms)
+
+
