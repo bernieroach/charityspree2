@@ -8,36 +8,63 @@
       <h3>Featured Achievement: <%= @user.user_achievements[0].achievement.title %></h3>
     </div>
   </div>
+
   <div class="row">
-    <div class="user-stats-btn col-sm-4">
+    <div class="user-stats-btn col-sm-8">
       <button type="button" class="btn btn-primary">Statistics</button>
     </div>
-    <div class="pick-charity-btn col-sm-4">
+    <div class="pick-charity-btn col-sm-2">
       <button type="button" class="btn btn-primary">Pick A Charity</button>
     </div>
-    <div class="update-btn col-sm-4">
+    <div class="update-btn col-sm-2">
     <a href= '/users/<%= current_user.id %>/edit'>
       <button class="btn btn-primary">
         Update Profile
       </button>
     </a>
     </div>
+
   </div>
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>Achievements:</h2>
+  <div class="achieved row">
+    <div class="col-sm-6">
+      <h3>Achievements:</h3>
+    </div>
+    <div class="col-sm-6">
+      <h3>Description:</h3>
     </div>
   </div>
+
+  <% @user.user_achievements.each do | u_a| %>
   <div class="row">
-    <% @user.user_achievements.each do | u_a| %>
-    <div class="col-sm-12">
+    <div class="achievement-title col-sm-3">
       <%= u_a.achievement.title %>
-      <%= u_a.achievement.description %>
+    </div>
+    <div class="achievement-icon col-sm-2">
       <%= image_tag u_a.achievement.image %>
     </div>
-    <% end %>
-    <% @achievements.each do |a| %>
-    <%= a.title %>
-    <% end %>
+    <div class="achievement-description col-sm-7">
+        <%= u_a.achievement.description %>
+    </div>
   </div>
+  <% end %>
+
+  <div class="row">
+    <div class="upcoming col-sm-8">
+      <h3>Your Upcoming Achievements:</h3>
+    </div>
+  </div>
+
+  <% @achievements.each do | achievement| %>
+  <div class="row">
+    <div class="achievement-title col-sm-3">
+      <%= achievement.title %>
+    </div>
+    <div class="achievement-icon col-sm-2">
+      <%= image_tag achievement.image %>
+    </div>
+    <div class="achievement-description col-sm-7">
+        <%= achievement.description %>
+    </div>
+  </div>
+  <% end %>
 </section>
