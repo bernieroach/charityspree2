@@ -24030,3 +24030,88 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 635ms (Views: 571.4ms | ActiveRecord: 3.4ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-20 20:12:19 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (9552.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (54.1ms)
+Completed 200 OK in 10332ms (Views: 10259.5ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 20:12:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserAchievement Load (0.5ms)[0m  [1m[34mSELECT "user_achievements".* FROM "user_achievements" WHERE "user_achievements"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mAchievement Load (0.5ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" WHERE "achievements"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.4ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" WHERE "achievements"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.8ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements" WHERE (id NOT IN (SELECT achievement_id FROM user_achievements WHERE user_id = 3))[0m
+  Rendered users/show.html.erb within layouts/application (228.2ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 910ms (Views: 818.2ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 20:12:38 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (92.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (3.1ms)
+Completed 200 OK in 744ms (Views: 673.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 20:13:05 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (99.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+Completed 200 OK in 829ms (Views: 765.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 20:13:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserAchievement Load (0.5ms)[0m  [1m[34mSELECT "user_achievements".* FROM "user_achievements" WHERE "user_achievements"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mAchievement Load (0.4ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" WHERE "achievements"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.4ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" WHERE "achievements"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements" WHERE (id NOT IN (SELECT achievement_id FROM user_achievements WHERE user_id = 3))[0m
+  Rendered users/show.html.erb within layouts/application (40.6ms)
+  Rendered layouts/_top_nav.html.erb (2.2ms)
+Completed 200 OK in 507ms (Views: 446.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/3" for 10.0.2.2 at 2017-11-20 20:13:13 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserAchievement Load (0.4ms)[0m  [1m[34mSELECT "user_achievements".* FROM "user_achievements" WHERE "user_achievements"."user_id" = $1[0m  [["user_id", 3]]
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" WHERE "achievements"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.5ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" WHERE "achievements"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.5ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements" WHERE (id NOT IN (SELECT achievement_id FROM user_achievements WHERE user_id = 3))[0m
+  Rendered users/show.html.erb within layouts/application (49.6ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 534ms (Views: 472.4ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-20 20:13:16 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (10.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (3.6ms)
+Completed 200 OK in 484ms (Views: 446.2ms | ActiveRecord: 0.5ms)
+
+
