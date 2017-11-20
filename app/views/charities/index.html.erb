@@ -1,7 +1,7 @@
 <section class="charities-index">
   <section class="title-logo">
     <h1>Charity Spree</h1>
-    <%= image_tag "nature.png" %>
+    <%= image_tag "nature-big.png" %>
     <p>Powering Generosity</p>
   </section>
 
@@ -42,7 +42,7 @@
           <h3><%= charity.name %></h3>
           <p><%= charity.description %></p>
           <%= link_to charity do %>
-            <div type="button" class="choose btn btn-primary">Choose</div>
+            <div type="button" class="choose btn btn-info">Choose</div>
           <% end %>
         </div>
       <% end %>
