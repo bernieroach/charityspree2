@@ -56,6 +56,14 @@ user2 = User.create!({
   password_confirmation: '1234567890'
 })
 
+user3 = User.create!({
+  first_name: 'Riley',
+  last_name: 'Gowan',
+  email: 't.rileygowan@gmail.com',
+  password: '1234567890',
+  password_confirmation: '1234567890'
+})
+
 ## ACHIEVEMENTS
 puts "Re-creating Achievements ..."
 Achievement.destroy_all
@@ -85,8 +93,10 @@ puts "Re-creating Donations ..."
 user1.donations.create!(quantity: 1, charity_id: charity1.id)
 user1.donations.create!(quantity: 5, charity_id: charity2.id)
 
-
-
-
+## USER ACHIEVEMENTS
+puts "Re-creating User Achievements ..."
+user3.user_achievements.create!(achievement_id: achievement1.id, achieved: true, progress: 1)
+user3.user_achievements.create!(achievement_id: achievement2.id, achieved: true, progress: 1)
+user3.user_achievements.create!(achievement_id: achievement3.id, achieved: true, progress: 5)
 
 puts "DONE!"
