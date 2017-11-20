@@ -36,19 +36,21 @@ class DonationsController < ApplicationController
     @charity = Charity.find(params[:charity_id]);
     new_amount = @charity.amount + params[:amount].to_i
     @charity.update_attributes(:amount => new_amount )
-     UserAchievement.where(user_id: current_user.id).find_each do |userachievement|
-      puts userachievement
-      puts "id"
-      puts userachievement.id
-      puts "achievement id"
-      puts userachievement.achievement_id
-      puts "user id"
-      puts userachievement.user_id
-      puts "progress"
-      puts userachievement.progress
 
+    UserAchievement.where(user_id: current_user.id).find_each do |userAchievement|
+      achievement = Achievement.find(userAchievement.achievement_id)
 
+      newProgress = userAchievement.progress + params[:amount].to_i
+      newAchieve = userAchievement.achieved
+      if newProgress >= achievement.progress
+        newAchieve = true
       end
+      userAchievement.update_attributes(
+        :progress => newProgress,
+        :achieved => newAchieve
+      )
+
+    end
 
     redirect_to root_path
     rescue Stripe::CardError => e

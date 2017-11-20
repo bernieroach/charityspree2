@@ -92,14 +92,16 @@ achievement3 = Achievement.create!({
   image: '003-war.png'
 })
 
-user_achievement1 = user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement1.id)
-user_achievement2 = user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement1.id)
+## user_achievements
+puts "Re-creating UserAchievements ..."
+user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement1.id)
+user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement1.id)
 
-user_achievement1 = user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement2.id)
-user_achievement2 = user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement2.id)
+user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement2.id)
+user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement2.id)
 
-user_achievement1 = user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement3.id)
-user_achievement2 = user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement3.id)
+user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement3.id)
+user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement3.id)
 
 
 ## DONATIONS
