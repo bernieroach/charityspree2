@@ -7,5 +7,6 @@ class CharitiesController < ApplicationController
     params[:currentUser] = 'Bernie Roach'
     @charity = Charity.find(params[:id])
     @achievements = Achievement.all
+    @donation = Donation.new
   end
 end
