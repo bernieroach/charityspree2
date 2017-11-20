@@ -7264,6 +7264,602 @@ Completed 200 OK in 423ms (Views: 369.6ms | ActiveRecord: 0.3ms)
 >>>>>>> 339541dc528b8729c1aab5a80e25702ef222f120
 
 
+<<<<<<< HEAD
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:22:45 +0000
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (11.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (4326.8ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 4650ms (Views: 4595.4ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 16:23:07 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 182ms (Views: 160.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/charities" for 10.0.2.2 at 2017-11-19 16:23:17 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (51.7ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 258ms (Views: 241.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/6" for 10.0.2.2 at 2017-11-19 16:23:21 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 166ms (Views: 151.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities" for 10.0.2.2 at 2017-11-19 16:23:23 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (48.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 254ms (Views: 233.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charities/4" for 10.0.2.2 at 2017-11-19 16:23:26 +0000
+=======
+<<<<<<< HEAD
+Started GET "/" for 10.0.2.2 at 2017-11-18 21:21:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (404.0ms)
+Completed 200 OK in 651ms (Views: 602.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:38:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 183ms (Views: 164.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:48:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (435.4ms)
+Completed 200 OK in 660ms (Views: 616.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/charities/10" for 10.0.2.2 at 2017-11-19 16:48:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for CharitiesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:52:01 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (5532.7ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 5825ms (Views: 5780.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:52:19 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.8ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 225ms (Views: 210.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/10" for 10.0.2.2 at 2017-11-19 16:52:24 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 163ms (Views: 143.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/charities/11" for 10.0.2.2 at 2017-11-19 16:52:41 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 155ms (Views: 139.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charities/12" for 10.0.2.2 at 2017-11-19 16:53:19 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 155ms (Views: 141.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:55:48 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (40.9ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 221ms (Views: 197.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 18:04:45 +0000
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (674.2ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 944ms (Views: 893.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:04:50 +0000
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for UsersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-19 18:08:23 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (51.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 2801ms (Views: 2771.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 18:08:27 +0000
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/new" for 10.0.2.2 at 2017-11-19 18:08:35 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 176ms (Views: 163.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.2.2 at 2017-11-19 18:12:35 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 223ms (Views: 210.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 18:12:39 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (52.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 209ms (Views: 184.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users/show" for 10.0.2.2 at 2017-11-19 18:12:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 169ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2017-11-19 18:12:57 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 170ms (Views: 159.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2017-11-19 18:13:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 174ms (Views: 162.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 18:14:28 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (43.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 200.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 18:14:32 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 152ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:14:38 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 182ms (Views: 169.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:21:01 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 168ms (Views: 158.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.2.2 at 2017-11-19 18:21:04 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 188ms (Views: 170.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.2.2 at 2017-11-19 18:21:16 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 179ms (Views: 166.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 18:21:27 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (44.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 190ms (Views: 178.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:27:06 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 175ms (Views: 163.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:36:47 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <h1>Users#show</h1>
+    2: <p>Find me in app/views/users/show.html.erb</p>
+    3: <p> here we put the user information </p>
+    4: <p> First Name: <%= @user.first_name %> </p>
+    5: <p> Last Name:  <%= @user.last_name %> </p>
+    6: <p> Email: <%= @user.last_name %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+  
+app/views/users/show.html.erb:4:in `_app_views_users_show_html_erb__3917845894360974605_70152673449780'
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:37:40 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 890ms (Views: 819.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:38:23 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `last_email' for #<User:0x007f7d70014380>
+Did you mean?  last_name):
+    3: <p> here we put the user information </p>
+    4: <p> First Name: <%= @user.first_name %> </p>
+    5: <p> Last Name:  <%= @user.last_name %> </p>
+    6: <p> Email: <%= @user.last_email %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+  
+app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb__1142815194963084217_70088340196700'
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 18:38:33 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 180ms (Views: 163.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:41:19 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 172ms (Views: 156.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:48:32 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (168.3ms)
+Completed 500 Internal Server Error in 219ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `gravatar_for' for #<#<Class:0x00000002e7a098>:0x00000002f0f350>):
+    6: <p> Email: <%= @user.email %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+    8: <p> gravatar test for image </p>
+    9: <p> <%= gravatar_for @user %> </p>
+  
+app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__1142815194963084217_24737800'
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:49:03 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User:0x00000002d8fa70>):
+    6: <p> Email: <%= @user.email %> </p>
+    7: <p> User ID (test) <%= @user.id %>
+    8: <p> gravatar test for image </p>
+    9: <p> <%= gravatar_for @user %> </p>
+  
+app/helpers/users_helper.rb:6:in `gravatar_for'
+app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__2562997942016697249_23790980'
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 18:49:36 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 873ms (Views: 800.1ms | ActiveRecord: 4.9ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "example@railstutorial.org"], ["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "first_name" = $2, "last_name" = $3, "password_digest" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["email", "bernieroach@gmail.com"], ["first_name", "Bernie"], ["last_name", "Roach"], ["password_digest", "$2a$10$Z/UOqLDFMrexGHIywiekAuXEWK2ZW0p50mv37/3sh6This9mhzIvK"], ["updated_at", "2017-11-19 19:00:26.046749"], ["id", 7]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/8" for 10.0.2.2 at 2017-11-19 19:00:58 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 178ms (Views: 154.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 19:01:01 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 176ms (Views: 158.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "example@railstutorial.org"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "first_name" = $2, "last_name" = $3, "password_digest" = $4, "updated_at" = $5 WHERE "users"."id" = $6[0m  [["email", "example@railstutorial.org"], ["first_name", "BernieTest"], ["last_name", "RoachTest"], ["password_digest", "$2a$10$yc0Gt4oYmWYctPzIcIMTreW.d092zKmBbCXjanvD1rVWr2tL4j7IO"], ["updated_at", "2017-11-19 19:02:12.129579"], ["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 19:02:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 162ms (Views: 149.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:36:19 +0000
+=======
 Started GET "/" for 10.0.2.2 at 2017-11-19 16:39:08 +0000
   [1m[35m (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by CharitiesController#index as HTML
@@ -7277,10 +7873,102 @@ Completed 200 OK in 7602ms (Views: 7524.1ms | ActiveRecord: 19.2ms)
   [1m[36mAchievement Load (4.1ms)[0m  [1m[34mSELECT  "achievements".* FROM "achievements" LIMIT $1[0m  [["LIMIT", 11]]
 Started GET "/charities/4" for 10.0.2.2 at 2017-11-19 17:00:44 +0000
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 09f2f088d3a4102ca56912acfc91f4634f322c01
 Processing by CharitiesController#show as HTML
   Parameters: {"id"=>"4"}
   [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
   Rendering charities/show.html.erb within layouts/application
+<<<<<<< HEAD
+  Rendered charities/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 221ms (Views: 202.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/charities" for 10.0.2.2 at 2017-11-19 16:23:43 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (35.8ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 202ms (Views: 179.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:23:45 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (43.9ms)
+  Rendered layouts/_top_nav.html.erb (1.4ms)
+Completed 200 OK in 236ms (Views: 218.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 16:23:49 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.9ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 164ms (Views: 148.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/charities" for 10.0.2.2 at 2017-11-19 16:23:58 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (47.1ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 252ms (Views: 223.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/charities/5" for 10.0.2.2 at 2017-11-19 16:24:39 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharity Load (0.7ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 184ms (Views: 164.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:34:50 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (712.5ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 1024ms (Views: 982.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/charities/4" for 10.0.2.2 at 2017-11-19 16:35:07 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 168ms (Views: 149.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 16:35:08 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.0ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 219ms (Views: 198.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/charities/4" for 10.0.2.2 at 2017-11-20 00:45:01 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 226ms (Views: 206.1ms | ActiveRecord: 0.8ms)
+=======
   [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
   Rendered charities/show.html.erb within layouts/application (244.1ms)
 Completed 500 Internal Server Error in 430ms (ActiveRecord: 10.4ms)
@@ -7669,10 +8357,3068 @@ Completed 200 OK in 414ms (Views: 378.2ms | ActiveRecord: 0.4ms)
 
 
 Started GET "/" for 10.0.2.2 at 2017-11-19 17:15:12 +0000
+>>>>>>> 4917278c383b1f7d8fa7f3fcd3d4791c76024361
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by CharitiesController#index as HTML
   Rendering charities/index.html.erb within layouts/application
   [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+<<<<<<< HEAD
+  Rendered charities/index.html.erb within layouts/application (3306.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3604ms (Views: 3560.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 19:36:29 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 211ms (Views: 197.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-19 19:36:55 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2A/UhTtzYynBVhD2jBbhaGRcAGf8t0Jsyk/wp4c5iSaQRJZn1SUVTqNewWHF+osSSuHiXp0gLCxUmSqL9e5V0g==", "user"=>{"first_name"=>"Signup", "email"=>"testsignup@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "testsignup@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "testsignup@gmail.com"], ["first_name", "Signup"], ["password_digest", "$2a$10$gn2Dmom9Fh.3Cjw2wQrZ1elG9FHc1tkvpNIOg454m3h0Xm5DmyXvK"], ["created_at", "2017-11-19 19:36:55.712543"], ["updated_at", "2017-11-19 19:36:55.712543"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 127ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:36:55 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (44.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 221ms (Views: 207.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 19:37:47 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 181ms (Views: 167.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-19 19:38:16 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iviTEaaaue50Ov0iqJgXWNPQRUGmoLflqk5JGWP7y2PCs9HzSMzPiRYyLLXhdH0i/W2neMc32aU0mJM1ESwXlw==", "user"=>{"first_name"=>"Test ", "last_name"=>"Signup2 ", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "testsignup2@gmail.com"], ["first_name", "Test "], ["last_name", "Signup2 "], ["password_digest", "$2a$10$fMEiFSlKxwCGxJEywIPbAeIflVKAeYw9Vx1uD7hrdUHVWxGpIgMsC"], ["created_at", "2017-11-19 19:38:16.552197"], ["updated_at", "2017-11-19 19:38:16.552197"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 75ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:38:16 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (34.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 181ms (Views: 169.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 19:39:15 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 199.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 19:59:41 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (undefined method `helper_method' for ApplicationHelper:Module):
+  
+app/helpers/application_helper.rb:6:in `<module:ApplicationHelper>'
+app/helpers/application_helper.rb:1:in `<top (required)>'
+app/controllers/application_controller.rb:1:in `<top (required)>'
+app/controllers/charities_controller.rb:1:in `<top (required)>'
+Started GET "/" for 10.0.2.2 at 2017-11-19 20:04:06 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (660.1ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 987ms (Views: 944.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 20:04:12 +0000
+  
+ActionController::RoutingError (uninitialized constant SessionsController):
+  
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `const_get'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:269:in `block in constantize'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.4) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:85:in `controller_class_for'
+actionpack (5.1.4) lib/action_dispatch/http/request.rb:78:in `controller_class'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/login" for 10.0.2.2 at 2017-11-19 20:08:30 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3264ms (Views: 3244.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-19 20:08:42 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rUAoPpLMurSDOVplb5qkK71KVqUnICKYw5f3WiFCNP/lC2rcfJrM0+Exi/Imds5Rk/e0nEa3TNhdQS12U5XoCw==", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bernieroach@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 40ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 20:08:42 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 195ms (Views: 181.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-19 20:09:03 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YRwapRqymuhYzEV3PsTu4p13wW9d1CWPsq+cNYrByOspV1hH9OTsjzrElOB3KISYs8ojVjxDS88seUYZ+BYUHw==", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 84ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 20:09:03 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (52.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 252ms (Views: 224.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 20:09:18 +0000
+  
+ActionController::RoutingError (undefined method `before_filter' for UsersController:Class
+Did you mean?  before_action):
+  
+app/controllers/users_controller.rb:2:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/users" for 10.0.2.2 at 2017-11-19 20:11:40 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 985ms (Views: 912.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 20:11:50 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 192ms (Views: 178.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 20:17:05 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 177ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `debugging' for #<UsersController:0x000000042399f8>
+Did you mean?  debugger):
+  
+app/controllers/application_controller.rb:11:in `authorize'
+Started GET "/users" for 10.0.2.2 at 2017-11-19 20:18:13 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 82722ms (ActiveRecord: 4.2ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `authorize'
+app/controllers/application_controller.rb:12:in `authorize'
+Started GET "/users" for 10.0.2.2 at 2017-11-19 20:19:49 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 37142ms (Views: 837.0ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 20:40:47 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (51.7ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 251ms (Views: 220.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 20:58:53 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (45.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 253ms (Views: 238.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 20:59:29 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (41.6ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 241ms (Views: 228.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 20:59:31 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 200ms (Views: 188.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 21:02:32 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 9001ms (Views: 153.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 21:03:07 +0000
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 14630ms (Views: 177.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 21:06:30 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 879ms (Views: 814.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:06:44 +0000
+  
+SyntaxError (/vagrant/charityspree/app/controllers/sessions_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/sessions_controller.rb:28: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:33 +0000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:34 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.9ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (561.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 837ms (Views: 804.4ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:37 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:37 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 183ms (Views: 173.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:38 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:38 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (38.0ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 216ms (Views: 205.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:39 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.7ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 209ms (Views: 192.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:41 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (38.7ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 221ms (Views: 209.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:43 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:43 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (47.4ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 255ms (Views: 243.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:44 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:44 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (40.7ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 203ms (Views: 187.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:07:45 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:07:45 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (35.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 187ms (Views: 175.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:08:16 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (33.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 189ms (Views: 177.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:18 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:19 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:19 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:19 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:19 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:34 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:08:45 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (645.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 991ms (Views: 949.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:49 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:50 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:08:55 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:09:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:10:13 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 934ms (Views: 915.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-19 21:10:30 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wONCvDo9I+b2fCPP1awFHuVCUDsbWu8MvVZqiswXbmyIqABe1GtVgZR08licQG9ky/+yAnrNgUwjgLCmvsCymA==", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 120ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:10:30 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (50.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 248ms (Views: 219.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:10:32 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:10:32 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.9ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 252ms (Views: 239.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 21:10:33 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:10:33 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 201ms (Views: 185.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:11:11 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (702.5ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 1053ms (Views: 1008.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 21:11:14 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:11:14 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (54.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 236ms (Views: 217.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:11:15 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_top_nav.html.erb (1.7ms)
+Completed 200 OK in 218ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-19 21:11:26 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0JjJZIsaA+99FSrLqn9TaGxS/b89dqrBr7L3y/8pcMyTZtzcnjzRtbpUIT7I+5+v9gCATECVnmte8DbnlCc3cA==", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 111ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:11:26 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (46.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 244ms (Views: 230.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:11:29 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:11:29 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (58.2ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 267ms (Views: 253.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 21:11:30 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:11:30 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (46.2ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 255ms (Views: 237.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:11:32 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 196ms (Views: 179.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:11:35 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (47.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 264ms (Views: 241.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 21:11:40 +0000
+Processing by UsersController#index as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:11:40 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 192ms (Views: 180.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 10.0.2.2 at 2017-11-19 21:13:52 +0000
+Processing by UsersController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:13:52 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 194ms (Views: 182.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "//signup'" for 10.0.2.2 at 2017-11-19 21:17:32 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/signup'"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "//signup" for 10.0.2.2 at 2017-11-19 21:17:35 +0000
+Processing by UsersController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:17:35 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 184ms (Views: 172.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:19:07 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (690.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 1037ms (Views: 992.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 21:19:22 +0000
+  
+ArgumentError (Before process_action callback :authorize has not been defined):
+  
+app/controllers/users_controller.rb:3:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<top (required)>'
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 21:20:10 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:20:11 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 895ms (Views: 881.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:20:38 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 917ms (Views: 899.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-19 21:20:46 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 207ms (Views: 192.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-19 21:21:10 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HCmd/xCvJrGmL+tuq9721ZKCNdnfWpV0jozSDx/s4ftUYt8d/vlQ1sQnOvniMpyvvD/X4L7N+zQQWggjbTs9Dw==", "user"=>{"first_name"=>"new", "last_name"=>"signup", "email"=>"newsignup@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "newsignup@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "newsignup@gmail.com"], ["first_name", "new"], ["last_name", "signup"], ["password_digest", "$2a$10$nDUqMeuhsH27KPPmUwdzEOBuYAyKPfLmaJomPRiMJY.TbgyHLmd5a"], ["created_at", "2017-11-19 21:21:10.309902"], ["updated_at", "2017-11-19 21:21:10.309902"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 136ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:21:10 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (59.0ms)
+  Rendered layouts/_top_nav.html.erb (1.7ms)
+Completed 200 OK in 291ms (Views: 262.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 21:21:15 +0000
+Processing by SessionsController#new as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 21:21:15 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (43.6ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 233ms (Views: 218.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 23:48:19 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 215ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 23:48:24 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:48:24 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (39.5ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 210ms (Views: 199.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 23:48:29 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 187ms (Views: 174.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 23:48:35 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:48:35 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (41.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 225ms (Views: 211.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 23:48:41 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 186ms (Views: 169.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-19 23:48:42 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:48:42 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (41.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 237ms (Views: 222.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/7" for 10.0.2.2 at 2017-11-19 23:48:49 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 23:48:49 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 153ms (Views: 141.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 23:48:58 +0000
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 190ms (Views: 177.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 23:50:28 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/vagrant/charityspree/app/controllers/users_controller.rb:3: syntax error, unexpected ':', expecting ']'
+  before_action :authorize, only: [:show :index]
+                                          ^):
+  
+app/controllers/users_controller.rb:3: syntax error, unexpected ':', expecting ']'
+Started GET "/users" for 10.0.2.2 at 2017-11-19 23:50:52 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 23:50:53 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 982ms (Views: 968.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:50:58 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (58.3ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 260ms (Views: 222.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2017-11-19 23:51:04 +0000
+Processing by UsersController#index as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 23:51:04 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 196ms (Views: 183.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:51:06 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (64.5ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 264ms (Views: 247.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:52:32 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (43.6ms)
+  Rendered layouts/_top_nav.html.erb (1.4ms)
+Completed 200 OK in 248ms (Views: 233.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:54:04 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (44.2ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 257ms (Views: 244.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:54:41 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (45.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 246ms (Views: 231.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:54:53 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.3ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 227ms (Views: 211.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-19 23:54:55 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 183ms (Views: 168.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-19 23:55:03 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0xaLHX6ISAfx/oTqcTHJOW8OF94gFXCyqSqRviHGoeuQ6J6la66aXTa/jx8TtQX+9VxqLV32RBhYaFCSSsjmVw==", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 110ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:55:03 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (41.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.7ms)
+Completed 200 OK in 231ms (Views: 214.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:00:35 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (48.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 232ms (Views: 217.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-20 00:00:38 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:00:38 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (38.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 199.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-20 00:00:40 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 181ms (Views: 165.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-20 00:00:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f/gEzO2ayD5il2BktOFGapgZ7u4xYVWsSgRA6o4drBI8BhF0+LwaZKXWa5HWZYqtAkuTHUyCYQa7RoHG5RPrrg==", "email"=>"testsignup2@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testsignup2@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 68ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:00:47 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (41.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 231ms (Views: 218.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:00:56 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (40.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 223ms (Views: 209.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-20 00:01:27 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:01:27 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (38.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 214ms (Views: 202.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 10.0.2.2 at 2017-11-20 00:01:29 +0000
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (18.7ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 207ms (Views: 193.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2017-11-20 00:01:43 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yBXVBpG6zpab+2DVtIULClD78PJuo/0hwJuKzJj8/BqRKqNXKCX5YpMJ3WqVvXP4jvG0i9Jr6oIM4yTfX4lZPQ==", "user"=>{"first_name"=>"Bernard", "last_name"=>"Roach", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Submit"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "bernieroach@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bernieroach@gmail.com"], ["first_name", "Bernard"], ["last_name", "Roach"], ["password_digest", "$2a$10$NRadAPdrct0dHi/Bzm5/EOPVuXM.0ESRQ9aKoyZ583QmadQLZXz3u"], ["created_at", "2017-11-20 00:01:43.297727"], ["updated_at", "2017-11-20 00:01:43.297727"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 82ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:01:43 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 233ms (Views: 219.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user_path(@current_user)" for 10.0.2.2 at 2017-11-20 00:01:47 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/user_path(@current_user)"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/user_path(@current_user)" for 10.0.2.2 at 2017-11-20 00:09:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/user_path(@current_user)"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:09:26 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (651.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (31.9ms)
+Completed 200 OK in 1012ms (Views: 962.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/user_path" for 10.0.2.2 at 2017-11-20 00:09:30 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/user_path"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:10:20 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (44.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (17.2ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    11:       <a class="navbar-brand" href="/">Charity Spree</a>
+    12: 
+    13: <% if current_user %>
+    14:  <a class="navbar-brand" href= '/users/<%= @current_user.id %>' > Welcome <%= current_user.first_name %> </a>  <a class="navbar-brand" href="/logout">logout</a>
+    15: <% else %>
+    16:    <a class="navbar-brand" href="/login">login</a> <a class="navbar-brand" href="/signup">signup</a>
+    17: <% end %>
+  
+app/views/layouts/_top_nav.html.erb:14:in `_app_views_layouts__top_nav_html_erb___2635536701384776900_69829346035420'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__3816168488474672428_38590600'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:10:43 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (47.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (3.2ms)
+Completed 200 OK in 260ms (Views: 245.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:10:45 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 199ms (Views: 181.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:21:54 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.7ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (604.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (34.5ms)
+Completed 200 OK in 948ms (Views: 896.1ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:21:57 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 199ms (Views: 173.2ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:22:12 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 235ms (Views: 218.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:22:14 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (408.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 599ms (Views: 576.3ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:22:44 +0000
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for UsersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:24:02 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (43.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 233ms (Views: 216.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:24:04 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 186ms (Views: 167.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:24:06 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 187ms (Views: 170.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:24:09 +0000
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for UsersController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:24:23 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (689.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (37.3ms)
+Completed 200 OK in 1077ms (Views: 1031.3ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:24:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 199ms (Views: 174.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:24:33 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (483.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 700ms (Views: 675.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:24:36 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j9NscP3wl1knzCN0Ff8Lt8X19Qvo+kGGb984Zz9XAEFuuQgg2vY/mpoDj5oGCq2dVK+OLyrzBS0J7qtz5d9gpA==", "user"=>{"first_name"=>"Bernardqw", "last_name"=>"Roach", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 206ms (Views: 186.5ms | ActiveRecord: 3.2ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:24:41 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pgt1SkHQq1yCRRLyS2uMwJ++TMP+GauX5oo4/jXSr6d2QDeor4bdO+BNw2UCh+a6sQOu+p+Oxdd4XOLSRwVzUw==", "user"=>{"first_name"=>"Bernardqw", "last_name"=>"Roach", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.4ms)
+Completed 200 OK in 188ms (Views: 179.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:24:46 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 202ms (Views: 184.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:24:49 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 191ms (Views: 173.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:24:59 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8NEmUoivcdZ3H7xgp8Fn+KT3gjs+VNr5huHWxfSqqLYRu0ICr6nZFcrQEI60NMHSNa35H/xdnlLg0EXRLiLIUw==", "user"=>{"first_name"=>"Bernard2", "last_name"=>"Roach", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "password_digest" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["first_name", "Bernard2"], ["password_digest", "$2a$10$djLTUeeTrv/8PergKKxK6e/Zkf/eCmU84G3ZbL5RadfdFXJIQgi1m"], ["updated_at", "2017-11-20 00:24:59.958676"], ["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 667ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:25:31 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.1ms)
+Completed 200 OK in 188ms (Views: 172.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:25:42 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jottIZ0yzd6laxLYpdH/wdqmhQGMnv/GPlQlZfcU32nGwC/Dc2S7ucdjw0/sPZW79BtnOO0JkYaggv9JhcMDnQ==", "user"=>{"first_name"=>"Bernard2", "last_name"=>"Roach2", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "last_name" = $1, "password_digest" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["last_name", "Roach2"], ["password_digest", "$2a$10$.z6Unmz0onA1O.yw5dLmBeIuLx0noRXBmzFSfnWzCna3g.1V/Xud2"], ["updated_at", "2017-11-20 00:25:42.840721"], ["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+No template found for UsersController#update, rendering head :no_content
+Completed 204 No Content in 678ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:27:11 +0000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (595.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (38.5ms)
+Completed 200 OK in 930ms (Views: 888.8ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:27:14 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 161ms (Views: 136.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:27:17 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (453.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (3.3ms)
+Completed 200 OK in 615ms (Views: 600.0ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:27:21 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ip2cDJdG5Whn28uvgsHH/czu3clt5o95jr3zoRGOj0Rr9/hcsEBNq9oUZ0GRNGHXXbSm7a/vy9LojGC1ywbvoQ==", "user"=>{"first_name"=>"Bernard1", "last_name"=>"Roach2", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.8ms)
+Completed 200 OK in 177ms (Views: 155.2ms | ActiveRecord: 3.8ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:27:29 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9QhxdtjEhF4IIXpv/oFhSzLc7usvLmSVu3fhP8da9Pe9QzOUNpLyOWopq/i3bQsxHGEM0k65CtUloTsTtY0oAw==", "user"=>{"first_name"=>"Bernard1", "last_name"=>"Roach2", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "password_digest" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["first_name", "Bernard1"], ["password_digest", "$2a$10$g0TGkLQ2LUtiPV7ZGUMvXOxELk96WCp4lxTALe3417jv32yBOa6uu"], ["updated_at", "2017-11-20 00:27:29.597042"], ["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/<%= params[:id] %>
+Completed 302 Found in 83ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/users/%3C%=%20params[:id]%20%%3E" for 10.0.2.2 at 2017-11-20 00:27:29 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"<%= params[:id] %>"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+Completed 404 Not Found in 5ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=<%= params[:id] %>):
+  
+app/controllers/users_controller.rb:9:in `show'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:29:33 +0000
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (592.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (33.7ms)
+Completed 200 OK in 914ms (Views: 871.7ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:29:36 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 160ms (Views: 137.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:29:38 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (477.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (3.0ms)
+Completed 200 OK in 680ms (Views: 662.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:29:48 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P4x+c732rzdm9zFl9eWvCu1Vu7pFhUK7HMcCXwmDGPze5hojmvAH9Ns4nYvmEAkgfA/AnoeMBhB69pFL0wt4GQ==", "user"=>{"first_name"=>"Bernard2", "last_name"=>"Roach2", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "password_digest" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["first_name", "Bernard2"], ["password_digest", "$2a$10$iDTFqAMO2wIWKd2QFmx.6extxRxR.dk2YOwL7wKjaKwrN5KcOfJRq"], ["updated_at", "2017-11-20 00:29:48.976126"], ["id", 12]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/12
+Completed 302 Found in 88ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:29:48 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 195ms (Views: 179.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:30:10 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.6ms)
+Completed 200 OK in 184ms (Views: 167.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:30:31 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrZxXUaU8IEXoM1wkYkpXfqV3HiXVmzpSJ0gB0q0a0Kr3BUNYZJYQqpvYZ6CfI93a8+nXFVfKEIurLMTkDwLpw==", "user"=>{"first_name"=>"Joseph", "last_name"=>"Roach2", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.3ms)
+Completed 200 OK in 165ms (Views: 157.1ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/users/12" for 10.0.2.2 at 2017-11-20 00:30:40 +0000
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TxYAhqHNyYNJ9F/klA1cKM8sGSuDubZuiE+MINFlFcIHXUJkT5u/5Cv8jnPd4TZS4ZH7EuIu2C4WmVYMo7LJNg==", "user"=>{"first_name"=>"Joseph", "last_name"=>"Roach2", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Save changes", "id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "bernieroach@gmail.com"], ["id", 12], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "password_digest" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["first_name", "Joseph"], ["password_digest", "$2a$10$5IwCty8wBtBtqDmH2cdKh.gQf.u4aKCNX5q.0LB6tI683JXxrp0EK"], ["updated_at", "2017-11-20 00:30:40.700731"], ["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://0.0.0.0:3000/users/12
+Completed 302 Found in 79ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:30:40 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 150ms (Views: 137.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logout" for 10.0.2.2 at 2017-11-20 00:30:44 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:30:44 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (41.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 221ms (Views: 207.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-20 00:31:18 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 190ms (Views: 174.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-20 00:31:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+mk4ucccWfrv7wdeV7bhKMwH1fGb0Y97tCD5WY2syD+5ly0B0jqLoCiuDKs1Mi3vVlWoAuYyu9FFYjh15qKPgw==", "email"=>"bernieroach@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bernieroach@gmail.com"], ["LIMIT", 1]]
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 69ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:31:24 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (42.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.9ms)
+Completed 200 OK in 241ms (Views: 227.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:31:26 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 152ms (Views: 136.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:31:30 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.5ms)
+Completed 200 OK in 167ms (Views: 152.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:32:59 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 196ms (Views: 181.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/12/edit" for 10.0.2.2 at 2017-11-20 00:35:29 +0000
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (1.8ms)
+Completed 200 OK in 193ms (Views: 177.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/12" for 10.0.2.2 at 2017-11-20 00:35:31 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 153ms (Views: 138.4ms | ActiveRecord: 0.5ms)
+=======
   Rendered charities/index.html.erb within layouts/application (1308.5ms)
   Rendered layouts/_top_nav.html.erb (0.8ms)
 Completed 200 OK in 1867ms (Views: 1797.1ms | ActiveRecord: 4.3ms)
@@ -8402,6 +12148,7 @@ Processing by CharitiesController#index as HTML
   Rendered charities/index.html.erb within layouts/application (109.8ms)
   Rendered layouts/_top_nav.html.erb (0.9ms)
 Completed 200 OK in 725ms (Views: 673.3ms | ActiveRecord: 0.3ms)
+>>>>>>> 4917278c383b1f7d8fa7f3fcd3d4791c76024361
 
 
 Started GET "/" for 10.0.2.2 at 2017-11-19 23:09:11 +0000
@@ -9249,6 +12996,7 @@ Processing by CharitiesController#index as HTML
   Rendered charities/index.html.erb within layouts/application (100.7ms)
   Rendered layouts/_top_nav.html.erb (0.9ms)
 Completed 200 OK in 3767ms (Views: 3731.4ms | ActiveRecord: 0.6ms)
+>>>>>>> 09f2f088d3a4102ca56912acfc91f4634f322c01
 
 
 Started GET "/" for 10.0.2.2 at 2017-11-20 00:48:11 +0000

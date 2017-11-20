@@ -1,10 +1,18 @@
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
+  get 'users/new'
+
   root to: 'charities#index'
 
-    resources :about, only: [:index]
+  get  '/signup',  to: 'users#new'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
-    resources :charities, only: [:index, :show]
+
+  resources :about, only: [:index]
+  resources :charities, only: [:index, :show]
+  resources :users
 
 end
