@@ -1,0 +1,16 @@
+<% provide(:title, 'Sign up') %>
+<h1>Sign up</h1>
+<p>This will be a signup page for new users.</p>
+
+<%= form_for :user, url: '/users' do |f| %>
+
+  First Name: <%= f.text_field :first_name %> <br>
+  Last Name: <%= f.text_field :last_name %> <br>
+  Email: <%= f.text_field :email %> <br>
+  Password: <%= f.password_field :password %> <br>
+  Password Confirmation: <%= f.password_field :password_confirmation %> <br>
+  <%= f.submit "Submit" %>
+
+<% end %>
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
