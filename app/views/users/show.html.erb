@@ -1,4 +1,4 @@
-<section class="container">
+<section id="profile" class="container">
   <div class="row">
     <div class="col-sm-3">
       <%= gravatar_for @user %>
@@ -8,11 +8,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-sm-3">
-      <button>Statistics</button>
+    <div class="user-stats-btn col-sm-8">
+      <button type="button" class="btn btn-primary">Statistics</button>
     </div>
-    <div class="col-sm-3">
-      <button>Pick A Charity</button>
+    <div class="pick-charity-btn col-sm-4">
+      <button type="button" class="btn btn-primary">Pick A Charity</button>
     </div>
   </div>
   <a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
