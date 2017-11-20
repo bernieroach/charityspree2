@@ -1,9 +1,9 @@
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 Rails.application.routes.draw do
-  get 'donates/new'
-
-  get 'donates/create'
+  # get 'donates/new'
+  #
+  # get 'donates/create'
 
   get 'users/new'
 
@@ -16,8 +16,9 @@ Rails.application.routes.draw do
 
 
   resources :about, only: [:index]
-  resources :charities, only: [:index, :show]
   resources :users
-  resources :donates
+  resources :charities, only: [:index, :show] do
+    resources :donations, only: [:create]
+  end
 
 end
