@@ -30,7 +30,12 @@ body {
   padding-top: 70px;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 .navbar-inverse {
+  padding: 0 15px;
   background-color: #FBB13C;
   border-color: #080808;
   border: none;
