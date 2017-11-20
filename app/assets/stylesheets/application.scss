@@ -23,10 +23,11 @@
 
 // Font
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 // Global
 body {
-  background-color: #9ad3de;
+  background-color: #bcf2ec;
   padding-top: 70px;
 }
 
@@ -36,8 +37,7 @@ body {
 
 .navbar-inverse {
   padding: 0 15px;
-  background-color: #FBB13C;
-  border-color: #080808;
+  background-color: #FFFFEF;
   border: none;
 
   .navbar-brand {
