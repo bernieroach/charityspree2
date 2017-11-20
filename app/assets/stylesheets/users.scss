@@ -6,20 +6,27 @@
 main section#profile {
   background-color: #FFFFEF;
   font-family: 'Open Sans', sans-serif;
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-bottom: 80px;
   padding: 40px 40px;
   box-shadow: 0 10px 6px -6px #777;
+
+  .update {
+    position: relative;
+    float: right;
+  }
 
   img.gravatar {
     height: 200px;
     margin: 0 auto;
     display: block;
+    border: 1px solid #000;
   }
 
   h1  {
+    margin-top: 10px;
     font-size: 100px;
     font-weight: bold;
-    letter-spacing: 5px;
     text-align: center;
   }
 
@@ -28,16 +35,22 @@ main section#profile {
     font-weight: bold;
   }
 
-  .user-stats-btn {
-    text-align: right;
-  }
+  .options {
+    border-bottom: 1px solid #000;
+    padding-bottom: 30px;
 
-  .pick-charity-btn {
-    text-align: right;
-  }
+    .user-stats-btn {
+      text-align: right;
+    }
 
-  .update-btn {
-    text-align: right;
+    .pick-charity-btn {
+      text-align: right;
+    }
+
+    .update-btn {
+      text-align: right;
+    }
+
   }
 
   .achievement-icon {
