@@ -1,37 +1,67 @@
-<section class="container">
+<section id="profile" class="container">
+  <a href= '/users/<%= current_user.id %>/edit'>
+    <button class="update btn btn-primary">
+      Update Profile
+    </button>
+  </a>
   <div class="row">
-    <figure class="col">
+    <div class="col-sm-3">
       <%= gravatar_for @user %>
-    </figure>
-    <div class="col">
-      <p><%= @user.first_name %> <%= @user.last_name %></p>
+    </div>
+    <div class="col-sm-9">
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <h3>Featured Achievement: <%= @user.user_achievements[0].achievement.title %> <%= image_tag @user.user_achievements[0].achievement.image %></h3>
     </div>
   </div>
-<p> Email: <%= @user.email %> </p>
-<p> User ID (test) <%= @user.id %>
-<a class="navbar-brand" href= '/users/<%= current_user.id %>/edit' > Update Profile </a>
 
+  <div class="options row">
+    <div class="user-stats-btn col-xs-6">
+      <button type="button" class="btn btn-primary">Statistics</button>
+    </div>
+    <div class="pick-charity-btn col-xs-2">
+      <button type="button" class="btn btn-primary">Pick A Charity</button>
+    </div>
+  </div>
+  <div class="achieved row">
+    <div class="col-xs-6">
+      <h3>Achievements:</h3>
+    </div>
+    <div class="col-xs-6">
+      <h3>Description:</h3>
+    </div>
+  </div>
+
+  <% @user.user_achievements.each do | u_a| %>
+  <div class="row">
+    <div class="achievement-title col-xs-3">
+      <%= u_a.achievement.title %>
+    </div>
+    <div class="achievement-icon col-xs-2">
+      <%= image_tag u_a.achievement.image %>
+    </div>
+    <div class="achievement-description col-xs-7">
+        <%= u_a.achievement.description %>
+    </div>
+  </div>
+  <% end %>
+
+  <div class="row">
+    <div class="upcoming col-xs-8">
+      <h3>Your Upcoming Achievements:</h3>
+    </div>
+  </div>
+
+  <% @achievements.each do | achievement| %>
+  <div class="row">
+    <div class="achievement-title col-xs-3">
+      <%= achievement.title %>
+    </div>
+    <div class="achievement-icon col-xs-2">
+      <%= image_tag achievement.image %>
+    </div>
+    <div class="achievement-description col-xs-7">
+        <%= achievement.description %>
+    </div>
+  </div>
+  <% end %>
 </section>
-
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-3">
-      1 of 2
-    </div>
-    <div class="col-sm-3">
-      1 of 2
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      1 of 3
-    </div>
-    <div class="col-sm-3">
-      1 of 3
-    </div>
-    <div class="col-sm-3">
-      1 of 3
-    </div>
-  </div>
-</div>
