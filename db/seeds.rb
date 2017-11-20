@@ -97,6 +97,5 @@ user1.donations.create!(quantity: 5, charity_id: charity2.id)
 puts "Re-creating User Achievements ..."
 user3.user_achievements.create!(achievement_id: achievement1.id, achieved: true, progress: 1)
 user3.user_achievements.create!(achievement_id: achievement2.id, achieved: true, progress: 1)
-user3.user_achievements.create!(achievement_id: achievement3.id, achieved: true, progress: 5)
 
 puts "DONE!"
