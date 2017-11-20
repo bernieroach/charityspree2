@@ -8404,3 +8404,802 @@ Processing by CharitiesController#index as HTML
 Completed 200 OK in 725ms (Views: 673.3ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:09:11 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (4905.6ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 5549ms (Views: 5472.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-19 23:09:20 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 474ms (Views: 447.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:09:36 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.7ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (126.7ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 882ms (Views: 841.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/charities/2" for 10.0.2.2 at 2017-11-19 23:09:42 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (3.2ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (62.9ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 856ms (Views: 753.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/charities" for 10.0.2.2 at 2017-11-19 23:09:46 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (65.6ms)
+  Rendered layouts/_top_nav.html.erb (1.5ms)
+Completed 200 OK in 516ms (Views: 489.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-19 23:10:09 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 515ms (Views: 488.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:16:16 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (116.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 825ms (Views: 778.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-19 23:17:02 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 448ms (Views: 431.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:17:03 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (74.9ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 582ms (Views: 532.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/3" for 10.0.2.2 at 2017-11-19 23:17:05 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharity Load (2.0ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (0.5ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (28.6ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 523ms (Views: 480.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/charities" for 10.0.2.2 at 2017-11-19 23:17:06 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (75.3ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 549ms (Views: 502.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/3" for 10.0.2.2 at 2017-11-19 23:17:08 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (0.5ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 538ms (Views: 493.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:18:30 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (84.5ms)
+  Rendered layouts/_top_nav.html.erb (1.4ms)
+Completed 200 OK in 579ms (Views: 558.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-19 23:19:30 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 602ms (Views: 576.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:21:09 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (127.7ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 800ms (Views: 756.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-19 23:22:29 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (19.2ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 548ms (Views: 519.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:22:32 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (68.2ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 544ms (Views: 492.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:26:04 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (132.1ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3241ms (Views: 3217.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:26:24 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (76.8ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3335ms (Views: 3313.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:27:21 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (70.0ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 2967ms (Views: 2937.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:30:40 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (83.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3400ms (Views: 3352.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:30:54 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (72.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 620ms (Views: 594.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:32:03 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.9ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (68.2ms)
+  Rendered layouts/_top_nav.html.erb (1.3ms)
+Completed 200 OK in 3004ms (Views: 2978.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:32:22 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (80.9ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 633ms (Views: 607.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:33:07 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (85.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3518ms (Views: 3489.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:36:23 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (82.1ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 588ms (Views: 543.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:43:08 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (83.8ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 541ms (Views: 506.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:44:58 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (81.9ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 3170ms (Views: 3148.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:45:31 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (70.3ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 3294ms (Views: 3268.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:45:44 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (79.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3182ms (Views: 3153.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:46:08 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (61.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3205ms (Views: 3185.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:46:38 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (88.9ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3494ms (Views: 3463.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:46:58 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (77.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3134ms (Views: 3110.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:47:17 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (80.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3310ms (Views: 3291.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:47:52 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (83.3ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3279ms (Views: 3240.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:48:19 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (79.0ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3365ms (Views: 3323.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:49:19 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (82.8ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 3160ms (Views: 3130.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:49:48 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (75.0ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3024ms (Views: 3000.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:50:09 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (75.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3235ms (Views: 3213.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:50:48 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (70.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3055ms (Views: 3032.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:51:18 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (98.4ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3257ms (Views: 3234.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:51:30 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (63.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3129ms (Views: 3113.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:51:47 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (69.7ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3184ms (Views: 3154.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:52:57 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (80.7ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 3008ms (Views: 2976.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:54:24 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (84.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 536ms (Views: 510.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:55:58 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (80.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3193ms (Views: 3165.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:56:42 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (66.0ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3210ms (Views: 3188.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:57:11 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (62.4ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3033ms (Views: 3016.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:57:21 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.8ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 3274ms (Views: 3248.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:57:30 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (75.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3262ms (Views: 3235.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:57:40 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (62.4ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 3373ms (Views: 3352.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:57:51 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (59.6ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3098ms (Views: 3075.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:58:07 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (62.9ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 3439ms (Views: 3421.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:58:17 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (70.9ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 463ms (Views: 443.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:58:23 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.9ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 597ms (Views: 571.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-19 23:59:31 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3049ms (Views: 3019.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:01:59 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (77.0ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 3074ms (Views: 3047.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:04:15 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (89.4ms)
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 3265ms (Views: 3229.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:06:06 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (83.5ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 3148ms (Views: 3115.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:06:29 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (64.5ms)
+  Rendered layouts/_top_nav.html.erb (1.7ms)
+Completed 200 OK in 3025ms (Views: 3000.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:08:33 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (76.1ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3170ms (Views: 3140.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:10:41 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (77.3ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3090ms (Views: 3062.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:12:11 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (81.6ms)
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 3318ms (Views: 3293.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:16:40 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.9ms)
+Completed 500 Internal Server Error in 1499ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "  }": expected selector or at-rule, was "}"):
+    4:     <title>Charity Spree</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= favicon_link_tag       'nature.png' %>
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/charities.scss:100
+app/assets/stylesheets/application.scss:22
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1592969156423470739_69922308253940'
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:19:04 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (85.3ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3237ms (Views: 3215.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:20:45 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (132.9ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 634ms (Views: 611.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:26:21 +0000
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (9266.4ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 10490ms (Views: 10388.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:27:28 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (99.8ms)
+  Rendered layouts/_top_nav.html.erb (2.0ms)
+Completed 200 OK in 4038ms (Views: 3993.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:27:49 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (84.8ms)
+  Rendered layouts/_top_nav.html.erb (7.6ms)
+Completed 200 OK in 4248ms (Views: 4210.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:28:08 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (85.9ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 4057ms (Views: 4023.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:28:37 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.7ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (103.2ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 4319ms (Views: 4257.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:31:39 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (97.4ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 3917ms (Views: 3866.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:31:53 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (82.8ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 3937ms (Views: 3897.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:32:08 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.8ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3721ms (Views: 3697.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:33:34 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.6ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (96.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 4038ms (Views: 3984.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:34:05 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (100.7ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 4297ms (Views: 4258.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:36:14 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.5ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (91.2ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 695ms (Views: 657.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:36:43 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (90.2ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 3844ms (Views: 3807.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:37:31 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (81.4ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 3906ms (Views: 3880.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:37:47 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (76.5ms)
+  Rendered layouts/_top_nav.html.erb (0.8ms)
+Completed 200 OK in 3889ms (Views: 3861.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:38:00 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.3ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3881ms (Views: 3855.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:38:17 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (73.8ms)
+  Rendered layouts/_top_nav.html.erb (1.0ms)
+Completed 200 OK in 3651ms (Views: 3618.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:38:32 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (133.3ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 4067ms (Views: 4035.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:38:46 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (90.7ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 3875ms (Views: 3842.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for 10.0.2.2 at 2017-11-20 00:39:11 +0000
+Processing by AboutController#index as HTML
+  Rendering about/index.html.erb within layouts/application
+  Rendered about/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 589ms (Views: 547.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-20 00:39:16 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (78.6ms)
+  Rendered layouts/_top_nav.html.erb (1.1ms)
+Completed 200 OK in 649ms (Views: 599.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/charities/2" for 10.0.2.2 at 2017-11-20 00:39:20 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (0.5ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (41.6ms)
+  Rendered layouts/_top_nav.html.erb (0.9ms)
+Completed 200 OK in 599ms (Views: 509.5ms | ActiveRecord: 4.0ms)
+
+
