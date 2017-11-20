@@ -25,7 +25,7 @@
   </div>
   <div class="row">
     <div class="col-sm-4">
-      <h2>Achievements:</h2>
+      <h3>Achievements:</h2>
     </div>
   </div>
   <div class="row">
@@ -35,6 +35,9 @@
       <%= u_a.achievement.description %>
       <%= image_tag u_a.achievement.image %>
     </div>
+    <% end %>
+    <% @achievements.each do |a| %>
+    <%= a.title %>
     <% end %>
   </div>
 </section>

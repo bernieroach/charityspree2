@@ -4,7 +4,11 @@
 * {
   border: 1px solid #000;
 }
+
 main section#profile {
+  margin-top: 50px;
+  font-family: 'Open Sans', sans-serif;
+
   img.gravatar {
     height: 150px;
     margin: 0 auto;
@@ -12,7 +16,6 @@ main section#profile {
   }
 
   h1  {
-    font-family: 'Open Sans', sans-serif;
     font-size: 100px;
     letter-spacing: 5px;
     text-align: center;
@@ -20,6 +23,7 @@ main section#profile {
 
   h3 {
     text-align: center;
+    font-weight: bold;
   }
 
   .user-stats-btn {
