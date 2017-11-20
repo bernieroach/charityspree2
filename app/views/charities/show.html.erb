@@ -7,7 +7,7 @@
     <% end %> -->
 
     <!-- Stripe form -->
-    <%= form_tag donates_path do %>
+    <%= form_for [@charity, @donation] do %>
     <div id="error_explanation">
       <% if flash[:error].present? %>
       <p><%= flash[:error] %></p>
