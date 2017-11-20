@@ -15,7 +15,6 @@
 <% end %>
 
 <script>
-  console.log("script donates new")
 var handler = StripeCheckout.configure({
   key: '<%= Rails.configuration.stripe[:publishable_key] %>',
   locale: 'auto',
@@ -23,16 +22,10 @@ var handler = StripeCheckout.configure({
   description: 'One-time donation',
   token: function(token) {
     $('input#stripeToken').val(token.id);
-    console.log("token")
-    console.log("stripe input", $('input#stripeToken').val(token.id));
-    console.log("token.id",token.id)
     $('form').submit();
   }
 });
 
-$( document ).ready(function() {
-    console.log( "ready!" );
-});
 
 $('#donateButton').on('click', function(e) {
   e.preventDefault();
