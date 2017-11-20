@@ -51,8 +51,8 @@ class DonationsController < ApplicationController
       )
 
     end
-
-    redirect_to root_path
+    @user = User.find(current_user.id)
+    redirect_to @user
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_donate_path
