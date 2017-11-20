@@ -9,6 +9,13 @@
       </button>
       <%= link_to image_tag("nature.png", alt: "logo"), '/', class: 'navbar-brand' %>
       <a class="navbar-brand" href="/">Charity Spree</a>
+
+<% if current_user %>
+ <a class="navbar-brand" href= '/users/<%= current_user.id %>' > Welcome <%= current_user.first_name %> </a>  <a class="navbar-brand" href="/logout">logout</a>
+<% else %>
+   <a class="navbar-brand" href="/login">login</a> <a class="navbar-brand" href="/signup">signup</a>
+<% end %>
+
     </div>
   </div>
 </nav>

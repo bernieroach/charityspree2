@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
- before_filter :authorize
+
+  before_action :authorize, only: [:show , :index]
 
   def new
   end
@@ -15,6 +16,22 @@ class UsersController < ApplicationController
       redirect_to '/'
     else
       redirect_to '/signup'
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+      # Handle a successful update.
+    else
+      render 'edit'
     end
   end
 
