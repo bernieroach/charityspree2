@@ -11,8 +11,11 @@ puts "Seeding Data ..."
 
 ## CHARITIES
 
+
 puts "Re-creating Charities ..."
+
 Donation.destroy_all
+UserAchievement.destroy_all
 Charity.destroy_all
 
 charity1 = Charity.create!({
@@ -56,28 +59,48 @@ user2 = User.create!({
   password_confirmation: '1234567890'
 })
 
+user3 = User.create!({
+  first_name: 'Riley',
+  last_name: 'Gowan',
+  email: 't.rileygowan@gmail.com',
+  password: '1234567890',
+  password_confirmation: '1234567890'
+})
+
 ## ACHIEVEMENTS
 puts "Re-creating Achievements ..."
 Achievement.destroy_all
 
 achievement1 = Achievement.create!({
   title: 'Join Us, Join Us',
-  description: 'Register on Charity Spree',
+  description: 'Donate your first dollar to a charity of your choice',
   progress: 1,
   image: '001-medieval-2.png'
 })
+
+
 achievement2 = Achievement.create!({
   title: 'Loose Change',
-  description: 'Donate your first dollar to a charity of your choice',
-  progress: 1,
+  description: 'Donate your tenth dollar to a charity of your choice',
+  progress: 10,
   image: '002-arrow.png'
 })
 achievement3 = Achievement.create!({
   title: 'Big Spender',
-  description: 'Donate five dollars to a charity of your choice',
-  progress: 5,
+  description: 'Donate one hundred dollars to a charity of your choice',
+  progress: 100,
   image: '003-war.png'
 })
+
+user_achievement1 = user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement1.id)
+user_achievement2 = user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement1.id)
+
+user_achievement1 = user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement2.id)
+user_achievement2 = user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement2.id)
+
+user_achievement1 = user1.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement3.id)
+user_achievement2 = user2.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement3.id)
+
 
 ## DONATIONS
 puts "Re-creating Donations ..."
@@ -85,8 +108,9 @@ puts "Re-creating Donations ..."
 user1.donations.create!(quantity: 1, charity_id: charity1.id)
 user1.donations.create!(quantity: 5, charity_id: charity2.id)
 
-
-
-
+## USER ACHIEVEMENTS
+puts "Re-creating User Achievements ..."
+user3.user_achievements.create!(achievement_id: achievement1.id, achieved: true, progress: 1)
+user3.user_achievements.create!(achievement_id: achievement2.id, achieved: true, progress: 1)
 
 puts "DONE!"
