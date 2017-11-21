@@ -32,17 +32,19 @@
   </div>
 
   <% @user.user_achievements.each do | u_a| %>
-  <div class="row">
-    <div class="achievement-title col-xs-3">
-      <%= u_a.achievement.title %>
+    <% if u_a.achieved == true %>
+    <div class="row">
+      <div class="achievement-title col-xs-3">
+        <%= u_a.achievement.title %>
+      </div>
+      <div class="achievement-icon col-xs-2">
+        <%= image_tag u_a.achievement.image %>
+      </div>
+      <div class="achievement-description col-xs-7">
+          <%= u_a.achievement.description %>
+      </div>
     </div>
-    <div class="achievement-icon col-xs-2">
-      <%= image_tag u_a.achievement.image %>
-    </div>
-    <div class="achievement-description col-xs-7">
-        <%= u_a.achievement.description %>
-    </div>
-  </div>
+    <% end %>
   <% end %>
 
   <div class="row">
@@ -51,17 +53,19 @@
     </div>
   </div>
 
-  <% @achievements.each do | achievement| %>
-  <div class="row">
-    <div class="achievement-title col-xs-3">
-      <%= achievement.title %>
+  <% @user.user_achievements.each do | u_a| %>
+    <% if u_a.achieved == false %>
+    <div class="row">
+      <div class="achievement-title col-xs-3">
+        <%= u_a.achievement.title %>
+      </div>
+      <div class="achievement-icon col-xs-2">
+        <%= image_tag u_a.achievement.image %>
+      </div>
+      <div class="achievement-description col-xs-7">
+          <%= u_a.achievement.description %>
+      </div>
     </div>
-    <div class="achievement-icon col-xs-2">
-      <%= image_tag achievement.image %>
-    </div>
-    <div class="achievement-description col-xs-7">
-        <%= achievement.description %>
-    </div>
-  </div>
+    <% end %>
   <% end %>
 </section>
