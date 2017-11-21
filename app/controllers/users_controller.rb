@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
       Achievement.all.find_each do |achievement|
         if achievement.id == 1
-          user.user_achievements.create!(progress: 1, achieved: true, achievement_id: achievement.id)
+          user.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement.id)
         else
           user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
         end
