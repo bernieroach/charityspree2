@@ -1,3 +1,9 @@
+<nav class="event-banner navbar navbar-default">
+  <div class="container-fluid">
+    <p>Tsunami Relief Fund: $42,978</p>
+  </div>
+</nav>
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -18,7 +24,7 @@
         <li><a href= '/users/<%= current_user.id %>'>Welcome <%= current_user.first_name %></a></li>
         <li><a href="/logout">logout</a></li>
       <% else %>
-        <li><a href="/signup">Register</a></li>
+        <li><a id="register" href="/signup">Register</a></li>
         <li><a href="/login">Login</a></li>
       <% end %>
         <li><a href="/about">About</a></li>
