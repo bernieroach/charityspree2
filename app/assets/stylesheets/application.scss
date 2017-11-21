@@ -40,6 +40,14 @@ body {
   background-color: #FFFFEF;
   border: none;
 
+  #login, #logout, #about {
+    color: #000;
+
+    &:hover {
+      color: #a9a9a9;
+    }
+  }
+
   #register {
     background-color: #00CAB8;
     color: #fff;
