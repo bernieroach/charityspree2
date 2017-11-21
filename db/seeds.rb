@@ -71,13 +71,19 @@ user3 = User.create!({
 puts "Re-creating Achievements ..."
 Achievement.destroy_all
 
-achievement1 = Achievement.create!({
+achievement0 = Achievement.create!({
   title: 'Join Us, Join Us',
+  description: 'Register on Charity Spree',
+  progress: 0,
+  image: '001-medieval-2.png'
+})
+
+achievement1 = Achievement.create!({
+  title: 'Bang for Your Buck',
   description: 'Donate your first dollar to a charity of your choice',
   progress: 1,
   image: '001-medieval-2.png'
 })
-
 
 achievement2 = Achievement.create!({
   title: 'Loose Change',

@@ -1,11 +1,11 @@
 class DonationsController < ApplicationController
   before_action :authorize
+
   def new
   end
 
   def create
     @amount = params[:amount]
-
     @amount = @amount.gsub('$', '').gsub(',', '')
 
     begin
@@ -17,7 +17,6 @@ class DonationsController < ApplicationController
     end
 
     @amount = (@amount * 100).to_i # Must be an integer!
-
 
      Stripe::Charge.create(
         :amount      => @amount,
@@ -31,6 +30,7 @@ class DonationsController < ApplicationController
       charity_id: params[:charity_id],
       quantity: params[:amount]
     )
+
     @donation.save
 
     @charity = Charity.find(params[:charity_id]);
