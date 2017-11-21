@@ -25,6 +25,7 @@
 
       <%= f.submit "Save changes", class: "btn btn-primary" %>
     <% end %>
+    <%= button_to "Cancel", {action: "show" , id: @user.id }, :method => :get %>
 
     <div class="gravatar_edit">
       <%= gravatar_for @user %>
