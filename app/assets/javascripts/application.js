@@ -18,10 +18,20 @@
 //= require_tree .
 
 
-$(document).on('click', 'a[href^="#"]', function (event) {
+$( document ).ready(function() {
+  var counter = 0;
+
+  var timer = setInterval(function () {
+    $('.total-donated').html(`$${counter += 13}`);
+  }, 1000);
+
+
+  $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
+  });
+
 });
