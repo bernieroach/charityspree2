@@ -16,7 +16,11 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
 
       Achievement.all.find_each do |achievement|
-        user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
+        if achievement.id == 1
+          user.user_achievements.create!(progress: 1, achieved: true, achievement_id: achievement.id)
+        else
+          user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
+        end
       end
 
       redirect_to '/'
