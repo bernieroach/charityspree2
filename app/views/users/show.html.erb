@@ -1,3 +1,14 @@
+<!-- Load Facebook SDK for JavaScript  -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- *END* Load Facebook SDK for JavaScript  -->
 <section id="profile" class="container">
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
@@ -49,7 +60,8 @@
       </div>
       <!-- Facebook Like and Share buttons -->
       <div class="fb-like" data-href="https://www.charityspree.com/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-      <!-- *END* Facebook Like and Share buttons -->
+      <!-- Twitter Share button -->
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
     </div>
     <% end %>
   <% end %>
@@ -76,3 +88,32 @@
     <% end %>
   <% end %>
 </section>
+
+<!-- Load Facebook SDK for JavaScript  -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+<!-- *END* Load Facebook SDK for JavaScript  -->
+
+<!-- Load Twitter SDK for JavaScript  -->
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<!-- *END* Load Twitter SDK for JavaScript  -->
