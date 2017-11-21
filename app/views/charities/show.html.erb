@@ -31,7 +31,9 @@
       locale: 'auto',
       name: 'Charity Spree',
       description: 'One-time donation',
-      email: '<%= current_user.email %>',
+      <% if current_user %>
+        email: '<%= current_user.email %>',
+      <% end %>
       token: function(token) {
         $('input#stripeToken').val(token.id);
         $('form').submit();
