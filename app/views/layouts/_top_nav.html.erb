@@ -1,6 +1,7 @@
 <nav class="event-banner navbar navbar-default">
   <div class="container-fluid">
-    <p>Tsunami Relief Fund: $42,978</p>
+    <p class="current-event">help the victims of hurricane philippe</p>
+    <p class="total-donated"></p>
   </div>
 </nav>
 
@@ -21,13 +22,13 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
-        <li><a href= '/users/<%= current_user.id %>'>Welcome <%= current_user.first_name %></a></li>
+        <li><a id="current-user" href= '/users/<%= current_user.id %>'>welcome, <%= current_user.first_name.downcase %>!</a></li>
         <li><a id="logout" href="/logout">logout</a></li>
       <% else %>
-        <li><a id="register" href="/signup">register</a></li>
-        <li><a id="login" href="/login">Login</a></li>
+        <li><a id="register" href="/signup">sign up</a></li>
+        <li><a id="login" href="/login">login</a></li>
       <% end %>
-        <li><a id="about" href="/about">About</a></li>
+        <li><a id="about" href="/about">about</a></li>
       </ul>
     </div>
   </div>
