@@ -28,7 +28,7 @@ main section.charities-index {
     margin: 0;
     padding-top: 225px;
     padding-bottom: 20px;
-    background-color: #FFFFEF;
+    background-color: #F3F7F6;
 
     img {
       height: 35px;
@@ -42,18 +42,18 @@ main section.charities-index {
   }
 
   .btn-primary {
-    background-color: #FFFFEF;
+    background-color: transparent;
 
     &:hover {
-      background-color: #FFFFEF;
+      background-color: transparent;
     }
   }
 
   .btn-default {
-    background-color: #bcf2ec;
+    background-color: transparent;
 
     &:hover {
-      background-color: #bcf2ec;
+      background-color: transparent;
     }
   }
 
