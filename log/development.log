@@ -28837,3 +28837,112 @@ Processing by CharitiesController#show as HTML
 Completed 200 OK in 597ms (Views: 539.8ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-21 14:54:18 +0000
+Started GET "/" for 10.0.2.2 at 2017-11-21 14:54:18 +0000
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (18.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (13.7ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  [1m[36mCharity Load (3.9ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (3826.5ms)
+  Rendered charities/index.html.erb within layouts/application (3839.2ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 6600ms (Views: 6373.3ms | ActiveRecord: 10.5ms)
+
+
+  Rendered layouts/_top_nav.html.erb (0.7ms)
+Completed 200 OK in 6577ms (Views: 6373.8ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/charities/1" for 10.0.2.2 at 2017-11-21 14:55:11 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharity Load (1.1ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (58.9ms)
+Completed 500 Internal Server Error in 254ms (ActiveRecord: 11.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    31:       locale: 'auto',
+    32:       name: 'Charity Spree',
+    33:       description: 'One-time donation',
+    34:       email: '<%= current_user.email %>',
+    35:       token: function(token) {
+    36:         $('input#stripeToken').val(token.id);
+    37:         $('form').submit();
+  
+app/views/charities/show.html.erb:34:in `_app_views_charities_show_html_erb___1772671753675326417_69810701157520'
+Started GET "/charities/1" for 10.0.2.2 at 2017-11-21 14:55:26 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  Rendered charities/show.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `email' for nil:NilClass):
+    31:       locale: 'auto',
+    32:       name: 'Charity Spree',
+    33:       description: 'One-time donation',
+    34:       email: '<%= current_user.email %>',
+    35:       token: function(token) {
+    36:         $('input#stripeToken').val(token.id);
+    37:         $('form').submit();
+  
+app/views/charities/show.html.erb:34:in `_app_views_charities_show_html_erb___1772671753675326417_69810823016480'
+Started GET "/charities/1" for 10.0.2.2 at 2017-11-21 14:56:16 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCharity Load (0.2ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mAchievement Load (4.7ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (50.9ms)
+  Rendered layouts/_top_nav.html.erb (1.9ms)
+Completed 200 OK in 719ms (Views: 683.9ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/login" for 10.0.2.2 at 2017-11-21 14:56:28 +0000
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_top_nav.html.erb (1.8ms)
+Completed 200 OK in 780ms (Views: 750.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 10.0.2.2 at 2017-11-21 14:56:36 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WolLdKo8GYaq8sBJeQiGrCGnqbxSy6Hy1iwiIO2ZANDCC5zOxBx+Z2xncnBir/XQBh02dsW8RbRFokmv5RNSPw==", "email"=>"t.rileygowan@gmail.com", "password"=>"[FILTERED]", "commit"=>"Submit"}
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "t.rileygowan@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 159ms (ActiveRecord: 9.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2017-11-21 14:56:36 +0000
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (0.4ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (88.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_top_nav.html.erb (5.3ms)
+Completed 200 OK in 688ms (Views: 659.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/charities/2" for 10.0.2.2 at 2017-11-21 14:56:40 +0000
+Processing by CharitiesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCharity Load (0.8ms)[0m  [1m[34mSELECT  "charities".* FROM "charities" WHERE "charities"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering charities/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAchievement Load (0.6ms)[0m  [1m[34mSELECT "achievements".* FROM "achievements"[0m
+  Rendered charities/show.html.erb within layouts/application (39.1ms)
+  Rendered layouts/_top_nav.html.erb (1.2ms)
+Completed 200 OK in 737ms (Views: 692.2ms | ActiveRecord: 3.0ms)
+
+
