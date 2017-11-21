@@ -26,12 +26,21 @@ main section.charities-index {
   section#description {
     text-align: center;
     margin: 0;
-    padding-top: 225px;
-    padding-bottom: 20px;
+    padding-top: 100px;
     background-color: #F3F7F6;
 
+    .site-flow {
+      background-color: #fff;
+      margin: 0 150px;
+      margin-bottom: 100px;
+      padding: 75px 25px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 6px -6px #777;
+    }
+
     img {
-      height: 35px;
+      height: 40px;
     }
 
     h3 {
@@ -57,10 +66,6 @@ main section.charities-index {
     }
   }
 
-  .social-media {
-    margin-bottom: 225px;
-  }
-
   button {
     margin: 32px auto;
     display: block;
@@ -71,13 +76,13 @@ main section.charities-index {
       padding-bottom: 30px;
     }
 
-    #first {
-      background-color: #E76D83;
+    .first {
+      color: #00CAB8;
     }
 
-    #second {
+    .second {
       margin: 0 auto;
-      background-color: #E76D83;
+      color: #00CAB8;
     }
   }
 
