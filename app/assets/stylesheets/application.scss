@@ -27,7 +27,8 @@
 
 // Global
 body {
-  background-image: url(homepage-background.jpg);
+  background-color: #fff;
+  // background-image: url(homepage-background.jpg);
   background-size: 2000px;
   background-repeat: no-repeat;
   padding-top: 70px;
@@ -42,6 +43,10 @@ body {
   background-color: #F3F7F6;
   border: none;
 
+  .nav-bar header {
+    padding-right: 50px;
+  }
+
   #login, #logout, #about {
     font-size: 15px;
     font-family: 'Open Sans';
@@ -54,7 +59,7 @@ body {
     }
   }
 
-  #register, #current-user {
+  #register, #current-user, #donate {
     font-variant: small-caps;
     background-color: #00CAB8;
     color: #fff;
