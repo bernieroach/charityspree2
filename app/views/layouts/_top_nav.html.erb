@@ -18,7 +18,6 @@
       <a class="navbar-brand" href="/">Charity Spree</a>
     </div>
 
-
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
@@ -29,7 +28,18 @@
         <li><a id="login" href="/login">login</a></li>
       <% end %>
         <li><a id="about" href="/about">about</a></li>
+        <!-- SEARCH MAGNIFIER -->
+        <li>
+          <a href=".search_box" class="btn" id="search">&#9740;</a>
+        </li>
       </ul>
     </div>
+  </div>
+  <div>
+  <!-- SEARCH BAR FOR USERS -->
+  <%= form_tag(users_path, method: :get, class: "search_box")  do %>
+  <%= text_field_tag :term, params[:term], placeholder: "Find Charity Spree Members ..." %>
+  <%= submit_tag 'Search', class: "search_icon" %>
+  <% end %>
   </div>
 </nav>

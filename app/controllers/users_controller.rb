@@ -2,6 +2,18 @@ class UsersController < ApplicationController
 
   before_action :authorize, only: [:show , :index]
 
+  def index
+    puts "searching..."
+    @users = if params[:term]
+      puts "searching for user ..."
+      puts @users.inspect
+      User.where('first_name ILIKE ? OR last_name ILIKE ?', "%#{params[:term]}%", "%#{params[:term]}%")
+    else
+      puts "No search term found"
+      User.all
+    end
+  end
+
   def new
   end
 
