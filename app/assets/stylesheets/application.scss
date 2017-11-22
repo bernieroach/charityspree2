@@ -30,7 +30,6 @@ body {
   background-image: url(homepage-background.jpg);
   background-size: 2000px;
   background-repeat: no-repeat;
-  // background-color: #fff;
   padding-top: 70px;
 }
 
@@ -44,14 +43,18 @@ body {
   border: none;
 
   #login, #logout, #about {
+    font-size: 15px;
+    font-family: 'Open Sans';
+    font-variant: small-caps;
     color: #000;
+    border: 0.1px solid #eaedec;
 
     &:hover {
       color: #a9a9a9;
     }
   }
 
-  #register {
+  #register, #current-user {
     font-variant: small-caps;
     background-color: #00CAB8;
     color: #fff;
@@ -73,12 +76,14 @@ body {
     color: #000;
     font-family: Pacifico;
     padding-bottom: 30px;
+    padding-left: 5px;;
 
     &:hover {
       color: #000;
     }
 
     img {
+      padding-left: 15px;
       height: 20px;
     }
   }
@@ -88,13 +93,19 @@ body {
   position: relative;
   bottom: 20px;
   background-color: #F3F7F6;
+  font-family: 'Open Sans';
+  font-weight: bold;
 
-  p {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: 0;
+  .current-event {
+    font-variant: small-caps;
+    color: #4c4c4c;
+    font-size: 25px;
+    margin: 0;
     padding-top: 0;
+    text-align: center;
+  }
+  .total-donated {
+    font-size: 20px;
     text-align: center;
   }
 }
