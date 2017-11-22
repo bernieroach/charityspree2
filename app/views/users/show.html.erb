@@ -1,7 +1,7 @@
 <section id="profile" class="container-fluid">
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
-      Update Profile
+      <%= image_tag 'cogwheel.png' %>
     </button>
   </a>
   <div class="row">
@@ -43,16 +43,16 @@
       <div class="achievement-title col-xs-3">
         <%= u_a.achievement.title %>
       </div>
-      <div class="achievement-icon col-xs-2">
+      <div class="achievement-icon col-xs-1">
         <%= image_tag u_a.achievement.image %>
       </div>
-      <div class="achievement-description col-xs-7">
+      <div class="achievement-description col-xs-5">
           <%= u_a.achievement.description %>
       </div>
       <!-- Facebook Like and Share buttons -->
-      <div class="fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+      <div class="col-xs-2 fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
       <!-- Twitter Share button -->
-      <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+      <a class="col-xs-1 twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
     </div>
     <% end %>
   <% end %>
