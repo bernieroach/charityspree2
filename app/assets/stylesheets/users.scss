@@ -1,9 +1,7 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-* {
-  border: 1px solid #000;
-}
+
 
 main section#profile {
   margin-top: -45px;
@@ -12,7 +10,7 @@ main section#profile {
   background: #74ebd5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 100% 20%;
+  background-size: 100% 27%;
   background-repeat: no-repeat;
 
   .update {
@@ -26,28 +24,46 @@ main section#profile {
     }
   }
 
-  img.gravatar {
-    height: 200px;
-    width: 200px;
-    margin: 0 auto;
-    display: block;
-    border: 5px solid #000;
-    border-radius: 100%;
+  .profile-header{
+    img.avatar {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+      display: block;
+      border: 5px solid #000;
+      border-radius: 100%;
+    }
+
+    h1  {
+      font-family: 'Open Sans', sans-serif;
+      font-variant: small-caps;
+      margin-top: 10px;
+      font-size: 80px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+      margin: 0;
+    }
   }
 
-  h1  {
-    font-family: 'Open Sans', sans-serif;
-    font-variant: small-caps;
-    margin-top: 10px;
-    font-size: 80px;
-    font-weight: bold;
-    text-align: center;
+
+
+  //Achievement tabs
+  #tabs .nav-pills > li > a {
+    border-radius: 4px 4px 0 0 ;
   }
 
-  h3 {
-    text-align: center;
-    font-weight: bold;
+  #tabs .tab-content {
+    color : white;
+    background-color: #428bca;
+    padding : 5px 15px;
   }
+
+
+
 
   .options {
     border-bottom: 1px solid #000;
