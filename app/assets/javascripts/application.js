@@ -419,7 +419,4 @@ console.log("window pizza")
 
 }($, this, this.document));
 
-$(window).load(function() {
-console.log("window load application.js")
-})
 

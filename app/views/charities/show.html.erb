@@ -84,40 +84,62 @@ console.log("load script donate button")
 </section>
 
 
+<section class="charity-statistics" id="charity-statistics" >
 
-<section class="charity-statistics"
 <div class="container">
+
   <div class="row">
         <div class="col-md-12">
             <h2>Charity <%= @charity.name %> Stats</h2>
         </div>
+        <div class="row">
+          <div class="col-md-12">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td> <h3> Total Donation amount </h3> </td>
+                <td> <h3> <%= @charity.amount %> </h3></td>
+              </tr>
+              <tr>
+                <td> <h3> Number of Donations </h3> </td>
+                <td> <h3> <%= @charity.donations.count %> </h3></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
   </div>
-    <div class="row">
+    <div class="row" >
+
         <div class="col-md-3">
-          <ul data-pie-id="svg">
-            <li data-value="60">Water Buffalo (60)</li>
-            <li data-value="20">Bison (20)</li>
-            <li data-value="12">Sheep (12)</li>
-            <li data-value="32">Goat (32)</li>
-            <li data-value="50">Shetland Pony (50)</li>
+          <h4>
+            Donations by donation amount
+          </h4>
+          <ul data-pie-id="donations-chart">
+            <li data-value="<%= @donation_number_stats[0_4] %>">0 - 4$ Donation (<%= @donation_number_stats[0_4] %>)</li>
+            <li data-value="<%= @donation_number_stats[5_9] %>">5 - 9$ Donation (<%= @donation_number_stats[5_9] %>)</li>
+            <li data-value="<%= @donation_number_stats[10_49] %>">10 - 49$ Donation (<%= @donation_number_stats[10_49] %>)</li>
+            <li data-value="<%= @donation_number_stats[50_99] %>">50 - 99$ Donation (<%= @donation_number_stats[50_99] %>)</li>
+            <li data-value="<%= @donation_number_stats[100] %>">100$ + Donation (<%= @donation_number_stats[100] %>)</li>
           </ul>
         </div>
         <div class="col-md-3">
-          <div id="svg"></div>
+          <div id="donations-chart"></div>
         </div>
         <div class="col-md-3">
-          <ul data-pie-id="my-cool-chart" data-options='{"donut": "true"}'>
-              <li data-value="36">Pepperoni</li>
-              <li data-value="14">Sausage</li>
-              <li data-value="8">Cheese</li>
-              <li data-value="11">Mushrooms</li>
-              <li data-value="7">Chicken</li>
-              <li data-value="24">Other</li>
+           <h4>
+            % Total by donation amount
+          </h4>
+          <ul data-pie-id="amounts-chart" data-options='{"donut": "true"}'>
+ <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[5_9] %>">5 - 9$ Donation (<%= @donation_quantity_stats[5_9] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[10_49] %>">10 - 49$ Donation (<%= @donation_quantity_stats[10_49] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[50_99] %>">50 - 99$ Donation (<%= @donation_quantity_stats[50_99] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[100] %>">100$ + Donation (<%= @donation_quantity_stats[100] %>)</li>
             </ul>
 
         </div>
         <div class="col-md-3">
-            <div id="my-cool-chart"></div>
+            <div id="amounts-chart"></div>
         </div>
     </div>
 </div>
