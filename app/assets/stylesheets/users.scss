@@ -1,12 +1,17 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  border: 1px solid #000;
+}
 
 main section#profile {
   margin-top: -45px;
   padding: 40px 40px;
   box-shadow: 0 10px 6px -6px #777;
   background: linear-gradient(to right, #efefbb, #d4d3dd);
+  background-size: 100% 20%;
+  background-repeat: no-repeat;
 
   .update {
     position: relative;
@@ -15,9 +20,10 @@ main section#profile {
 
   img.gravatar {
     height: 200px;
+    width: 200px;
     margin: 0 auto;
     display: block;
-    border: 1px solid #000;
+    border: 5px solid #000;
     border-radius: 100%;
   }
 
