@@ -1,84 +1,85 @@
 <section id="profile" class="container-fluid">
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
-      Update Profile
+      <%= image_tag 'cogwheel.png' %>
     </button>
   </a>
-  <div class="row">
-    <div class="col-sm-12">
-      <%= gravatar_for @user %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">
-      <h1><%= @user.first_name.downcase %> <%= @user.last_name.downcase %></h1>
-      <h3>Featured Achievement: <%= @user.user_achievements[0].achievement.title %> <%= image_tag @user.user_achievements[0].achievement.image %></h3>
-    </div>
-  </div>
-
-  <div class="options row">
-    <div class="user-stats-btn col-xs-6">
-      <button type="button" class="btn btn-primary">Statistics</button>
-    </div>
-    <div class="pick-charity-btn col-xs-2">
-      <button type="button" class="btn btn-primary">
-        <a href="/#charities-list">
-          Pick A Charity
-        </a>
-      </button>
-    </div>
-  </div>
-  <div class="achieved row">
-    <div class="col-xs-6">
-      <h3>Achievements:</h3>
-    </div>
-    <div class="col-xs-6">
-      <h3>Description:</h3>
-    </div>
-  </div>
-
-  <% @user.user_achievements.each do | u_a| %>
-    <% if u_a.achieved == true %>
+  <div class="profile-header">
     <div class="row">
-      <div class="achievement-title col-xs-3">
-        <%= u_a.achievement.title %>
+      <div class="col-sm-12">
+        <%= image_tag('IMG_7128.JPG', :class => 'avatar') %>
       </div>
-      <div class="achievement-icon col-xs-2">
-        <%= image_tag u_a.achievement.image %>
-      </div>
-      <div class="achievement-description col-xs-7">
-          <%= u_a.achievement.description %>
-      </div>
-      <!-- Facebook Like and Share buttons -->
-      <div class="fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-      <!-- Twitter Share button -->
-      <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
     </div>
-    <% end %>
-  <% end %>
-
-  <div class="row">
-    <div class="upcoming col-xs-8">
-      <h3>Your Upcoming Achievements:</h3>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><%= @user.first_name.downcase %> <%= @user.last_name.downcase %></h1>
+        <h3><em>Featured Achievement: <%= @user.user_achievements[0].achievement.title %> <%= image_tag @user.user_achievements[0].achievement.image %></em></h3>
+      </div>
     </div>
   </div>
 
-  <% @user.user_achievements.each do | u_a| %>
-    <% if u_a.achieved == false %>
-    <div class="row">
-      <div class="achievement-title col-xs-3">
-        <%= u_a.achievement.title %>
+
+
+
+
+  <div id="tabs" class="container">
+    <ul  class="nav nav-pills">
+      <li class="active">
+        <a href=".1a" data-toggle="tab">Achievements</a>
+      </li>
+      <li>
+        <a href=".2a" data-toggle="tab">Upcoming Achievements</a>
+    </li>
+  </ul>
+    <div class="tab-content clearfix">
+      <div class="tab-pane active 1a">
+        <% @user.user_achievements.each do | u_a| %>
+          <% if u_a.achieved == true %>
+          <div class="row">
+            <div class="achievement-icon col-xs-1">
+              <%= image_tag u_a.achievement.image %>
+            </div>
+            <div class="achievement-title col-xs-2">
+              <%= u_a.achievement.title %>
+            </div>
+            <div class="achievement-description col-xs-3">
+                <%= u_a.achievement.description %>
+            </div>
+            <!-- Facebook Like and Share buttons -->
+            <div class="col-xs-4 fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+            <!-- Twitter Share button -->
+            <a class="col-xs-2 twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+          </div>
+          <% end %>
+        <% end %>
       </div>
-      <div class="achievement-icon col-xs-2">
-        <%= image_tag u_a.achievement.image %>
-      </div>
-      <div class="achievement-description col-xs-7">
-          <%= u_a.achievement.description %>
+      <div class="tab-pane 2a">
+        <% @user.user_achievements.each do | u_a| %>
+          <% if u_a.achieved == false %>
+          <div class="row">
+            <div class="achievement-icon col-xs-2">
+              <%= image_tag u_a.achievement.image %>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%</div>
+            </div>
+            <div class="achievement-title col-xs-3">
+              <%= u_a.achievement.title %>
+            </div>
+            <div class="achievement-description col-xs-7">
+                <%= u_a.achievement.description %>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
-    <% end %>
-  <% end %>
-</section>
+  </div>
+
+
+
+
+
 
 <!-- Load Facebook SDK for JavaScript  -->
 <div id="fb-root"></div>

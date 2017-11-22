@@ -24,14 +24,8 @@
     <button id='donateButton' class="choose btn btn-primary">Donate</button>
     <% end %>
 
-
-<h1>Pure CSS Ticker (No-JS)</h1>
-<h2>A smooth horizontal news like ticker using CSS transform on infinite loop</h2>
-
-
-
     <script>
-
+console.log("load script donate button")
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',
       locale: 'auto',
@@ -89,6 +83,68 @@
   </section>
 </section>
 
+
+<section class="charity-statistics" id="charity-statistics" >
+
+<div class="container">
+
+  <div class="row">
+        <div class="col-md-12">
+            <h2>Charity <%= @charity.name %> Stats</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td> <h3> Total Donation amount </h3> </td>
+                <td> <h3> <%= @charity.amount %> </h3></td>
+              </tr>
+              <tr>
+                <td> <h3> Number of Donations </h3> </td>
+                <td> <h3> <%= @charity.donations.count %> </h3></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  </div>
+    <div class="row" >
+
+        <div class="col-md-3">
+          <h4>
+            Donations by donation amount
+          </h4>
+          <ul data-pie-id="donations-chart">
+            <li data-value="<%= @donation_number_stats[0_4] %>">0 - 4$ Donation (<%= @donation_number_stats[0_4] %>)</li>
+            <li data-value="<%= @donation_number_stats[5_9] %>">5 - 9$ Donation (<%= @donation_number_stats[5_9] %>)</li>
+            <li data-value="<%= @donation_number_stats[10_49] %>">10 - 49$ Donation (<%= @donation_number_stats[10_49] %>)</li>
+            <li data-value="<%= @donation_number_stats[50_99] %>">50 - 99$ Donation (<%= @donation_number_stats[50_99] %>)</li>
+            <li data-value="<%= @donation_number_stats[100] %>">100$ + Donation (<%= @donation_number_stats[100] %>)</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div id="donations-chart"></div>
+        </div>
+        <div class="col-md-3">
+           <h4>
+            % Total by donation amount
+          </h4>
+          <ul data-pie-id="amounts-chart" data-options='{"donut": "true"}'>
+ <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[5_9] %>">5 - 9$ Donation (<%= @donation_quantity_stats[5_9] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[10_49] %>">10 - 49$ Donation (<%= @donation_quantity_stats[10_49] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[50_99] %>">50 - 99$ Donation (<%= @donation_quantity_stats[50_99] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[100] %>">100$ + Donation (<%= @donation_quantity_stats[100] %>)</li>
+            </ul>
+
+        </div>
+        <div class="col-md-3">
+            <div id="amounts-chart"></div>
+        </div>
+    </div>
+</div>
+</section>
+
 <div class="ticker-wrap">
 <div class="ticker">
 <% @news_articles[0..4].each do |article| %>
@@ -100,3 +156,11 @@
 
 </div>
 </div>
+
+<script>
+$(document).ready(function() {
+console.log("charity ready page")
+Pizza.init();
+})
+</script>
+
