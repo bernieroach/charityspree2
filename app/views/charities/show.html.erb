@@ -24,14 +24,8 @@
     <button id='donateButton' class="choose btn btn-primary">Donate</button>
     <% end %>
 
-
-<h1>Pure CSS Ticker (No-JS)</h1>
-<h2>A smooth horizontal news like ticker using CSS transform on infinite loop</h2>
-
-
-
     <script>
-
+console.log("load script donate button")
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',
       locale: 'auto',
@@ -89,6 +83,46 @@
   </section>
 </section>
 
+
+
+<section class="charity-statistics"
+<div class="container">
+  <div class="row">
+        <div class="col-md-12">
+            <h2>Charity <%= @charity.name %> Stats</h2>
+        </div>
+  </div>
+    <div class="row">
+        <div class="col-md-3">
+          <ul data-pie-id="svg">
+            <li data-value="60">Water Buffalo (60)</li>
+            <li data-value="20">Bison (20)</li>
+            <li data-value="12">Sheep (12)</li>
+            <li data-value="32">Goat (32)</li>
+            <li data-value="50">Shetland Pony (50)</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <div id="svg"></div>
+        </div>
+        <div class="col-md-3">
+          <ul data-pie-id="my-cool-chart" data-options='{"donut": "true"}'>
+              <li data-value="36">Pepperoni</li>
+              <li data-value="14">Sausage</li>
+              <li data-value="8">Cheese</li>
+              <li data-value="11">Mushrooms</li>
+              <li data-value="7">Chicken</li>
+              <li data-value="24">Other</li>
+            </ul>
+
+        </div>
+        <div class="col-md-3">
+            <div id="my-cool-chart"></div>
+        </div>
+    </div>
+</div>
+</section>
+
 <div class="ticker-wrap">
 <div class="ticker">
 <% @news_articles[0..4].each do |article| %>
@@ -100,3 +134,11 @@
 
 </div>
 </div>
+
+<script>
+$(document).ready(function() {
+console.log("charity ready page")
+Pizza.init();
+})
+</script>
+
