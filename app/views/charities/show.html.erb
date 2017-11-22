@@ -24,6 +24,12 @@
     <button id='donateButton' class="choose btn btn-primary">Donate</button>
     <% end %>
 
+
+<h1>Pure CSS Ticker (No-JS)</h1>
+<h2>A smooth horizontal news like ticker using CSS transform on infinite loop</h2>
+
+
+
     <script>
 
     var handler = StripeCheckout.configure({
@@ -82,3 +88,15 @@
     <% end %>
   </section>
 </section>
+
+<div class="ticker-wrap">
+<div class="ticker">
+<% @news_articles[0..4].each do |article| %>
+     <div class="ticker__item">
+   <%= link_to(image_tag(article['urlToImage'], height: 20, width: 20) , article['url']) %>
+    <%= link_to(article['title'], article['url'], target: :blank) %>
+      </div>
+<% end %>
+
+</div>
+</div>
