@@ -43,6 +43,10 @@ body {
   background-color: #F3F7F6;
   border: none;
 
+  .nav-bar header {
+    padding-right: 50px;
+  }
+
   #login, #logout, #about {
     font-size: 15px;
     font-family: 'Open Sans';

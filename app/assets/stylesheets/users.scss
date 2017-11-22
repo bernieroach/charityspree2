@@ -4,14 +4,18 @@
 
 
 main section#profile {
+  height: 200px;
   margin-top: -45px;
-  padding: 40px 40px;
-  box-shadow: 0 10px 6px -6px #777;
+  padding-top: 40px;
   background: #74ebd5;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 100% 27%;
+  background-size: 100% 180px;
   background-repeat: no-repeat;
+
+  .container-fluid {
+
+  }
 
   .update {
     position: relative;
@@ -50,16 +54,21 @@ main section#profile {
   }
 
 
+  #tabs {
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover {
+      background-color: #3BF1D7;
+    }
 
-  //Achievement tabs
-  #tabs .nav-pills > li > a {
-    border-radius: 4px 4px 0 0 ;
-  }
+    .nav-pills > li > a {
+      border-radius: 4px 4px 0 0 ;
+    }
 
-  #tabs .tab-content {
-    color : white;
-    background-color: #428bca;
-    padding : 5px 15px;
+    .tab-content {
+      border: 1px solid #000;
+      color: #000;
+      background-color: #fff;
+      padding: 20px 20px 20px 20px;
+    }
   }
 
 
