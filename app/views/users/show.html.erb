@@ -1,16 +1,17 @@
-
-<section id="profile" class="container">
+<section id="profile" class="container-fluid">
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
       Update Profile
     </button>
   </a>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-12">
       <%= gravatar_for @user %>
     </div>
-    <div class="col-sm-9">
-      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @user.first_name.downcase %> <%= @user.last_name.downcase %></h1>
       <h3>Featured Achievement: <%= @user.user_achievements[0].achievement.title %> <%= image_tag @user.user_achievements[0].achievement.image %></h3>
     </div>
   </div>
