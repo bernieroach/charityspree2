@@ -3,12 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 main section#profile {
-  background-color: #FFFFEF;
-  font-family: 'Open Sans', sans-serif;
-  margin-top: 10px;
-  margin-bottom: 80px;
+  margin-top: -45px;
   padding: 40px 40px;
   box-shadow: 0 10px 6px -6px #777;
+  background: linear-gradient(to right, #efefbb, #d4d3dd);
 
   .update {
     position: relative;
@@ -20,11 +18,14 @@ main section#profile {
     margin: 0 auto;
     display: block;
     border: 1px solid #000;
+    border-radius: 100%;
   }
 
   h1  {
+    font-family: 'Open Sans', sans-serif;
+    font-variant: small-caps;
     margin-top: 10px;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: bold;
     text-align: center;
   }

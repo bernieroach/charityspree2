@@ -13,14 +13,14 @@
 
    <section id="description">
     <article class="site-flow">
-      <h3>Donate to charity</h3>
+      <h3>Donate to charity.</h3>
       <%= image_tag "shape.png" %>
-      <h3>Earn achievements for your donations</h3>
+      <h3>Earn achievements for your donations.</h3>
       <%= image_tag "001-award.png" %>
       <%= image_tag "002-medal.png" %>
       <%= image_tag "003-ribbon.png" %>
       <%= image_tag "005-cup.png" %>
-      <h3>Share your achievements with your friends</h3>
+      <h3>Share your achievements with your friends!</h3>
       <%= image_tag "004-fb.png", :class => 'social-media'  %>
       <%= image_tag "003-twitter.png", :class => 'social-media' %>
     </article>
@@ -40,8 +40,7 @@
       <div class="row">
       <% @charities.each do |charity| %>
         <div class="col-sm-4">
-          <%= image_tag charity.image %>
-          <h3><%= charity.name %></h3>
+          <h3><%= charity.name.downcase %></h3>
           <p><%= charity.description %></p>
           <%= link_to charity do %>
             <div type="button" class="choose btn btn-info">Choose</div>
