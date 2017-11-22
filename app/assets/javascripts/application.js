@@ -34,4 +34,10 @@ $( document ).ready(function() {
     }, 500);
   });
 
+  // SEARCH BAR
+  $( "#search" ).click(function(e) {
+    e.preventDefault();
+    $(".search_box").toggleClass('active');
+    $(".search_box").find("#term").focus();
+  });
 });
