@@ -22,24 +22,53 @@
 
 
 
-
-
-
-    <div id="tabs" class="container-fluid">
-      <ul  class="nav nav-pills">
-        <li class="active">
-          <a  href="#1a" data-toggle="tab">Achievements</a>
-        </li>
-        <li>
-          <a href="#2a" data-toggle="tab">Upcoming Achievements</a>
+  <div id="tabs" class="container">
+    <ul  class="nav nav-pills">
+      <li class="active">
+        <a href=".1a" data-toggle="tab">Achievements</a>
       </li>
-    </ul>
+      <li>
+        <a href=".2a" data-toggle="tab">Upcoming Achievements</a>
+    </li>
+  </ul>
     <div class="tab-content clearfix">
-      <div class="tab-pane active" id="1a">
-        <h3>Here are my achievements</h3>
+      <div class="tab-pane active 1a">
+        <% @user.user_achievements.each do | u_a| %>
+          <% if u_a.achieved == true %>
+          <div class="row">
+            <div class="achievement-icon col-xs-1">
+              <%= image_tag u_a.achievement.image %>
+            </div>
+            <div class="achievement-title col-xs-2">
+              <%= u_a.achievement.title %>
+            </div>
+            <div class="achievement-description col-xs-3">
+                <%= u_a.achievement.description %>
+            </div>
+            <!-- Facebook Like and Share buttons -->
+            <div class="col-xs-4 fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+            <!-- Twitter Share button -->
+            <a class="col-xs-2 twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+          </div>
+          <% end %>
+        <% end %>
       </div>
-      <div class="tab-pane" id="2a">
-        <h3>Here are my upcoming achievements</h3>
+      <div class="tab-pane 2a">
+        <% @user.user_achievements.each do | u_a| %>
+          <% if u_a.achieved == false %>
+          <div class="row">
+            <div class="achievement-title col-xs-3">
+              <%= u_a.achievement.title %>
+            </div>
+            <div class="achievement-icon col-xs-2">
+              <%= image_tag u_a.achievement.image %>
+            </div>
+            <div class="achievement-description col-xs-7">
+                <%= u_a.achievement.description %>
+            </div>
+          </div>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
@@ -48,73 +77,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="achieved row">
-    <div class="col-xs-6">
-      <h3>Achievements:</h3>
-    </div>
-    <div class="col-xs-6">
-      <h3>Description:</h3>
-    </div>
-  </div>
-
-  <% @user.user_achievements.each do | u_a| %>
-    <% if u_a.achieved == true %>
-    <div class="row">
-      <div class="achievement-title col-xs-3">
-        <%= u_a.achievement.title %>
-      </div>
-      <div class="achievement-icon col-xs-1">
-        <%= image_tag u_a.achievement.image %>
-      </div>
-      <div class="achievement-description col-xs-5">
-          <%= u_a.achievement.description %>
-      </div>
-      <!-- Facebook Like and Share buttons -->
-      <div class="col-xs-2 fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-      <!-- Twitter Share button -->
-      <a class="col-xs-1 twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
-    </div>
-    <% end %>
-  <% end %>
-
-  <div class="row">
-    <div class="upcoming col-xs-8">
-      <h3>Your Upcoming Achievements:</h3>
-    </div>
-  </div>
-
-  <% @user.user_achievements.each do | u_a| %>
-    <% if u_a.achieved == false %>
-    <div class="row">
-      <div class="achievement-title col-xs-3">
-        <%= u_a.achievement.title %>
-      </div>
-      <div class="achievement-icon col-xs-2">
-        <%= image_tag u_a.achievement.image %>
-      </div>
-      <div class="achievement-description col-xs-7">
-          <%= u_a.achievement.description %>
-      </div>
-    </div>
-    <% end %>
-  <% end %>
-</section>
 
 <!-- Load Facebook SDK for JavaScript  -->
 <div id="fb-root"></div>
