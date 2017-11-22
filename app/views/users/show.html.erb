@@ -1,26 +1,17 @@
-<!-- Load Facebook SDK for JavaScript  -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
-<!-- *END* Load Facebook SDK for JavaScript  -->
-<section id="profile" class="container">
+<section id="profile" class="container-fluid">
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
       Update Profile
     </button>
   </a>
   <div class="row">
-    <div class="col-sm-3">
+    <div class="col-sm-12">
       <%= gravatar_for @user %>
     </div>
-    <div class="col-sm-9">
-      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h1><%= @user.first_name.downcase %> <%= @user.last_name.downcase %></h1>
       <h3>Featured Achievement: <%= @user.user_achievements[0].achievement.title %> <%= image_tag @user.user_achievements[0].achievement.image %></h3>
     </div>
   </div>
@@ -59,7 +50,7 @@
           <%= u_a.achievement.description %>
       </div>
       <!-- Facebook Like and Share buttons -->
-      <div class="fb-like" data-href="https://www.charityspree.com/" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+      <div class="fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
       <!-- Twitter Share button -->
       <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
     </div>
