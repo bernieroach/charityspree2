@@ -57,11 +57,14 @@
         <% @user.user_achievements.each do | u_a| %>
           <% if u_a.achieved == false %>
           <div class="row">
-            <div class="achievement-title col-xs-3">
-              <%= u_a.achievement.title %>
-            </div>
             <div class="achievement-icon col-xs-2">
               <%= image_tag u_a.achievement.image %>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%</div>
+            </div>
+            <div class="achievement-title col-xs-3">
+              <%= u_a.achievement.title %>
             </div>
             <div class="achievement-description col-xs-7">
                 <%= u_a.achievement.description %>
