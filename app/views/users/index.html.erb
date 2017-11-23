@@ -1,17 +1,15 @@
 <h1>Search Results</h1>
-<table>
-  <tbody>
+<table class="search-results">
+  <tbody >
       <% for user in @users %>
-      <tr>
-        <div class="">
+        <tr>
           <td>
-            <strong> <%= user.first_name %> <%= user.last_name %></strong>
+            <%= user.first_name %> <%= user.last_name %>
           </td>
           <td>
             <%= link_to 'Go to Profile', user_path(user) %>
           </td>
-        </div>
-      </tr>
+        </tr>
       <% end %>
   </tbody>
 </table>
