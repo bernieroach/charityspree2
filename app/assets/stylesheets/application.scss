@@ -127,4 +127,97 @@ body {
   height: 100%;
   padding: 30px;
   font-size: 25px
+
+// SEARCH BAR
+
+
+li a .btn{
+  padding: 10px 1%;
+  margin: 5px;
+  background: #777777;
+  color: #fff;
+  text-decoration: none;
+  font-family: sans-serif;
+   -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+li a .btn:hover{
+  background: #42BBA3;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+#search{
+  float: right;
+  font-size: 3em;
+  padding: 15px;
+  -webkit-transform: rotate(181deg);
+  -moz-transform: rotate(181deg);
+  -ms-transform: rotate(181deg);
+  -o-transform: rotate(181deg);
+  transform: rotate(181deg);
+  border: 0.1px solid #eaedec;
+}
+.search_box {
+  clear: both;
+  width: 98%;
+  background: #ccc;
+  padding: 0 1%;
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:  all 0.1s ease-in-out;
+  -ms-transition:  all 0.1s ease-in-out;
+  -o-transition:  all0.1s ease-in-out;
+  transition:  all 0.1s ease-in-out;
+}
+.search_box.active{
+  height: auto;
+  padding: 1%;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition:  all 0.1s ease-in-out;
+  -ms-transition:  all 0.1s ease-in-out;
+  -o-transition:  all 0.1s ease-in-out;
+  transition:  all 0.1s ease-in-out;
+}
+.search_box input {
+  width: 90%;
+  font-size: 1em;
+  margin: 0px;
+  padding:1%;
+  border: none;
+  background: #fff;
+}
+.search_box input.search_icon {
+  clear: both;
+  width:7%;
+  height: auto;
+  padding: 1%;
+  margin: 0;
+  float: right;
+  border: medium none;
+  color: #FFF;
+  cursor: pointer;
+  background: #42BBA3;
+  opacity: 1;
+    -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+.search_box input.search_icon:hover {
+  background: #777;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+
 }
