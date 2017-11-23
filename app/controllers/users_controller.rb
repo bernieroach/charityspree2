@@ -26,6 +26,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
+      # user.write_attribute(:avatar, Faker::Avatar.image)
 
       Achievement.all.find_each do |achievement|
         if achievement.id == 1

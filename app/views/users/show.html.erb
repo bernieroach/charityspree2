@@ -1,19 +1,23 @@
 <section id="profile" class="container-fluid">
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
-      <%= image_tag 'cogwheel.png' %>
+      <%= image_tag 'cogwheel.png', :class => 'edit-cog' %>
     </button>
   </a>
   <div class="profile-header">
     <div class="row">
       <div class="col-sm-12">
-        <%= image_tag('IMG_7128.JPG', :class => 'avatar') %>
+        <%= image_tag(@user.avatar, :class => 'avatar') %>
       </div>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <h1><%= @user.first_name.downcase %> <%= @user.last_name.downcase %></h1>
-        <h3><em>Featured Achievement: <%= @user.user_achievements[0].achievement.title %> <%= image_tag @user.user_achievements[0].achievement.image %></em></h3>
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+        <div id="featured-achievement">
+          <h3><strong>Featured Achievement</strong></h3>
+          <h4><%= @user.user_achievements[0].achievement.title %></h4>
+          <h4><%= image_tag '001-award.png' %></h4>
+        </div>
       </div>
     </div>
   </div>
@@ -25,7 +29,7 @@
   <div id="tabs" class="container">
     <ul  class="nav nav-pills">
       <li class="active">
-        <a href=".1a" data-toggle="tab">Achievements</a>
+        <a class="tabs" href=".1a" data-toggle="tab">Achievements</a>
       </li>
       <li>
         <a href=".2a" data-toggle="tab">Upcoming Achievements</a>
@@ -61,7 +65,8 @@
               <%= image_tag u_a.achievement.image %>
             </div>
             <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%</div>
+              <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%
+              </div>
             </div>
             <div class="achievement-title col-xs-3">
               <%= u_a.achievement.title %>
