@@ -3,15 +3,27 @@ class ApplicationController < ActionController::Base
 
 
     def recent_activities
-      @donations = Donation.all.map { | donation |
+      @recent_donations = Donation.all.order(created_at: :desc).limit(5).map { | donation |
         puts
            { :id => donation.id,
+             :activity => "Donation"
              :user_name => User.find(donation.user_id).first_name.strip,
              :charity_name => Charity.find(donation.charity_id).name.strip,
-             :date => donation.created_at.to_date,
-
+             :date => donation.created_at,
              :quantity => donation.quantity }
-       }.sort! { | a,b | b[:id] <=> a[:id] }
+       }.sort! { | a,b | b[:created_at] <=> a[:created_at] }
+      @recent_achievements = UserAchievement.where(achieved: true).order(updated_at: :desc).limit(5).map { | achievement |
+        puts
+           { :id => achievement.id,
+             :activity => "Achievement"
+             :achievement => Achievement.find(achievement.achievement_id).title.strip,
+             :user_name => User.find(achievement.user_id).first_name.strip,
+             :date => achievement.updated_at,
+             :quantity => achievement.progress }
+       }.sort! { | a,b | b[:updated_at] <=> a[:updated_at] }
+
+      @recent_activities = ( @recent_donations + @recent_activities ).sort!{ | a,b | b[:date] <=> a[:date] }
+
     end
 
 
