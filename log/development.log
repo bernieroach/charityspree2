@@ -47212,3 +47212,13 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 3373ms (Views: 3332.5ms | ActiveRecord: 5.6ms)
 
 
+Started GET "/" for 10.0.2.2 at 2017-11-23 14:37:40 +0000
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CharitiesController#index as HTML
+  Rendering charities/index.html.erb within layouts/application
+  [1m[36mCharity Load (12.3ms)[0m  [1m[34mSELECT "charities".* FROM "charities"[0m
+  Rendered charities/index.html.erb within layouts/application (8191.2ms)
+  Rendered layouts/_top_nav.html.erb (1.6ms)
+Completed 200 OK in 9310ms (Views: 9199.1ms | ActiveRecord: 19.9ms)
+
+
