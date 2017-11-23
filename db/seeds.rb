@@ -92,21 +92,57 @@ achievement0 = Achievement.create!({
 
 achievement1 = Achievement.create!({
   title: 'Bang for Your Buck',
-  description: 'Donate your first dollar to a charity of your choice',
+  description: 'Donate your first dollar',
   progress: 1,
   image: '003-ribbon.png'
 })
 
 achievement2 = Achievement.create!({
   title: 'Loose Change',
-  description: 'Donate your tenth dollar to a charity of your choice',
+  description: 'Donate your tenth dollar',
   progress: 10,
   image: '004-medal-1.png'
 })
+
 achievement3 = Achievement.create!({
   title: 'Big Spender',
-  description: 'Donate one hundred dollars to a charity of your choice',
+  description: 'Donate one hundred dollars',
   progress: 100,
+  image: '005-cup.png'
+})
+
+achievement4 = Achievement.create!({
+  title: 'Huge',
+  description: 'Spend even more money',
+  progress: 150,
+  image: '002-medal.png'
+})
+
+achievement5 = Achievement.create!({
+  title: 'Huger',
+  description: 'Spend even more money',
+  progress: 200,
+  image: '003-ribbon.png'
+})
+
+achievement6 = Achievement.create!({
+  title: 'Hugest',
+  description: 'Wow, that\'t a lot of money',
+  progress: 250,
+  image: '004-medal-1.png'
+})
+
+achievement7 = Achievement.create!({
+  title: 'Biggest Spender',
+  description: 'Bah!',
+  progress: 300,
+  image: '005-cup.png'
+})
+
+achievement8 = Achievement.create!({
+  title: 'Biggerest Spender',
+  description: 'Crazy',
+  progress: 350,
   image: '005-cup.png'
 })
 
