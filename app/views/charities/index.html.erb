@@ -40,7 +40,8 @@
     <article class="container charity-container">
       <div class="row">
       <% @charities.each do |charity| %>
-        <div class="col-sm-4">
+        <div class="charity-box col-sm-4">
+          <%= image_tag charity.image %>
           <h3><%= charity.name.downcase %></h3>
           <p><%= charity.description %></p>
           <%= link_to charity do %>
