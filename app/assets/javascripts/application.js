@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require turbolinks
 //= require bootstrap-sprockets
 //= require rails-ujs
-//= require turbolinks
+
 //= require_tree .
 
 
@@ -36,9 +37,15 @@ $( document ).ready(function() {
   });
 
 
-console.log("pizza init")
-Pizza.init();
+  // SEARCH BAR
+  $( "#search" ).click(function(e) {
+    e.preventDefault();
+    $(".search_box").toggleClass('active');
+    $(".search_box").find("#term").focus();
+  });
 
+  console.log("pizza init")
+  Pizza.init();
 });
 
 
@@ -418,5 +425,3 @@ console.log("window pizza")
   window.Pizza = Pizza;
 
 }($, this, this.document));
-
-
