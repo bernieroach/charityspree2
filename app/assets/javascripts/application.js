@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require rails-ujs
-
 //= require_tree .
 
 
@@ -48,6 +47,10 @@ $( document ).ready(function() {
   Pizza.init();
 });
 
+
+$( document ).ready(function(){
+  console.log("document bernie ready")
+});
 
 /// pie charts
 

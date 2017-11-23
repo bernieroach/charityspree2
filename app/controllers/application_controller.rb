@@ -24,8 +24,12 @@ class ApplicationController < ActionController::Base
        }.sort! { | a,b | b[:updated_at] <=> a[:updated_at] }
 
 
-      @recent_activities = @recent_donations + @recent_achievements
-
+      if @recent_donations != nil
+        @recent_activities = @recent_donations
+      end
+      if @recent_achievements != nil
+            @recent_activities += @recent_achievements
+      end
       @recent_activities.sort! { | a,b | b[:date] <=> a[:date] }
 
     end

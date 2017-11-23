@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$brand-danger: #456;
+$bg-danger:  #ccc;
+$gray-base: #fff;
+$bg-general: #3BF1D7;
+
 main section#profile {
   height: 200px;
   margin-top: -45px;
@@ -100,8 +105,6 @@ main section#profile {
   }
 
 
-
-
   .options {
     border-bottom: 1px solid #000;
     padding-bottom: 30px;
@@ -148,4 +151,32 @@ main section#profile {
   margin-left: 100px;
   margin-top: 50px;
   font-size: 20px;
+}
+
+
+
+.field_with_errors{
+
+    background-color: $bg-danger;
+  border-color: $brand-danger;
+  color: $gray-base;
+  font-weight: 500;
+
+}
+
+
+
+.userform{
+  background-color: $bg-general;
+}
+
+
+.errormsg {
+  background-color: #f00;
+  border-color: $brand-danger;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
 }
