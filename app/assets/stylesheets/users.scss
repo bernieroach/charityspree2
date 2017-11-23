@@ -6,15 +6,9 @@
 main section#profile {
   height: 200px;
   margin-top: -45px;
-  padding-top: 40px;
-  background: #74ebd5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 100% 180px;
-  background-repeat: no-repeat;
 
-  .container-fluid {
-
+  .edit-cog {
+    margin-top: 10px;
   }
 
   .update {
@@ -29,34 +23,60 @@ main section#profile {
   }
 
   .profile-header{
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100% 175px;
+    background-repeat: no-repeat;
+
     img.avatar {
       height: 200px;
       width: 200px;
       margin: 0 auto;
       display: block;
-      border: 5px solid #000;
+      border: 5px solid #fff;
       border-radius: 100%;
+      box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
     }
 
     h1  {
       font-family: 'Open Sans', sans-serif;
-      font-variant: small-caps;
-      margin-top: 10px;
-      font-size: 80px;
-      font-weight: bold;
+      margin-top: 5px;
+      font-size: 40px;
+      font-weight: 300;
       text-align: center;
     }
 
-    h3 {
-      text-align: center;
-      margin: 0;
+    #featured-achievement {
+      background-color: #e5e9f0;
+      border-radius: 10px;
+      margin: 0 500px;
+      padding: 5px 5px;
+
+      h3 {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+      }
+
+      h4 {
+        font-family: 'Open Sans', sans-serif;
+        text-align: center;
+
+        img {
+          height: 50px;
+          float: none;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
     }
   }
 
 
   #tabs {
+    margin-top: 50px;
     .nav-pills > li.active > a, .nav-pills > li.active > a:hover {
-      background-color: #3BF1D7;
+      // background-color: #3BF1D7;
     }
 
     .nav-pills > li > a {
