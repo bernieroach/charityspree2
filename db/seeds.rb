@@ -46,6 +46,7 @@ user1 = User.create!({
   first_name: Faker::Internet.user_name,
   last_name: Faker::Internet.user_name,
   email: Faker::Internet.email,
+  avatar: Faker::Avatar.image,
   password: '1234567890',
   password_confirmation: '1234567890'
 })
@@ -55,6 +56,7 @@ user2 = User.create!({
   first_name: Faker::Internet.user_name,
   last_name: Faker::Internet.user_name,
   email: Faker::Internet.email,
+  avatar: Faker::Avatar.image,
   password: '1234567890',
   password_confirmation: '1234567890'
 })
@@ -63,6 +65,16 @@ user3 = User.create!({
   first_name: 'Riley',
   last_name: 'Gowan',
   email: 't.rileygowan@gmail.com',
+  avatar: Faker::Avatar.image,
+  password: '1234567890',
+  password_confirmation: '1234567890'
+})
+
+user4 = User.create!({
+  first_name: 'Thomas',
+  last_name: 'Gowan',
+  email: 'rileygowan@gmail.com',
+  avatar: Faker::Avatar.image,
   password: '1234567890',
   password_confirmation: '1234567890'
 })
@@ -75,27 +87,27 @@ achievement0 = Achievement.create!({
   title: 'Join Us, Join Us',
   description: 'Register on Charity Spree',
   progress: 0,
-  image: '001-medieval-2.png'
+  image: '002-medal.png'
 })
 
 achievement1 = Achievement.create!({
   title: 'Bang for Your Buck',
   description: 'Donate your first dollar to a charity of your choice',
   progress: 1,
-  image: '001-medieval-2.png'
+  image: '003-ribbon.png'
 })
 
 achievement2 = Achievement.create!({
   title: 'Loose Change',
   description: 'Donate your tenth dollar to a charity of your choice',
   progress: 10,
-  image: '002-arrow.png'
+  image: '004-medal-1.png'
 })
 achievement3 = Achievement.create!({
   title: 'Big Spender',
   description: 'Donate one hundred dollars to a charity of your choice',
   progress: 100,
-  image: '003-war.png'
+  image: '005-cup.png'
 })
 
 ## user_achievements
