@@ -19,7 +19,7 @@ charity1 = Charity.create!({
 
 charity2 = Charity.create!({
   name: 'The END Fund',
-  description: 'The END Fund is a leader in the global health movement to tackle NTDs, working collaboratively with committed partners including global health organizations, visionary investors, pharmaceutical companies, leaders from developing countries affected by NTDs, and those who suffer from the diseases themselves.',
+  description: 'The END Fund is a leader in the global health movement to tackle neglected tropical diseases, working collaboratively with committed partners including global health organizations, visionary investors, pharmaceutical companies, leaders from developing countries affected by NTDs, and those who suffer from the diseases themselves.',
   amount: 0,
   image: '002-first-aid-kit.png'
 })
@@ -50,6 +50,13 @@ charity6 = Charity.create!({
   description: 'Sightsavers is an international non-governmental organisation that works with partners in developing countries to treat and prevent avoidable blindness, and promote equality for people with visual impairments and other disabilities.',
   amount: 0,
   image: '006-people.png'
+})
+
+charity7 = Charity.create!({
+  name: 'Schistosomiasis Control Initiative',
+  description: 'Schistosomiasis Control Initiative is an initiative that helps governments in African countries treat schistosomiasis, one of the most common neglected tropical diseases, caused by parasitic worms. It was founded in 2002 and funded via grants from the Gates Foundation and USAID.',
+  amount: 0,
+  image: '001-lifesaver.png'
 })
 
 ## USERS
