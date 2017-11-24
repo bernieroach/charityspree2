@@ -68,8 +68,8 @@ charity7 = Charity.create!({
 puts "Re-creating Users ..."
 
 user1 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -78,8 +78,8 @@ user1 = User.create!({
 
 
 user2 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -87,8 +87,8 @@ user2 = User.create!({
 })
 
 user3 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -96,8 +96,8 @@ user3 = User.create!({
 })
 
 user4 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -105,8 +105,8 @@ user4 = User.create!({
 })
 
 user5 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -114,8 +114,8 @@ user5 = User.create!({
 })
 
 user6 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -123,8 +123,8 @@ user6 = User.create!({
 })
 
 user7 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -132,8 +132,8 @@ user7 = User.create!({
 })
 
 user8 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -141,8 +141,8 @@ user8 = User.create!({
 })
 
 user9 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -150,8 +150,8 @@ user9 = User.create!({
 })
 
 user10 = User.create!({
-  first_name: Faker::Internet.user_name,
-  last_name: Faker::Internet.user_name,
+  first_name: Faker::Name.first_name,
+  last_name: Faker::Name.last_name,
   email: Faker::Internet.email,
   avatar: Faker::Avatar.image,
   password: '1234567890',
