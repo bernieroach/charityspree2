@@ -26,9 +26,11 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+
     @user.avatar = Faker::Avatar.image
     if @user.save
       session[:user_id] = @user.id
+      session[:time] = Time.now
 
       Achievement.all.find_each do |achievement|
         if achievement.id == 1
