@@ -22,9 +22,10 @@
                             <%= image_tag activity[:image] %>
                           <%= activity[:user_name].strip %>
                           <% if activity[:activity] == "Donation" %>
-                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much <%=activity[:user_name]%>! </p>
+                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much <%=activity[:user_name]%>!
+                        </p>
                           <% else%>
-                          achieved <%= activity[:achievement] %> -- Congratulations <%=activity[:user_name]%>! </p>
+                            achieved <%= activity[:achievement] %> -- Congratulations <%=activity[:user_name]%>! </p>
                           <% end %>
                         </div>
                       </div>
