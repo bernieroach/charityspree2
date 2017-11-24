@@ -29,6 +29,7 @@ class UsersController < ApplicationController
 
     @user.avatar = Faker::Avatar.image
     if @user.save
+      UserNotifierMailer.send_signup_email(@user).deliver
       session[:user_id] = @user.id
       session[:time] = Time.now
 
@@ -39,8 +40,7 @@ class UsersController < ApplicationController
           @user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
         end
       end
-
-      redirect_to '/'
+      redirect_to @user
     else
      render 'new'
     end
