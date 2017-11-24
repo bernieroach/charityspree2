@@ -1,6 +1,6 @@
 <nav class="event-banner navbar navbar-default">
 
-<div id="text-carousel" class="carousel slide" data-ride="carousel">
+<div id="text-carousel" class="carousel slide">
     <!-- Wrapper for slides -->
     <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
@@ -13,11 +13,24 @@
                   <% end %>
                      <div class="carousel-content">
                         <div>
-                          <p> <%= activity[:activity] %> [ <%= activity[:date] %> ] <%= activity[:user_name].strip %>
+
+                          <p><%= activity[:activity] %>: <%= activity[:user_name].strip.capitalize %>
                           <% if activity[:activity] == "Donation" %>
-                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much! <%=activity[:user_name]%> </p>
+                            donated $<%= activity[:quantity] %> to <%=activity[:charity_name]%>! Thanks so much, <%=activity[:user_name].capitalize %>.
+                          </p>
                           <% else%>
-                          achieved <%= activity[:achievement] %> -- Congratulations <%=activity[:user_name]%> </p>
+                            achieved <%= activity[:achievement] %>. Congratulations, <%=activity[:user_name].capitalize %>! </p>
+
+                          <% if session[:user_id] && ( session[:time] == nil ||
+                            activity[:date] > session[:time] )%>
+                            <aside> <%= image_tag "new.png" %> </aside>
+                          <% end %>
+                          <p>  <%= image_tag activity[:image] %>
+                          <%= activity[:user_name].strip %>
+                          <% if activity[:activity] == "Donation" %>
+                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much <%=activity[:user_name]%>! </p>
+                          <% else%>
+                          achieved <%= activity[:achievement] %> -- Congratulations <%=activity[:user_name]%>! </p>
                           <% end %>
                         </div>
                       </div>
@@ -28,7 +41,7 @@
         </div>
   </div>
 
-    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+  <a class="left carousel-control" href="#text-carousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
  <a class="right carousel-control" href="#text-carousel" data-slide="next">
@@ -86,3 +99,4 @@
         </a>
       </button>
     </div> -->
+

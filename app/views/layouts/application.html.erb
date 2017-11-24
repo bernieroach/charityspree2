@@ -15,21 +15,33 @@
     <meta property="og:title"         content="Charity Spree" />
     <meta property="og:description"   content="Earn achievements for your donations and share them with your friends" />
     <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+
     <!-- *END* Facebook meta data -->
+
   </head>
 
   <body>
 
     <%= render 'layouts/top_nav' %>
-
+    <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+    </div>
     <main class="container-fluid">
       <%= yield %>
     </main>
 
     <%= yield :end_of_body %>
     <script src="https://checkout.stripe.com/checkout.js"></script>
-
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.carousel').carousel({
+          interval: 5000
+        })
+      });
+    </script>
   </body>
-      <script> console.log("load svg") </script>
+
 <script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
 </html>

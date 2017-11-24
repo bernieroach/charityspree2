@@ -1,14 +1,48 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
-<p>This will be a signup page for new users.</p>
 
-<%= form_for :user, url: '/users' do |f| %>
 
-  First Name: <%= f.text_field :first_name %> <br>
-  Last Name: <%= f.text_field :last_name %> <br>
-  Email: <%= f.text_field :email %> <br>
-  Password: <%= f.password_field :password %> <br>
-  Password Confirmation: <%= f.password_field :password_confirmation %> <br>
-  <%= f.submit "Submit" %>
+ <div id="tabs" class="container">
+<div class="row">
+  <div class="tab-content clearfix">
 
-<% end %>
+    <div class="col-md-6 col-md-offset-3 userform" >
+
+    <h1>Signup</h1>
+
+        <%= form_for(:user, url: users_path) do |f| %>
+
+          <% if @user.errors.any? %>
+            <br>
+            <div id="error_explanation" class="errormsg">
+              <table>
+                <tbody>
+                  <tr>
+                    <td><%= @user.errors.full_messages.first %></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          <% end %>
+          <br>
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, class: 'form-control' %>
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, class: 'form-control' %>
+          <%= f.label :email %>
+          <%= f.email_field :email, class: 'form-control' %>
+          <%= f.label :password %>
+          <%= f.password_field :password, class: 'form-control' %>
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+          <br>
+          <%= f.submit "Save", class: "btn btn-primary" %> <br>
+          <br>
+          <% end %>
+              <p>Already a member? <%= link_to "Login now!", login_path %></p>
+  </div>
+
+</div>
+</div>
+</div>
+</div>
+
+

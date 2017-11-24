@@ -44,7 +44,6 @@ console.log("load script donate button")
       e.preventDefault();
 
       $('#error_explanation').html('');
-      console.log("currentUser", $('input#currentUser').val())
       var amount = $('input#amount').val();
       amount = amount.replace(/\$/g, '').replace(/\,/g, '')
 
@@ -130,7 +129,7 @@ console.log("load script donate button")
             % Total by donation amount
           </h4>
           <ul data-pie-id="amounts-chart" data-options='{"donut": "true"}'>
- <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
+            <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
             <li data-value="<%= @donation_quantity_stats[5_9] %>">5 - 9$ Donation (<%= @donation_quantity_stats[5_9] %>)</li>
             <li data-value="<%= @donation_quantity_stats[10_49] %>">10 - 49$ Donation (<%= @donation_quantity_stats[10_49] %>)</li>
             <li data-value="<%= @donation_quantity_stats[50_99] %>">50 - 99$ Donation (<%= @donation_quantity_stats[50_99] %>)</li>
@@ -147,9 +146,8 @@ console.log("load script donate button")
 
 <div class="ticker-wrap">
 <div class="ticker">
-<% @news_articles[0..4].each do |article| %>
+<% @news_articles[0..5].each do |article| %>
      <div class="ticker__item">
-   <%= link_to(image_tag(article['urlToImage'], height: 20, width: 20) , article['url']) %>
     <%= link_to(article['title'], article['url'], target: :blank) %>
       </div>
 <% end %>
@@ -159,7 +157,6 @@ console.log("load script donate button")
 
 <script>
 $(document).ready(function() {
-console.log("charity ready page")
 Pizza.init();
 })
 </script>

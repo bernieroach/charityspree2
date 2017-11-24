@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
              :user_name => User.find(donation.user_id).first_name.strip,
              :charity_name => Charity.find(donation.charity_id).name.strip,
              :date => donation.created_at,
-             :quantity => donation.quantity }
+             :quantity => donation.quantity,
+             :image => "donate.png" }
        }.sort! { | a,b | b[:created_at] <=> a[:created_at] }
       @recent_achievements = UserAchievement.where(achieved: true).order(updated_at: :desc).limit(5).map { | achievement |
         puts "achievment"
@@ -20,12 +21,17 @@ class ApplicationController < ActionController::Base
              :achievement => Achievement.find(achievement.achievement_id).title.strip,
              :user_name => User.find(achievement.user_id).first_name.strip,
              :date => achievement.updated_at,
-             :quantity => achievement.progress }
+             :quantity => achievement.progress,
+             :image => Achievement.find(achievement.achievement_id).image }
        }.sort! { | a,b | b[:updated_at] <=> a[:updated_at] }
 
 
-      @recent_activities = @recent_donations + @recent_achievements
-
+      if @recent_donations != nil
+        @recent_activities = @recent_donations
+      end
+      if @recent_achievements != nil
+            @recent_activities += @recent_achievements
+      end
       @recent_activities.sort! { | a,b | b[:date] <=> a[:date] }
 
     end
