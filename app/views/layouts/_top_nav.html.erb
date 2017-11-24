@@ -20,7 +20,7 @@
                           </p>
                           <% else%>
                             achieved <%= activity[:achievement] %>. Congratulations, <%=activity[:user_name].capitalize %>! </p>
-
+                            <% end %>
                           <% if session[:user_id] && ( session[:time] == nil ||
                             activity[:date] > session[:time] )%>
                             <aside> <%= image_tag "new.png" %> </aside>
@@ -99,4 +99,3 @@
         </a>
       </button>
     </div> -->
-
