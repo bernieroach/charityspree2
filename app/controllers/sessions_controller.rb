@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-before_action :check_for_cancel, :only => [:create, :update]
+
     def new
       puts "new session"
       if session[:user_id]
@@ -30,11 +30,5 @@ before_action :check_for_cancel, :only => [:create, :update]
     redirect_to root_path
   end
 
-  private
 
-    def check_for_cancel
-      if params[:commit] == "Cancel"
-        redirect_to user #replace with your own path
-      end
-    end
 end
