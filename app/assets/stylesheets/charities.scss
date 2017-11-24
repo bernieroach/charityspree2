@@ -106,12 +106,12 @@ main section.charities-index {
     }
 
     .charity-container {
-      padding: 50px 0 50px 0;
+      padding: 10px 0 50px 0;
       font-family: 'Open Sans', sans-serif;
 
       .charity-box {
         height: 300px;
-        margin-top: 30px;
+        margin-top: 40px;
 
         h3  {
           font-weight: bold;
@@ -119,6 +119,7 @@ main section.charities-index {
         }
 
         p {
+          margin: 0;
           padding: 0;
         }
       }

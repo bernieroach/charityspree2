@@ -94,7 +94,7 @@ main section#profile {
     }
 
     .tab-content {
-      background: #F3F7F6;
+      background: #e5e9f0;
       border: 1px solid #e5e9f0;
       // height: 1500px;
       border-radius: 10px;
@@ -131,6 +131,10 @@ main section#profile {
         width: 50%;
         // margin: 20px 0;
         border-left: 1px solid #e5e9f0;
+
+        .progress {
+
+        }
 
         h3 {
           font-family: 'Open Sans', sans-serif;
