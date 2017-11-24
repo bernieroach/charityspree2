@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
+  before_action :check_for_cancel
   before_action :authorize, only: [:show , :index]
 
   def index
@@ -47,6 +48,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    puts "update user"
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       redirect_to @user
@@ -64,5 +66,14 @@ class UsersController < ApplicationController
                 :email,
                 :password,
                 :password_confirmation)
+    end
+
+
+
+    def check_for_cancel
+      puts "cancel check"
+      if params[:commit_cancel] == "Cancel"
+        redirect_to user_path
+      end
     end
 end
