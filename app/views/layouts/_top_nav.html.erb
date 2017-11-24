@@ -13,11 +13,12 @@
                   <% end %>
                      <div class="carousel-content">
                         <div>
-                          <p> <%= activity[:activity] %> [ <%= activity[:date] %> ] <%= activity[:user_name].strip %>
+                          <p><%= activity[:activity] %>: <%= activity[:user_name].strip.capitalize %>
                           <% if activity[:activity] == "Donation" %>
-                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much! <%=activity[:user_name]%> </p>
+                            donated $<%= activity[:quantity] %> to <%=activity[:charity_name]%>! Thanks so much, <%=activity[:user_name].capitalize %>.
+                          </p>
                           <% else%>
-                          achieved <%= activity[:achievement] %> -- Congratulations <%=activity[:user_name]%> </p>
+                            achieved <%= activity[:achievement] %>. Congratulations, <%=activity[:user_name].capitalize %>! </p>
                           <% end %>
                         </div>
                       </div>
@@ -28,7 +29,7 @@
         </div>
   </div>
 
-    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+  <a class="left carousel-control" href="#text-carousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
   </a>
  <a class="right carousel-control" href="#text-carousel" data-slide="next">

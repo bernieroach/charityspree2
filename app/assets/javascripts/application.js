@@ -19,21 +19,26 @@
 
 
 $( document ).ready(function() {
-  console.log("document ready")
-  var counter = 0;
-
-  var timer = setInterval(function () {
-    $('.total-donated').html(`$${counter += 13}`);
-  }, 1000);
 
 
-  $(document).on('click', 'a[href^="#"]', function (event) {
+
+
+  $(document).on('click', 'a.first[href^="#"], a.second[href^="#"]', function (event) {
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
   });
+
+
+
+
+
+
+
+
+
 
 
   // SEARCH BAR
