@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-
+  skip_before_action :verify_authenticity_token
+  before_action :check_for_cancel
   before_action :authorize, only: [:show , :index]
 
   def index
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def show
@@ -23,22 +25,22 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    user.avatar = Faker::Avatar.image
-    if user.save
-      session[:user_id] = user.id
+    @user = User.new(user_params)
+    @user.avatar = Faker::Avatar.image
+    if @user.save
+      session[:user_id] = @user.id
 
       Achievement.all.find_each do |achievement|
         if achievement.id == 1
-          user.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement.id)
+          @user.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement.id)
         else
-          user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
+          @user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
         end
       end
 
       redirect_to '/'
     else
-      redirect_to '/signup'
+     render 'new'
     end
   end
 
@@ -47,6 +49,7 @@ class UsersController < ApplicationController
   end
 
   def update
+    puts "update user"
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
       redirect_to @user
@@ -64,5 +67,14 @@ class UsersController < ApplicationController
                 :email,
                 :password,
                 :password_confirmation)
+    end
+
+
+
+    def check_for_cancel
+      puts "cancel check"
+      if params[:commit_cancel] == "Cancel"
+        redirect_to user_path
+      end
     end
 end
