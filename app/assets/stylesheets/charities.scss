@@ -102,23 +102,32 @@ main section.charities-index {
         font-weight: bold;
         margin: 0;
       }
+
     }
 
     .charity-container {
-      padding: 100px 0 240px 0;
+      padding: 10px 0 50px 0;
       font-family: 'Open Sans', sans-serif;
 
-      h3  {
-        font-weight: bold;
-        font-variant: small-caps;
-      }
+      .charity-box {
+        height: 300px;
+        margin-top: 40px;
 
-      p {
+        h3  {
+          font-weight: bold;
+          font-variant: small-caps;
+        }
 
+        p {
+          margin: 0;
+          padding: 0;
+        }
       }
 
       .choose {
-        text-align: left;
+        position: absolute;
+        bottom: 0;
+        left: 5;
         margin: 0;
 
         a{

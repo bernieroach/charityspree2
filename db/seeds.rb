@@ -1,46 +1,67 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 puts "Seeding Data ..."
 
-
 ## CHARITIES
-
 
 puts "Re-creating Charities ..."
 
 Donation.destroy_all
 UserAchievement.destroy_all
 Charity.destroy_all
+User.destroy_all
+Achievement.destroy_all
 
 charity1 = Charity.create!({
-  name: 'Amnesty International',
-  description: 'Amnesty International (commonly known as Amnesty or AI) is a London-based non-governmental organisation focused on human rights. The organisation claims to have over 7 million members and supporters around the world.',
+  name: 'GiveDirectly',
+  description: 'GiveDirectly is a nonprofit organization operating in East Africa that helps families living in extreme poverty by making unconditional cash transfers to them via mobile phone. GiveDirectly transfers funds to people in Kenya, Uganda, and Rwanda.',
   amount: 0,
-  image: '004-medieval-1.png'
+  image: '001-lifesaver.png'
 })
+
 charity2 = Charity.create!({
-  name: 'Doctors Without Borders',
-  description: 'Médecins Sans Frontières (MSF), also known in English as Doctors Without Borders, is an international humanitarian non-governmental organization (NGO) best known for its projects in war-torn regions and developing countries affected by endemic diseases.',
+  name: 'The END Fund',
+  description: 'The END Fund is a leader in the global health movement to tackle neglected tropical diseases, working collaboratively with committed partners including global health organizations, visionary investors, pharmaceutical companies, leaders from developing countries affected by NTDs, and those who suffer from the diseases themselves.',
   amount: 0,
-  image: '002-arrow.png'
+  image: '002-first-aid-kit.png'
 })
+
 charity3 = Charity.create!({
   name: 'Against Malaria Foundation',
-  description: 'The Against Malaria Foundation (AMF) is a United Kingdom-based charity that provides long-lasting insecticidal nets (LLINs) to populations at high risk of malaria, primarily in Africa. As of July 2016, the foundation has raised $86.6 million and distributed or committed to fund 19.3 million LLINs since its founding in 2004.',
+  description: 'The Against Malaria Foundation (AMF) is a United Kingdom-based charity that provides long-lasting insecticidal nets (LLINs) to populations at high risk of malaria, primarily in Africa.',
   amount: 0,
-  image: '003-war.png'
+  image: '003-new-ribbon.png'
+})
+
+charity4 = Charity.create!({
+  name: 'Malaria Consortium',
+  description: 'Established in 2003, Malaria Consortium is one of the world’s leading non-profit organisations specialising in the prevention, control and treatment of malaria and other communicable diseases among vulnerable populations.',
+  amount: 0,
+  image: '004-medicine.png'
+})
+
+charity5 = Charity.create!({
+  name: 'Deworm the World Initiative',
+  description: 'The Deworm the World Initiative is a program led by the nonprofit Evidence Action that works to support governments in developing school-based deworming programs in Kenya, India, Ethiopia, and Vietnam.',
+  amount: 0,
+  image: '005-heart.png'
+})
+
+charity6 = Charity.create!({
+  name: 'Sightsavers',
+  description: 'Sightsavers is an international non-governmental organisation that works with partners in developing countries to treat and prevent avoidable blindness, and promote equality for people with visual impairments and other disabilities.',
+  amount: 0,
+  image: '006-people.png'
+})
+
+charity7 = Charity.create!({
+  name: 'Schistosomiasis Control Initiative',
+  description: 'Schistosomiasis Control Initiative is an initiative that helps governments in African countries treat schistosomiasis, one of the most common neglected tropical diseases, caused by parasitic worms. It was founded in 2002 and funded via grants from the Gates Foundation and USAID.',
+  amount: 0,
+  image: '001-lifesaver.png'
 })
 
 ## USERS
 
 puts "Re-creating Users ..."
-User.destroy_all
 
 user1 = User.create!({
   first_name: Faker::Internet.user_name,
@@ -62,8 +83,8 @@ user2 = User.create!({
 })
 
 user3 = User.create!({
-  first_name: 'Riley',
-  last_name: 'Gowan',
+  first_name: Faker::Internet.user_name,
+  last_name: Faker::Internet.user_name,
   email: 't.rileygowan@gmail.com',
   avatar: Faker::Avatar.image,
   password: '1234567890',
@@ -81,7 +102,6 @@ user4 = User.create!({
 
 ## ACHIEVEMENTS
 puts "Re-creating Achievements ..."
-Achievement.destroy_all
 
 achievement0 = Achievement.create!({
   title: 'Join Us, Join Us',
