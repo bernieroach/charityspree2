@@ -3,6 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+$brand-danger: #456;
+$bg-danger:  #ccc;
+$gray-base: #fff;
+$bg-general: #3BF1D7;
+
 main section#profile {
   height: 200px;
   margin-top: -45px;
@@ -10,6 +15,8 @@ main section#profile {
   .edit-cog {
     margin-top: 10px;
   }
+
+
 
   .update {
     position: relative;
@@ -75,7 +82,7 @@ main section#profile {
 
   #tabs {
 
-    margin-top: 50px;
+    margin-top: 30px;
     .nav-pills > li.active > a, .nav-pills > li.active > a:hover {
       // background-color: #3BF1D7;
     }
@@ -89,17 +96,52 @@ main section#profile {
     }
 
     .tab-content {
-      background: #F3F7F6;  /* fallback for old browsers */
-      width: 100%;
-      height: 500px;
-      border-top: 1px solid #e5e9f0;
-      // background-color: #e5e9f0;
+      background: #e5e9f0;
+      border: 1px solid #e5e9f0;
+      // height: 1500px;
+      border-radius: 10px;
       margin: 0 auto;
-      padding: 20px 20px;
+      padding: 50px 50px;
+
+      .achieved {
+        display: inline-block;
+        width: 50%;
+        // margin: 20px 0;
+
+        h3 {
+          font-family: 'Open Sans', sans-serif;
+          text-align: center;
+          margin-top: 0;
+        }
+
+        .achievement-title {
+          font-size: 10px;
+        }
+
+        .achievement-description {
+          font-size: 10px;
+        }
+
+        .achievement-icon img {
+          // height: 40px;
+        }
+      }
+
+      .upcoming {
+        display: inline-block;
+        float: right;
+        width: 50%;
+        // margin: 20px 0;
+        border-left: 1px solid #e5e9f0;
+
+        h3 {
+          font-family: 'Open Sans', sans-serif;
+          text-align: center;
+          margin-top: 0;
+        }
+      }
     }
   }
-
-
 
 
   .options {
@@ -120,29 +162,26 @@ main section#profile {
     .update-btn {
       text-align: right;
     }
-
-  }
-
-  .achievement-icon {
-    height: 30px;
-  }
-
-  .achievement-title {
-    font-size: 20px;
-  }
-
-  .achievement-description {
-    font-size: 20px;
-  }
-
-  .achieved {
-    margin: 25px 0;
-  }
-
-  .upcoming {
-    margin: 25px 0;
   }
 }
+
+.search-results {
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+
+
+.field_with_errors{
+
+    background-color: $bg-danger;
+  border-color: $brand-danger;
+  color: $gray-base;
+  font-weight: 500;
+
+}
+
 
 // SEARCH RESULTS
 .result-container {
@@ -183,3 +222,22 @@ main section#profile {
   box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
 }
 // *END* SEARCH RESULTS
+
+.userform{
+  background-color: $bg-general;
+}
+
+
+.errormsg {
+  background-color: #f00;
+  border-color: $brand-danger;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.form-control {
+background-color: rgb(250,255,189)
+}

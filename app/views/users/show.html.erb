@@ -13,11 +13,11 @@
     <div class="row">
       <div class="col-sm-12">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-        <!-- <div id="featured-achievement">
+        <div id="featured-achievement">
           <h3><strong>Featured Achievement</strong></h3>
           <h4><%= @user.user_achievements[0].achievement.title %></h4>
-          <h4><%= image_tag '001-award.png' %></h4>
-        </div> -->
+          <h4><%= image_tag '002-medal.png' %></h4>
+        </div>
       </div>
     </div>
   </div>
@@ -26,41 +26,78 @@
 
 
 
+
+
+
+
+
+<!-- TABS AND TAB CONTENT START HERE -->
+
+
   <div id="tabs" class="container">
     <ul  class="nav nav-pills">
       <li class="active">
         <a class="tabs" href=".1a" data-toggle="tab">Achievements</a>
       </li>
       <li>
-        <a href=".2a" data-toggle="tab">Upcoming Achievements</a>
-    </li>
-  </ul>
+        <a href=".2a" data-toggle="tab">Global Achievements</a>
+      </li>
+    </ul>
+
+
+
+
+
+
+
     <div class="tab-content clearfix">
       <div class="tab-pane active 1a">
+
+
+        <div class="achieved row">
+          <h3>Achievements</h3>
         <% @user.user_achievements.each do | u_a| %>
           <% if u_a.achieved == true %>
-          <div class="row">
-            <div class="achievement-icon col-xs-1">
-              <%= image_tag u_a.achievement.image %>
-            </div>
-            <div class="achievement-title col-xs-2">
+            <div class="achievement-icon col-xs-4">
               <%= u_a.achievement.title %>
+              <br>
+              <%= image_tag u_a.achievement.image %>
+              <br>
+              <%= u_a.achievement.description %>
+              <br>
+              <div style="display: inline-block;" class="fb-share-button" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+              <br>
+              <div style="display: inline-block;"><a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a></div>
             </div>
-            <div class="achievement-description col-xs-3">
-                <%= u_a.achievement.description %>
+          <% end %>
+        <% end %>
+        </div>
+
+        <div class="upcoming row">
+        <h3>Upcoming</h3>
+        <% @user.user_achievements.each do | u_a| %>
+          <% if u_a.achieved == false %>
+            <div class="achievement-icon col-xs-12">
+              <%= u_a.achievement.title %>
+              <br>
+              <%= image_tag u_a.achievement.image %>
+              <br>
+              <%= u_a.achievement.description %>
+              <br>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%
+                </div>
             </div>
-            <!-- Facebook Like and Share buttons -->
-            <div class="col-xs-4 fb-like" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-            <!-- Twitter Share button -->
-            <a class="col-xs-2 twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
-          </div>
+            </div>
           <% end %>
         <% end %>
       </div>
-      <div class="tab-pane 2a">
+
+
+      <!-- <div class="tab-pane 2a">
         <% @user.user_achievements.each do | u_a| %>
           <% if u_a.achieved == false %>
-          <div class="row">
+          <div class="upcoming row">
             <div class="achievement-icon col-xs-2">
               <%= image_tag u_a.achievement.image %>
             </div>
@@ -77,9 +114,15 @@
           </div>
           <% end %>
         <% end %>
-      </div>
+      </div> -->
+
+
     </div>
   </div>
+
+
+
+<!-- TABS AND TAB CONTENT END HERE -->
 
 
 
@@ -94,8 +137,7 @@
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
-</script>
+}(document, 'script', 'facebook-jssdk'));</script>
 <!-- *END* Load Facebook SDK for JavaScript  -->
 
 <!-- Load Twitter SDK for JavaScript  -->
