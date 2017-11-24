@@ -1,16 +1,12 @@
 class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :check_for_cancel
-  before_action :authorize, only: [:show , :index]
+  # before_action :authorize, only: [:show , :index]
 
   def index
-    puts "searching..."
     @users = if params[:term]
-      puts "searching for user ..."
-      puts @users.inspect
       User.where('first_name ILIKE ? OR last_name ILIKE ?', "%#{params[:term]}%", "%#{params[:term]}%")
     else
-      puts "No search term found"
       User.all
     end
   end

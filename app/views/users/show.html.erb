@@ -47,59 +47,62 @@
     </ul>
 
 
-
-
-
-
-
     <div class="tab-content clearfix">
       <div class="tab-pane active 1a">
-
-
-        <div class="achieved row">
-          <h3>Achievements</h3>
-        <% @user.user_achievements.each do | u_a| %>
-          <% if u_a.achieved == true %>
-            <div class="achievement-icon col-xs-4">
-              <%= u_a.achievement.title %>
-              <br>
-              <%= image_tag u_a.achievement.image %>
-              <br>
-              <%= u_a.achievement.description %>
-              <% if @user.id == session[:user_id] %>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="achieved row">
+              <h3>Achievements</h3>
+              <% @user.user_achievements.each do | u_a| %>
+              <% if u_a.achieved == true %>
+              <div class="achievement-icon col-sm-4">
+                <%= u_a.achievement.title %>
                 <br>
-                <div style="display: inline-block;" class="fb-share-button" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+                <%= image_tag u_a.achievement.image %>
                 <br>
-                <div style="display: inline-block;"><a class="twitter-share-button"
-                  data-text="I donated and achieved <%= u_a.achievement.description %>!"
-                  data-url="http://www.charityspree.com/users/<%= current_user.id %>"
-                  data-via="charityspree"
-                  href="https://twitter.com/intent/tweet">Tweet</a></div>
+                <%= u_a.achievement.description %>
+                <% if @user.id == session[:user_id] %>
+                  <br>
+                  <div style="display: inline-block;" class="fb-share-button" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+                  <br>
+                  <div style="display: inline-block;">
+                    <a class="twitter-share-button"
+                      data-text="I donated and achieved <%= u_a.achievement.description %>!"
+                      data-url="http://www.charityspree.com/users/<%= current_user.id %>"
+                      data-via="charityspree"
+                      href="https://twitter.com/intent/tweet">Tweet
+                    </a>
+                  </div>
+                <% end %>
+              </div>
+              <% end %>
               <% end %>
             </div>
-          <% end %>
-        <% end %>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="upcoming row">
+              <h3>Upcoming</h3>
+              <% @user.user_achievements.each do | u_a| %>
+                <% if u_a.achieved == false %>
+                  <div class="achievement-icon col-sm-12">
+                    <%= u_a.achievement.title %>
+                    <br>
+                    <%= image_tag u_a.achievement.image %>
+                    <br>
+                    <%= u_a.achievement.description %>
+                    <br>
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%
+                      </div>
+                  </div>
+                  </div>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
         </div>
 
-        <div class="upcoming row">
-        <h3>Upcoming</h3>
-        <% @user.user_achievements.each do | u_a| %>
-          <% if u_a.achieved == false %>
-            <div class="achievement-icon col-xs-12">
-              <%= u_a.achievement.title %>
-              <br>
-              <%= image_tag u_a.achievement.image %>
-              <br>
-              <%= u_a.achievement.description %>
-              <br>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%
-                </div>
-            </div>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
 
 
       <!-- <div class="tab-pane 2a">
