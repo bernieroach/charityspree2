@@ -9,11 +9,10 @@ end
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'stripe'
-gem 'dotenv-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -46,6 +45,8 @@ gem 'jquery-rails'
 
 # share buttons
 gem 'shareable'
+
+gem 'sendgrid-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
