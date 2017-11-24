@@ -14,18 +14,12 @@
                      <div class="carousel-content">
                         <div>
 
-                          <p><%= activity[:activity] %>: <%= activity[:user_name].strip.capitalize %>
-                          <% if activity[:activity] == "Donation" %>
-                            donated $<%= activity[:quantity] %> to <%=activity[:charity_name]%>! Thanks so much, <%=activity[:user_name].capitalize %>.
-                          </p>
-                          <% else%>
-                            achieved <%= activity[:achievement] %>. Congratulations, <%=activity[:user_name].capitalize %>! </p>
-                            <% end %>
+                          <p>
                           <% if session[:user_id] && ( session[:time] == nil ||
                             activity[:date] > session[:time] )%>
-                            <aside> <%= image_tag "new.png" %> </aside>
+                             <%= image_tag "new.png" %>
                           <% end %>
-                          <p>  <%= image_tag activity[:image] %>
+                            <%= image_tag activity[:image] %>
                           <%= activity[:user_name].strip %>
                           <% if activity[:activity] == "Donation" %>
                           donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much <%=activity[:user_name]%>! </p>
@@ -40,6 +34,7 @@
             </div>
         </div>
   </div>
+
 
   <a class="left carousel-control" href="#text-carousel" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -79,15 +74,15 @@
         <li><a id="about" href="/about">about</a></li>
         <!-- SEARCH MAGNIFIER -->
         <li>
-          <a href=".search_box" class="btn" id="search">&#9740;</a>
+          <a href="#search_box" class="btn" id="search">&#9740;</a>
         </li>
       </ul>
     </div>
   </div>
   <div>
   <!-- SEARCH BAR FOR USERS -->
-  <%= form_tag(users_path, method: :get, class: "search_box")  do %>
-  <%= text_field_tag :term, params[:term], placeholder: "Find Charity Spree Members ..." %>
+  <%= form_tag(users_path, method: :get, id: "search_box") do %>
+  <%= text_field_tag :term, params[:term], placeholder: "Search users ..." %>
   <%= submit_tag 'Search', class: "search_icon" %>
   <% end %>
   </div>

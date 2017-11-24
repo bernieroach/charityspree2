@@ -2,19 +2,20 @@
 <html>
   <head>
 
-    <title>Charity Spree</title>
+    <title>Charity Spree
+    </title>
     <script src="https://checkout.stripe.com/checkout.js"></script>
 
     <%= csrf_meta_tags %>
     <%= favicon_link_tag       'nature.png' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
     <!-- Facebook meta data -->
-    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:url"           content="http://www.charityspree.com" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Charity Spree" />
     <meta property="og:description"   content="Earn achievements for your donations and share them with your friends" />
-    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+    <meta property="og:image"         content="https://cdn2.iconfinder.com/data/icons/banking-finance-ii-flat/2048/Donation-512.png" />
 
     <!-- *END* Facebook meta data -->
 
@@ -41,7 +42,7 @@
         })
       });
     </script>
+
   </body>
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
 </html>
