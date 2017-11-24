@@ -126,10 +126,18 @@ body {
 
 }
 .carousel-content {
-    color:black;
+
     display:flex;
     align-items:center;
     color: #FFFFFF;
+    z-index: 2;
+
+      aside {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+
+      }
 }
 
 #text-carousel {
@@ -238,3 +246,5 @@ li a .btn:hover{
 .form-control {
 background-color: rgb(250,255,189)
 }
+
+
