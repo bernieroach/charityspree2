@@ -19,7 +19,7 @@
 @import "bootstrap";
 
 // App
-@import "charities";
+// @import "charities";
 
 // Font
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
@@ -183,6 +183,7 @@ li a .btn:hover{
   -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
+
 #search{
   float: right;
   font-size: 3em;
@@ -194,7 +195,8 @@ li a .btn:hover{
   transform: rotate(181deg);
   border: 0.1px solid #eaedec;
 }
-.search_box {
+
+#search_box {
   clear: both;
   width: 98%;
   background: #ccc;
@@ -208,7 +210,8 @@ li a .btn:hover{
   -o-transition:  all0.1s ease-in-out;
   transition:  all 0.1s ease-in-out;
 }
-.search_box.active{
+
+#search_box.active{
   height: auto;
   padding: 1%;
   -webkit-transition: all 0.1s ease-in-out;
@@ -217,7 +220,8 @@ li a .btn:hover{
   -o-transition:  all 0.1s ease-in-out;
   transition:  all 0.1s ease-in-out;
 }
-.search_box input {
+
+#search_box input {
   width: 90%;
   font-size: 1em;
   margin: 0px;
@@ -225,7 +229,7 @@ li a .btn:hover{
   border: none;
   background: #fff;
 }
-.search_box input.search_icon {
+#search_box input.search_icon {
   clear: both;
   width:7%;
   height: auto;
@@ -243,7 +247,7 @@ li a .btn:hover{
   -o-transition: all 0.1s ease;
   transition: all 0.1s ease;
 }
-.search_box input.search_icon:hover {
+#search_box input.search_icon:hover {
   background: #777;
   -webkit-transition: all 0.1s ease;
   -moz-transition: all 0.1s ease;
