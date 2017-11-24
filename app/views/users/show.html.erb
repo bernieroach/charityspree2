@@ -1,9 +1,11 @@
 <section id="profile" class="container-fluid">
+<% if @user.id == session[:user_id] %>
   <a href= '/users/<%= current_user.id %>/edit'>
     <button class="update btn btn-primary">
       <%= image_tag 'cogwheel.png', :class => 'edit-cog' %>
     </button>
   </a>
+<% end %>
   <div class="profile-header">
     <div class="row">
       <div class="col-sm-12">
@@ -64,10 +66,12 @@
               <%= image_tag u_a.achievement.image %>
               <br>
               <%= u_a.achievement.description %>
-              <br>
-              <div style="display: inline-block;" class="fb-share-button" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
-              <br>
-              <div style="display: inline-block;"><a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a></div>
+              <% if @user.id == session[:user_id] %>
+                <br>
+                <div style="display: inline-block;" class="fb-share-button" data-href="http://www.charityspree.com/users/<%= current_user.id %>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+                <br>
+                <div style="display: inline-block;"><a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a></div>
+              <% end %>
             </div>
           <% end %>
         <% end %>
