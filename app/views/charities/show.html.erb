@@ -44,7 +44,6 @@ console.log("load script donate button")
       e.preventDefault();
 
       $('#error_explanation').html('');
-      console.log("currentUser", $('input#currentUser').val())
       var amount = $('input#amount').val();
       amount = amount.replace(/\$/g, '').replace(/\,/g, '')
 
@@ -149,7 +148,6 @@ console.log("load script donate button")
 <div class="ticker">
 <% @news_articles[0..4].each do |article| %>
      <div class="ticker__item">
-   <%= link_to(image_tag(article['urlToImage'], height: 20, width: 20) , article['url']) %>
     <%= link_to(article['title'], article['url'], target: :blank) %>
       </div>
 <% end %>
@@ -159,7 +157,6 @@ console.log("load script donate button")
 
 <script>
 $(document).ready(function() {
-console.log("charity ready page")
 Pizza.init();
 })
 </script>
