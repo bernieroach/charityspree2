@@ -10,21 +10,28 @@
     <% end %> -->
 
     <!-- Stripe form -->
-    <%= form_for [@charity, @donation] do %>
-    <div id="error_explanation">
-      <% if flash[:error].present? %>
-      <p><%= flash[:error] %></p>
+    <% if current_user %>
+      <%= form_for [@charity, @donation] do %>
+      <div id="error_explanation">
+        <% if flash[:error].present? %>
+        <p><%= flash[:error] %></p>
+        <% end %>
+      </div>
+      <article>
+        <%= label_tag(:amount, 'Donation Amount:') %>
+        <%= text_field_tag(:amount) %>
+      </article>
+      <article>
+        <%= hidden_field_tag(:stripeToken) %>
+        <%= hidden_field_tag "currentUser" , current_user %>
+      </article>
+      <button id='donateButton' class="choose btn btn-primary">Donate</button>
       <% end %>
-    </div>
-    <article>
-      <%= label_tag(:amount, 'Donation Amount:') %>
-      <%= text_field_tag(:amount) %>
-    </article>
-    <article>
-      <%= hidden_field_tag(:stripeToken) %>
-      <%= hidden_field_tag "currentUser" , current_user %>
-    </article>
-    <button id='donateButton' class="choose btn btn-primary">Donate</button>
+    <% else %>
+      <p>
+        Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
+      </p>
+
     <% end %>
 
     <script>
@@ -160,6 +167,3 @@
 <script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
 </div>
 </div>
-
-
-
