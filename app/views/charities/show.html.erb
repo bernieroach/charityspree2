@@ -1,3 +1,6 @@
+<%= javascript_include_tag "charities" %>
+
+
 <section class="charities-show">
   <section class="charity">
     <h1 class="charity-name"><%= @charity.name %></h1>
@@ -25,7 +28,6 @@
     <% end %>
 
     <script>
-console.log("load script donate button")
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',
       locale: 'auto',
@@ -83,6 +85,8 @@ console.log("load script donate button")
 </section>
 
 
+
+<% if @charity.donations.count > 1 %>
 <section class="charity-statistics" id="charity-statistics" >
 
 <div class="container">
@@ -143,6 +147,7 @@ console.log("load script donate button")
     </div>
 </div>
 </section>
+<% end %>
 
 <div class="ticker-wrap">
 <div class="ticker">
@@ -152,12 +157,9 @@ console.log("load script donate button")
       </div>
 <% end %>
 
+<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
 </div>
 </div>
 
-<script>
-$(document).ready(function() {
-Pizza.init();
-})
-</script>
+
 
