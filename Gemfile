@@ -9,7 +9,7 @@ end
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'stripe'
-gem 'dotenv-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 
