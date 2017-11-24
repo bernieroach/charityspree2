@@ -13,12 +13,24 @@
                   <% end %>
                      <div class="carousel-content">
                         <div>
+
                           <p><%= activity[:activity] %>: <%= activity[:user_name].strip.capitalize %>
                           <% if activity[:activity] == "Donation" %>
                             donated $<%= activity[:quantity] %> to <%=activity[:charity_name]%>! Thanks so much, <%=activity[:user_name].capitalize %>.
                           </p>
                           <% else%>
                             achieved <%= activity[:achievement] %>. Congratulations, <%=activity[:user_name].capitalize %>! </p>
+
+                          <% if session[:user_id] && ( session[:time] == nil ||
+                            activity[:date] > session[:time] )%>
+                            <aside> <%= image_tag "new.png" %> </aside>
+                          <% end %>
+                          <p>  <%= image_tag activity[:image] %>
+                          <%= activity[:user_name].strip %>
+                          <% if activity[:activity] == "Donation" %>
+                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> -- Thanks so much <%=activity[:user_name]%>! </p>
+                          <% else%>
+                          achieved <%= activity[:achievement] %> -- Congratulations <%=activity[:user_name]%>! </p>
                           <% end %>
                         </div>
                       </div>
