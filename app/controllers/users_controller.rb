@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
     @user.avatar = Faker::Avatar.image
     if @user.save
-      UserNotifierMailer.send_signup_email(@user).deliver
+      UserMailer.send_signup_email(@user).deliver
       session[:user_id] = @user.id
       session[:time] = Time.now
 

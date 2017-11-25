@@ -68,6 +68,8 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
+    css_parser (1.6.0)
+      addressable
     domain_name (0.5.20160615)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (1.0.2)
@@ -80,6 +82,7 @@ GEM
     ffi (1.9.18)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    htmlentities (4.3.4)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     i18n (0.9.1)
@@ -114,6 +117,13 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
+    premailer (1.11.1)
+      addressable
+      css_parser (>= 1.6.0)
+      htmlentities (>= 4.0.0)
+    premailer-rails (1.10.0)
+      actionmailer (>= 3, < 6)
+      premailer (~> 1.7, >= 1.7.9)
     public_suffix (3.0.1)
     puma (3.10.0)
     rack (2.0.3)
@@ -172,9 +182,6 @@ GEM
     sendgrid-ruby (5.2.0)
       ruby_http_client (~> 3.2)
       sinatra (>= 1.4.7, < 3)
-    shareable (1.1.4)
-      actionpack (>= 3.0.0)
-      activesupport (>= 3.0.0)
     sinatra (2.0.0)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -233,12 +240,12 @@ DEPENDENCIES
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   pg
+  premailer-rails
   puma (~> 3.7)
   rails (~> 5.1.4)
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid-ruby
-  shareable
   spring
   spring-watcher-listen (~> 2.0.0)
   stripe

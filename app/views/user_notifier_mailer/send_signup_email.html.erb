@@ -2,10 +2,43 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <%= stylesheet_link_tag "mailer" %>
+  <%= stylesheet_link_tag "mailer" %>
   </head>
   <body>
-    <h1>Thanks for signing up, <%= @user.first_name %>!</h1>
-    <p>Thanks for joining and have a great day! Now sign in and do
-awesome things!</p>
+  <div class="profile-header">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= image_tag(@user.avatar, :class => 'avatar') %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+        <div id="featured-achievement">
+          <h3><strong>Featured Achievement</strong></h3>
+          <h4><%= @user.user_achievements[0].achievement.title %></h4>
+          <h4><%= image_tag '002-medal.png' %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-header">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= image_tag(@user.avatar, :class => 'avatar') %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+        <div id="featured-achievement">
+          <h3><strong>Thanks for signing up to http://wwww.charityspree.com, <%= @user.first_name %>!</strong></h3>
+          <h4><%= image_tag 'http://www.charityspree.com/assets/nature-big-ceef064736ae75deae45b0d16ac8cc2d058978f7ba3bbc96a122455ffe8a0602.png' %></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </body>
 </html>
