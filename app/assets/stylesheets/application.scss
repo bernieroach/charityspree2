@@ -48,7 +48,7 @@ body {
     padding-right: 50px;
   }
 
-  #login, #logout, #about {
+  #login, #logout, #about, #donate {
     font-size: 15px;
     font-family: 'Open Sans';
     font-variant: small-caps;
@@ -60,7 +60,7 @@ body {
     }
   }
 
-  #register, #current-user, #donate {
+  #register, #current-user {
     font-variant: small-caps;
     background-color: #00CAB8;
     color: #fff;

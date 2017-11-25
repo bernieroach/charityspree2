@@ -1,14 +1,14 @@
 <section id="profile" class="container-fluid">
-<% if @user.id == session[:user_id] %>
-  <a href= '/users/<%= current_user.id %>/edit'>
-    <button class="update btn btn-primary">
-      <%= image_tag 'cogwheel.png', :class => 'edit-cog' %>
-    </button>
-  </a>
-<% end %>
   <div class="profile-header">
     <div class="row">
       <div class="col-sm-12">
+        <% if @user.id == session[:user_id] %>
+          <a href= '/users/<%= current_user.id %>/edit'>
+            <button class="update btn btn-primary">
+              <%= image_tag 'cogwheel.png', :class => 'edit-cog' %>
+            </button>
+          </a>
+        <% end %>
         <%= image_tag(@user.avatar, :class => 'avatar') %>
       </div>
     </div>
