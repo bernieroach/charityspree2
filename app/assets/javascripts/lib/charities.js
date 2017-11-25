@@ -1,21 +1,30 @@
 $( document ).ready(function() {
 
-  let statistics = document.getElementById('charity-statistics')
+  $('#statsButton').click(function(event){
+    event.preventDefault()
+    $('section#charity-statistics').slideToggle('slow', function(){
 
-  $(document).on('click', '#statsButton[href^="#"]', function (event) {
-    event.preventDefault();
 
-    $('section#charity-statistics').toggleClass('hidden')
+    })
 
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
+  })
+
+  // let statistics = document.getElementById('charity-statistics')
+
+  // $(document).on('click', '#statsButton[href^="#"]', function (event) {
+  //   event.preventDefault();
+
+  //   $('section#charity-statistics').toggleClass('hidden')
+
+  //   $('html, body').animate({
+  //       scrollTop: $($.attr(this, 'href')).offset().top
+  //   }, 1000);
 
     if (statistics) {
       Pizza.init();
     }
   });
-});
+// });
 /// pie charts
 
 (function ($, window, document, undefined) {
