@@ -17,7 +17,9 @@
                           <p>
                           <% if session[:user_id] && ( session[:time] == nil ||
                             activity[:date] > session[:time] )%>
+                            <aside>
                              <%= image_tag "new.png" %>
+                           </aside>
                           <% end %>
                             <%= image_tag activity[:image] %>
                           <%= activity[:user_name].strip %>
