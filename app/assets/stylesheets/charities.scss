@@ -140,9 +140,9 @@ main section.charities-index {
 
 // CHARITY SHOW
 
-// * {
-//   border: 1px solid #000;
-// }
+* {
+  border: 1px solid #000;
+}
 
 main section.charities-show {
 
@@ -159,12 +159,39 @@ main section.charities-show {
         height: 70px;
       }
     }
-
+// div.click-to-top span {display: none; position: absolute; bottom: 0; left: 0; right: 0; background: #333; color: #fff; }
+// div.click-to-top:hover span {display: block; }
     .charity-name {
       text-align: center;
       margin-bottom: 30px;
       font-family: 'Open Sans';
       font-size: 50px;
+
+
+
+      .information-container {
+        display: inline-block;
+        &:hover span {
+          display: block;
+        }
+        .information {
+          height: 25px;
+          margin-bottom: 25px;
+        }
+        span {
+          background-color: #F3F7F6;
+          margin-right: 20px;
+          display: none;
+          position: absolute;
+          z-index: 2;
+
+          .charity-description {
+            text-align: justify;
+            font-size: 15px;
+            padding: 10px 10px;
+          }
+        }
+      }
     }
 
     .choose {
@@ -183,6 +210,7 @@ main section.charities-show {
     }
   }
 }
+
 
   // section.achievements-legend {
   //   background-color: #89bdd3;
