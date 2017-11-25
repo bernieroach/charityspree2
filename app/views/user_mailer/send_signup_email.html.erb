@@ -17,7 +17,9 @@
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
         <div id="featured-achievement">
           <h3>
-            <strong>Thanks for joining <a href="http://www.charityspree.com">Charity Spree</a> , </strong> where giving is award winning.  <strong><a href="http://www.charityspree.com/users/<%= @user.id %>"> Visit your user profile </a> </strong> to keep track of your achievements and share your passion for your causes with friends and family.
+             <%= image_tag('new-member.png') %> <br>
+            Thanks for joining<strong> <a href="http://www.charityspree.com">Charity Spree</a> , </strong> where giving is award winning.  <strong><a href="http://www.charityspree.com/users/<%= @user.id %>"> Visit your user profile </a> </strong> to keep track of your achievements and share your passion for your causes with friends and family.
+            <br>
             <br>
              <h4>The Charity Spree Team </h4>
           </h3>
