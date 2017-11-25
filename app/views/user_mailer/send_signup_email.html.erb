@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  <%= stylesheet_link_tag "mailer" %>
-  <%= stylesheet_link_tag "mailer" %>
-  </head>
-  <body>
+<section id="profile" class="container-fluid">
+
   <div class="profile-header">
     <div class="row">
       <div class="col-sm-12">
@@ -15,16 +9,29 @@
     <div class="row">
       <div class="col-sm-12">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-        <div id="featured-achievement">
-          <h3>
-             <%= image_tag('new-member.png') %> <br>
-            Thanks for joining<strong> <a href="http://www.charityspree.com">Charity Spree</a> , </strong> where giving is award winning.  <strong><a href="http://www.charityspree.com/users/<%= @user.id %>"> Visit your user profile </a> </strong> to keep track of your achievements and share your passion for your causes with friends and family.
+         <div id="featured-achievement">
+            <h3><strong>Joined</strong></h3>
+               <h4><%= image_tag('new-member.png') %> </h4>
+          </div>
+        </div>
+       </div>
+    </div>
+
+<div id="tabs" class="container">
+<div class="tab-content clearfix">
+  <div class="tab-pane active 1a">
+    <div class="row">
+      <div class="col-sm-12">
+
+        <h3>
+            Thanks for joining<strong> <a href="http://www.charityspree.com">Charity Spree</a> , </strong> where giving is award winning!  <strong><a href="http://www.charityspree.com/users/<%= @user.id %>"> Visit your user profile </a> </strong> to keep track of your achievements and share your passion for your causes with friends and family.
             <br>
             <br>
-             <h4>The Charity Spree Team </h4>
-          </h3>
+             <h4>-The Charity Spree Team </h4>
+
       </div>
     </div>
   </div>
-  </body>
-</html>
+</div>
+</section>
+
