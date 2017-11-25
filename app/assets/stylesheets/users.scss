@@ -28,13 +28,13 @@ main section#profile {
     background: #74ebd5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background-size: 100% 175px;
+    background-size: 100% 375px;
     background-repeat: no-repeat;
 
     img.avatar {
       height: 200px;
       width: 200px;
-      margin: 0 auto;
+      margin: 20px auto;
       display: block;
       border: 5px solid #fff;
       border-radius: 100%;

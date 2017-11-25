@@ -128,28 +128,22 @@ body {
 }
 .carousel-content {
 
-    color: #000;
-    text-align: center;
-    color: #FFFFFF;
+  color: #fff;
+  text-align: center;
+  color: #FFFFFF;
 
-    p {
-      padding: 0;
-      font-size: 20px;
-    }
+  p {
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+  }
+  // z-index: 2;
 
-
-    display:flex;
-    align-items:center;
-    color: #FFFFFF;
-    z-index: 2;
-
-      aside {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-
-      }
-
+  aside {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
 }
 
 #text-carousel {
