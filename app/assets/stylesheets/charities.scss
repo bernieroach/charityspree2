@@ -169,15 +169,20 @@ main section.charities-show {
 
     .choose {
       margin: 0 5px;
-      font-size: 20px;
+      font-size: 15px;
+    }
+
+    .statistics {
       float: right;
+      font-size: 20px;
 
       a#statsButton{
+        float: right;
         text-decoration: none;
         color: #fff;
-      }
     }
   }
+}
 
   // section.achievements-legend {
   //   background-color: #89bdd3;

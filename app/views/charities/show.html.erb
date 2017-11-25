@@ -25,15 +25,16 @@
       <article>
         <%= label_tag(:amount, 'Donation Amount:') %>
         <%= text_field_tag(:amount) %>
+              <button id='donateButton' class="choose btn btn-primary">Submit</button>
+
       </article>
       <article>
         <%= hidden_field_tag(:stripeToken) %>
         <%= hidden_field_tag "currentUser" , current_user %>
       </article>
-      <button id='donateButton' class="choose btn btn-primary">Donate</button>
       <% end %>
 
-      <button class="choose btn btn-primary">
+      <button class="statistics btn btn-primary">
         <a id="statsButton" href="#charity-statistics">
           Statistics
         </a>
