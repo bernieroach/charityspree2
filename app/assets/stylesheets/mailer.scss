@@ -1,0 +1,39 @@
+.profile-header{
+background: #74ebd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-size: 100% 175px;
+background-repeat: no-repeat;
+
+
+  img.avatar {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  }
+ h1  {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+  }
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+  }
+}
+
+
+  h3 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+  }
+
+  h4 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;}

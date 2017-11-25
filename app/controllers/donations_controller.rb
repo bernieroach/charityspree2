@@ -36,7 +36,8 @@ class DonationsController < ApplicationController
     @charity = Charity.find(params[:charity_id]);
     new_amount = @charity.amount + params[:amount].to_i
     @charity.update_attributes(:amount => new_amount )
-
+    @user = User.find(current_user.id)
+    UserMailer.send_donation_receipt(@user, @donation,@charity).deliver
     UserAchievement.where(["user_id = :user_id and achieved = :achieved", { user_id: current_user.id, achieved: false }] ).find_each do |userAchievement|
       achievement = Achievement.find(userAchievement.achievement_id)
 
@@ -52,7 +53,9 @@ class DonationsController < ApplicationController
 
     end
     @user = User.find(current_user.id)
+
     redirect_to @user
+
     rescue Stripe::CardError => e
       flash[:error] = e.message
       redirect_to new_donate_path

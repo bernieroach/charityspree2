@@ -43,8 +43,8 @@ gem 'jquery-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# share buttons
-gem 'shareable'
+
+gem 'premailer-rails'
 
 gem 'sendgrid-ruby'
 
