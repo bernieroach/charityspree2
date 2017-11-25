@@ -261,7 +261,33 @@ li a .btn:hover{
 
 
 .form-control {
-background-color: rgb(250,255,189)
+background-color: rgb(250,255,189);
+
 }
 
+.big { height: 100%;
+       font-size: 100px;
+}
+// scroll buttons
+#topscroll {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    color: #00CAB8;
+    background-color: transparent;
+    padding: 15px;
+    height:80px;
+    width:80px;
+    font-size:50px;
+    border-radius: 10px;
+}
+
+#topscroll:hover {
+    background-color: #555;
+}
 
