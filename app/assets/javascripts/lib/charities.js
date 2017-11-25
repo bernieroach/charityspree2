@@ -2,9 +2,19 @@ $( document ).ready(function() {
 
   let statistics = document.getElementById('charity-statistics')
 
-  if (statistics) {
-    Pizza.init();
-  }
+  $(document).on('click', '#statsButton[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('section#charity-statistics').toggleClass('hidden')
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+
+    if (statistics) {
+      Pizza.init();
+    }
+  });
 });
 /// pie charts
 

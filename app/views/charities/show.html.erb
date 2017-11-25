@@ -1,15 +1,20 @@
 <%= javascript_include_tag "charities" %>
 
+<section class="charities-show container">
 
-<section class="charities-show">
   <section class="charity">
+    <div class='logo'>
+      <%= image_tag @charity.image %>
+    </div>
     <h1 class="charity-name"><%= @charity.name %></h1>
     <p class="charity-description"><%= @charity.description %></p>
-    <!-- <%= link_to charities_path do %>
-      <div type="button" class="choose btn btn-primary">Donate</div>
-    <% end %> -->
 
-    <!-- Stripe form -->
+
+
+
+
+
+
     <% if current_user %>
       <%= form_for [@charity, @donation] do %>
       <div id="error_explanation">
@@ -27,12 +32,24 @@
       </article>
       <button id='donateButton' class="choose btn btn-primary">Donate</button>
       <% end %>
+
+      <button class="choose btn btn-primary">
+        <a id="statsButton" href="#charity-statistics">
+          Statistics
+        </a>
+      </button>
+
     <% else %>
       <p>
         Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
       </p>
-
     <% end %>
+
+
+
+
+
+
 
     <script>
     var handler = StripeCheckout.configure({
@@ -75,10 +92,26 @@
     });
     </script>
 
+
+
+
+
+
+
+
+
   </section>
+</section>
 
 
-  <section class="achievements-legend">
+
+
+
+
+
+
+<!-- KEEPING IN CASE WE WANT TO SHOW THE USER THEIR UPCOMING ACHIEVEMENTS -->
+  <!-- <section class="achievements-legend">
     <h3>Achievements</h4>
     <% @achievements.each do |achievement | %>
       <p>
@@ -89,18 +122,52 @@
       </p>
     <% end %>
   </section>
-</section>
+</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <% if @charity.donations.count > 1 %>
-<section class="charity-statistics" id="charity-statistics" >
+<section class="charity-statistics hidden" id="charity-statistics" >
 
 <div class="container">
 
   <div class="row">
         <div class="col-md-12">
-            <h2>Charity <%= @charity.name %> Stats</h2>
+            <h2><%= @charity.name %> Stats</h2>
         </div>
         <div class="row">
           <div class="col-md-12">
