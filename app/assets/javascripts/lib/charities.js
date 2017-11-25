@@ -1,10 +1,12 @@
 $( document ).ready(function() {
+    let statistics = document.getElementById('charity-statistics')
+
 
   $('#statsButton').click(function(event){
     event.preventDefault()
     $('section#charity-statistics').slideToggle('slow', function(){
 
-
+      console.log('hello')
     })
 
   })
