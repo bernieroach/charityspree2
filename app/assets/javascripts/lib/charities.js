@@ -5,8 +5,10 @@ $( document ).ready(function() {
   $('#statsButton').click(function(event){
     event.preventDefault()
     $('section#charity-statistics').slideToggle('slow', function(){
+      if (statistics) {
+        Pizza.init();
+    }
 
-      console.log('hello')
     })
 
   })
