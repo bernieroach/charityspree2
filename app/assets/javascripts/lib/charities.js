@@ -1,4 +1,29 @@
 $( document ).ready(function() {
+
+  $('label').click(function(event){
+    $('input#amount').val($(this).find('input').data('value'))
+  })
+
+  $('#custom-amount').click(function(event){
+    event.preventDefault()
+
+    $('form').slideToggle('slow', function(){
+
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
     let statistics = document.getElementById('charity-statistics')
 
 
@@ -24,9 +49,6 @@ $( document ).ready(function() {
   //       scrollTop: $($.attr(this, 'href')).offset().top
   //   }, 1000);
 
-    if (statistics) {
-      Pizza.init();
-    }
   });
 // });
 /// pie charts
