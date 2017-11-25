@@ -14,12 +14,27 @@
       </div>
     </h1>
 
-
-
-
-
-
-
+    <section class="donations-wrapper">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" name="options" id="option1" autocomplete="off" data-value="1"><p>$1</p>
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option2" autocomplete="off" data-value="5"><p>$5</p>
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option3" autocomplete="off" data-value="10"><p>$10</p>
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option4" autocomplete="off" data-value="20"><p>$20</p>
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option5" autocomplete="off" data-value="25"><p>$25</p>
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option6" autocomplete="off"><p id="custom-amount">Custom Amount</p>
+        </label>
+      </div>
 
 
 
@@ -30,28 +45,31 @@
         <p><%= flash[:error] %></p>
         <% end %>
       </div>
-      <article>
+      <article id="custom-amount-input">
         <%= label_tag(:amount, 'Donation Amount:') %>
         <%= text_field_tag(:amount) %>
-        <button id='donateButton' class="choose btn btn-primary">Submit</button>
       </article>
       <article>
         <%= hidden_field_tag(:stripeToken) %>
         <%= hidden_field_tag "currentUser", current_user %>
       </article>
       <% end %>
-
-      <button class="statistics btn btn-primary">
-        <a id="statsButton" href="#charity-statistics">
-          Statistics
-        </a>
-      </button>
-
     <% else %>
       <p>
         Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
       </p>
     <% end %>
+
+    <div>
+      <button id='donate-button' class="btn btn-primary">Pay with Card</button>
+    </div>
+    <div>
+      <button id="statistics" class="btn btn-primary">
+        <a id="statsButton" href="#charity-statistics">
+          Statistics
+        </a>
+      </button>
+    </div>
 
 
 
@@ -74,7 +92,7 @@
       }
     });
 
-    $('#donateButton').on('click', function(e) {
+    $('#donate-button').on('click', function(e) {
       e.preventDefault();
 
       $('#error_explanation').html('');
@@ -107,7 +125,7 @@
 
 
 
-
+    </section>
   </section>
 </section>
 

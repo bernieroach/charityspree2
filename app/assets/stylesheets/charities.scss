@@ -129,10 +129,6 @@ main section.charities-index {
         bottom: 0;
         left: 5;
         margin: 0;
-
-        a#statsButton{
-          color: #fff;
-        }
       }
     }
   }
@@ -140,9 +136,6 @@ main section.charities-index {
 
 // CHARITY SHOW
 
-* {
-  border: 1px solid #000;
-}
 
 main section.charities-show {
 
@@ -193,20 +186,27 @@ main section.charities-show {
         }
       }
     }
+  }
 
-    .choose {
-      margin: 0 5px;
-      font-size: 15px;
-    }
+section.donations-wrapper {
 
-    .statistics {
-      float: right;
-      font-size: 20px;
+  form {
+    display: none;
+  }
 
-      a#statsButton{
-        float: right;
-        text-decoration: none;
-        color: #fff;
+  .buttons-wrapper {
+
+  }
+
+  #donate-button {
+
+  }
+
+  #statistics {
+
+    a#statsButton{
+      text-decoration: none;
+      color: #fff;
     }
   }
 }
