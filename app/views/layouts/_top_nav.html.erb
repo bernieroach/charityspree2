@@ -67,14 +67,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
-        <li><a id="current-user" href= '/users/<%= current_user.id %>'>welcome, <%= current_user.first_name.downcase %>!</a></li>
-        <li><a id="logout" href="/logout">logout</a></li>
+        <li><a id="current-user" href= '/users/<%= current_user.id %>'><i class="fa fa-user-circle-o" aria-hidden="true"></i> welcome, <%= current_user.first_name.downcase %>!</a></li>
+        <li><a id="logout" href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>logout</a></li>
       <% else %>
-        <li><a id="register" href="/signup">sign up</a></li>
-        <li><a id="login" href="/login">login</a></li>
+        <li><a id="register" href="/signup"><i class="fa fa-user-plus" aria-hidden="true"></i> sign up</a></li>
+        <li><a id="login" href="/login"><i class="fa fa-sign-in" aria-hidden="true"></i> login</a></li>
       <% end %>
-        <li><a id="donate" href="/#charities-list">donate</a></li>
-        <li><a id="about" href="/about">about</a></li>
+        <li><a id="donate" href="/#charities-list"><i class="fa fa-heart-o" aria-hidden="true"></i> donate</a></li>
+        <li><a id="about" href="/about"><i class="fa fa-info-circle" aria-hidden="true"></i> about</a></li>
         <!-- SEARCH MAGNIFIER -->
         <li>
           <a href="#search_box" class="btn" id="search">&#9740;</a>
