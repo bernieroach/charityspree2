@@ -6,7 +6,7 @@
 
     <div class="col-md-6 col-md-offset-3 userform" >
 
-    <h1>Signup</h1>
+    <h1><i class="fa fa-user-plus" aria-hidden="true"></i> Signup</h1>
 
         <%= form_for(:user, url: users_path) do |f| %>
 
@@ -23,16 +23,31 @@
             </div>
           <% end %>
           <br>
+          <div><i class="fa fa-user-circle-o" aria-hidden="true"></i>
           <%= f.label :first_name %>
           <%= f.text_field :first_name, class: 'form-control' %>
+</div>
+<div>
+  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
           <%= f.label :last_name %>
+
           <%= f.text_field :last_name, class: 'form-control' %>
+        </span>
+             <div>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
           <%= f.label :email %>
           <%= f.email_field :email, class: 'form-control' %>
+        </div>
+          <div>
+          <i class="fa fa-lock" aria-hidden="true"></i>
           <%= f.label :password %>
           <%= f.password_field :password, class: 'form-control' %>
+        </div>
+        <div>
+          <i class="fa fa-lock" aria-hidden="true"></i>
           <%= f.label :password_confirmation, "Confirmation" %>
           <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
           <br>
           <%= f.submit "Save", class: "btn btn-primary" %> <br>
           <br>
