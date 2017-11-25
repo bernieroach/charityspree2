@@ -39,7 +39,6 @@ $( document ).ready(function() {
 
 
 
-
   // SEARCH BAR
   $( "#search" ).click(function(e) {
     e.preventDefault();
@@ -47,6 +46,18 @@ $( document ).ready(function() {
     $("#search_box").find("#term").focus();
   });
 
+$(window).scroll(function() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("topscroll").style.display = "block";
+  } else {
+      document.getElementById("topscroll").style.display = "none";
+  }
+});
+
+// scroll to top
+$("#topscroll").click(function(e) {
+  $('html, body').animate({ scrollTop: 0 }, 'slow');
+})
 
 });
 
