@@ -29,14 +29,28 @@ $( document ).ready(function() {
 
   $('#statsButton').click(function(event){
     event.preventDefault()
+
+
+
     $('section#charity-statistics').slideToggle('slow', function(){
       if (statistics) {
         Pizza.init();
-    }
+      }
+
 
     })
 
+
+
   })
+
+  $(document).on('click', '#statsButton', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1200);
+  });
 
   // let statistics = document.getElementById('charity-statistics')
 
