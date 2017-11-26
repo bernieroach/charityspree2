@@ -43,6 +43,28 @@
         <label class="btn btn-oblong btn-lg">
           <input type="radio" name="options" id="option5" autocomplete="off"><p id="custom-amount">Custom Amount</p>
         </label>
+        <% if current_user %>
+    <%= form_for [@charity, @donation] do %>
+    <div id="error_explanation">
+      <% if flash[:error].present? %>
+      <p><%= flash[:error] %></p>
+      <% end %>
+    </div>
+    <article id="custom-amount-input">
+      <%= label_tag(:amount, 'Donation Amount: $') %>
+      <%= text_field_tag :amount %>
+    </article>
+    <article>
+      <%= hidden_field_tag(:stripeToken) %>
+      <%= hidden_field_tag "currentUser", current_user %>
+    </article>
+    <% end %>
+  <% else %>
+    <p>
+      Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
+    </p>
+  <% end %>
+  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
       </div>
 
 
@@ -67,28 +89,6 @@
 
     </section>
   </section>
-  <% if current_user %>
-    <%= form_for [@charity, @donation] do %>
-    <div id="error_explanation">
-      <% if flash[:error].present? %>
-      <p><%= flash[:error] %></p>
-      <% end %>
-    </div>
-    <article id="custom-amount-input">
-      <%= label_tag(:amount, 'Donation Amount: $') %>
-      <%= text_field_tag :amount %>
-    </article>
-    <article>
-      <%= hidden_field_tag(:stripeToken) %>
-      <%= hidden_field_tag "currentUser", current_user %>
-    </article>
-    <% end %>
-  <% else %>
-    <p>
-      Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
-    </p>
-  <% end %>
-  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
 </section>
 
 <script>
