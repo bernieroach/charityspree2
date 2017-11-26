@@ -3,37 +3,69 @@
 <section class="charities-show container">
 
   <section class="charity">
-    <div class='logo'>
-      <%= image_tag @charity.image %>
-    </div>
-    <h1 class="charity-name">
-      <%= @charity.name %>
-      <div class="information-container">
-        <%= image_tag 'signs.png', class: 'information' %>
-        <span><p class="charity-description"><%= @charity.description %></p></span>
+    <div class="charity-details">
+      <div class='logo'>
+        <%= image_tag @charity.image %>
       </div>
-    </h1>
+      <h1 class="charity-name">
+        <%= @charity.name %>
+        <div class="information-container">
+          <%= image_tag 'signs.png', class: 'information' %>
+          <span><p class="charity-description"><%= @charity.description %></p></span>
+        </div>
+      </h1>
+    </div>
 
     <section class="donations-wrapper container">
-      <div data-toggle="buttons">
-        <label class="btn btn-circle btn-lg">
-          <input type="radio" name="options" id="option1" autocomplete="off" data-value="1"><p>$1</p>
+
+      <div class="donate-buttons" data-toggle="buttons">
+        <h3>Choose Your Amount</h3>
+        <label class="btn btn-circle btn-lg active">
+          <input type="radio" name="options" id="option1" autocomplete="off" data-value="1" checked><p>$1</p>
         </label>
         <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option2" autocomplete="off" data-value="5"><p>$5</p>
         </label>
+        <br>
         <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option3" autocomplete="off" data-value="10"><p>$10</p>
         </label>
         <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option4" autocomplete="off" data-value="20"><p>$20</p>
         </label>
+        <br>
         <label class="btn btn-oblong btn-lg">
-          <input type="radio" name="options" id="option6" autocomplete="off"><p id="custom-amount">Custom Amount</p>
+          <input type="radio" name="options" id="option5" autocomplete="off"><p id="custom-amount">Custom Amount</p>
         </label>
       </div>
 
-    <% if current_user %>
+
+    <!-- <div>
+      <button id="statistics" class="btn btn-primary">
+        <a id="statsButton" href="#charity-statistics">
+          Statistics
+        </a>
+      </button>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+  </section>
+  <% if current_user %>
       <%= form_for [@charity, @donation] do %>
       <div id="error_explanation">
         <% if flash[:error].present? %>
@@ -54,22 +86,10 @@
         Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
       </p>
     <% end %>
+    <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
+</section>
 
-    <!-- <div>
-      <button id="statistics" class="btn btn-primary">
-        <a id="statsButton" href="#charity-statistics">
-          Statistics
-        </a>
-      </button>
-    </div> -->
-
-
-
-
-
-
-
-    <script>
+<script>
     var handler = StripeCheckout.configure({
       key: '<%= Rails.configuration.stripe[:publishable_key] %>',
       locale: 'auto',
@@ -109,17 +129,6 @@
       handler.close();
     });
     </script>
-
-
-
-
-
-
-
-
-    </section>
-  </section>
-</section>
 
 
 
