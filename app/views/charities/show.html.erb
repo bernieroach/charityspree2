@@ -13,7 +13,13 @@
           <%= image_tag 'signs.png', class: 'information' %>
           <span><p class="charity-description"><%= @charity.description %></p></span>
         </div>
+        <p class="on-charity-spree">on Charity Spree</p>
       </h1>
+      <button id="statistics" class="btn btn-info">
+        <a id="statsButton" href="#charity-statistics">
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
+        </a>
+  </button>
     </div>
 
     <section class="donations-wrapper container">
@@ -40,13 +46,9 @@
       </div>
 
 
-    <!-- <div>
-      <button id="statistics" class="btn btn-primary">
-        <a id="statsButton" href="#charity-statistics">
-          Statistics
-        </a>
-      </button>
-    </div> -->
+
+
+
 
 
 
@@ -66,27 +68,27 @@
     </section>
   </section>
   <% if current_user %>
-      <%= form_for [@charity, @donation] do %>
-      <div id="error_explanation">
-        <% if flash[:error].present? %>
-        <p><%= flash[:error] %></p>
-        <% end %>
-      </div>
-      <article id="custom-amount-input">
-        <%= label_tag(:amount, 'Donation Amount: $') %>
-        <%= text_field_tag :amount %>
-      </article>
-      <article>
-        <%= hidden_field_tag(:stripeToken) %>
-        <%= hidden_field_tag "currentUser", current_user %>
-      </article>
+    <%= form_for [@charity, @donation] do %>
+    <div id="error_explanation">
+      <% if flash[:error].present? %>
+      <p><%= flash[:error] %></p>
       <% end %>
-    <% else %>
-      <p>
-        Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
-      </p>
+    </div>
+    <article id="custom-amount-input">
+      <%= label_tag(:amount, 'Donation Amount: $') %>
+      <%= text_field_tag :amount %>
+    </article>
+    <article>
+      <%= hidden_field_tag(:stripeToken) %>
+      <%= hidden_field_tag "currentUser", current_user %>
+    </article>
     <% end %>
-    <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
+  <% else %>
+    <p>
+      Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
+    </p>
+  <% end %>
+  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
 </section>
 
 <script>
@@ -189,7 +191,6 @@
 
 <% if @charity.donations.count > 1 %>
 <section class="charity-statistics" id="charity-statistics" >
-
 <div class="container">
 
   <div class="row">
@@ -257,6 +258,7 @@
     <%= link_to(article['title'], article['url'], target: :blank) %>
       </div>
 <% end %>
+
 
 <script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
 </div>

@@ -139,14 +139,23 @@ main section.charities-index {
 
 main section.charities-show {
 
+
   form {
+    margin-top:10px;
     font-size: 25px;
     display: none;
     text-align: right;
     // margin: 0 auto;
+    label {
+      font-family: 'Open Sans';
+      font-weight: normal;
+    }
   }
 
+
   #donate-button {
+    position: relative;
+    top: -100px;
     float: right;
     margin: 20px 160px 0 0;
 
@@ -171,6 +180,28 @@ main section.charities-show {
       float: left;
       border-right: 1px solid #000;
 
+    .btn-info {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+      #statistics {
+        margin: 32px auto;
+        display: block;
+        border: none;
+
+      .glyphicon-triangle-bottom {
+        font-size: 30px;
+        color: #337ab7;
+      }
+
+      a#statsButton{
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+
     .logo {
       display: flex;
       justify-content: center;
@@ -186,6 +217,11 @@ main section.charities-show {
       margin-bottom: 30px;
       font-family: 'Open Sans';
       font-size: 50px;
+
+      .on-charity-spree {
+        margin-top: 20px;
+        font-size: 25px;
+      }
 
 
 
@@ -220,6 +256,7 @@ section.donations-wrapper {
 
 
   div.donate-buttons {
+    font-family: 'Open Sans';
     padding-left: 40px;
     width: 50%;
     float: right;
@@ -279,18 +316,8 @@ section.donations-wrapper {
     }
   }
 }
-
-
-
-
-  #statistics {
-
-    a#statsButton{
-      text-decoration: none;
-      color: #fff;
-    }
-  }
 }
+
 
 
   // section.achievements-legend {
@@ -313,6 +340,7 @@ section.donations-wrapper {
 
 main section#charity-statistics {
   display: none;
+  padding-bottom: 150px;
 
   .hidden {
       display: none;
