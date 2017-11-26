@@ -50,7 +50,7 @@ body {
     padding-right: 50px;
   }
 
-  #login, #logout, #about {
+  #login, #logout, #about, #donate {
     font-size: 15px;
     font-family: 'Open Sans';
     font-variant: small-caps;
@@ -62,7 +62,7 @@ body {
     }
   }
 
-  #register, #current-user, #donate {
+  #register, #current-user {
     font-variant: small-caps;
     background-color: #00CAB8;
     color: #fff;
@@ -130,30 +130,22 @@ body {
 }
 .carousel-content {
 
-    color: #000;
-    text-align: center;
-    color: #FFFFFF;
+  color: #fff;
+  text-align: center;
+  color: #FFFFFF;
 
-    p {
-      padding: 0;
-      font-size: 20px;
-    }
+  p {
+    padding: 0;
+    font-size: 20px;
+    width: 100%;
+  }
+  // z-index: 2;
 
-
-    display:flex;
-    align-items:center;
-    color: #FFFFFF;
-    z-index: 2;
-
-      aside img{
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 40px;
-        width: 40px;
-
-      }
-
+  aside {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
 }
 
 #text-carousel {
