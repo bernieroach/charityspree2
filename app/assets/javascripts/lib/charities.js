@@ -24,6 +24,14 @@ $( document ).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
     let statistics = document.getElementById('charity-statistics')
 
 
