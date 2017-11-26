@@ -24,6 +24,14 @@ $( document ).ready(function() {
 
 
 
+
+
+
+
+
+
+
+
     let statistics = document.getElementById('charity-statistics')
 
 
@@ -434,3 +442,4 @@ $( document ).ready(function() {
   window.Pizza = Pizza;
 
 }($, this, this.document));
+
