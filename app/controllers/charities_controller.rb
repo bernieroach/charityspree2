@@ -1,4 +1,5 @@
 class CharitiesController < ApplicationController
+
   def index
     @charities = Charity.all
   end
@@ -37,4 +38,5 @@ class CharitiesController < ApplicationController
         end
     end
   end
+
 end
