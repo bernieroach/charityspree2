@@ -142,9 +142,17 @@ body {
   // z-index: 2;
 
   aside {
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+  }
+    .fishes
+  {
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -285,3 +293,29 @@ background-color: rgb(250,255,189);
     background-color: #555;
 }
 
+
+
+.parent {
+
+  display: inline-block;
+
+
+
+.image1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  z-index: 10;
+}
+.image2 {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+    height: 70px;
+  width: 70px;
+  z-index: 1;
+}
+}
