@@ -1,11 +1,70 @@
 $( document ).ready(function() {
 
-  let statistics = document.getElementById('charity-statistics')
+  $('label').click(function(event){
+    $('input#amount').val($(this).find('input').data('value'))
+  })
 
-  if (statistics) {
-    Pizza.init();
-  }
-});
+  $('#custom-amount').click(function(event){
+    event.preventDefault()
+
+    $('form').slideToggle('slow', function(){
+
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    let statistics = document.getElementById('charity-statistics')
+
+
+  $('#statsButton').click(function(event){
+    event.preventDefault()
+
+
+
+    $('section#charity-statistics').slideToggle('slow', function(){
+      if (statistics) {
+        Pizza.init();
+      }
+
+
+    })
+
+
+
+  })
+
+  $(document).on('click', '#statsButton', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1200);
+  });
+
+  // let statistics = document.getElementById('charity-statistics')
+
+  // $(document).on('click', '#statsButton[href^="#"]', function (event) {
+  //   event.preventDefault();
+
+  //   $('section#charity-statistics').toggleClass('hidden')
+
+  //   $('html, body').animate({
+  //       scrollTop: $($.attr(this, 'href')).offset().top
+  //   }, 1000);
+
+  });
+// });
 /// pie charts
 
 (function ($, window, document, undefined) {

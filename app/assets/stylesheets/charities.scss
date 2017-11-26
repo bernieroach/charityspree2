@@ -4,7 +4,7 @@ main section.charities-index {
   section.title-logo {
     font-family: Pacifico;
     text-align: center;
-    padding: 20px 0;
+    padding: 7px 0;
     color: #000;
 
     h1 {
@@ -129,59 +129,220 @@ main section.charities-index {
         bottom: 0;
         left: 5;
         margin: 0;
+      }
+    }
+  }
+}
 
-        a{
-          color: #000;
+// CHARITY SHOW
+
+
+main section.charities-show {
+
+  section.charity {
+    margin: 0 0 0 50px;
+    padding: 35px 35px 0 35px;
+
+    .charity-details {
+      margin-top: 50px;
+      padding-top:25px;
+      width: 50%;
+      float: left;
+      border-right: 2px solid #fafafa;
+
+    .btn-info {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+      #statistics {
+        margin: 32px auto;
+        display: block;
+        border: none;
+
+      .glyphicon-triangle-bottom {
+        font-size: 30px;
+        color: #337ab7;
+      }
+
+      a#statsButton{
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      img{
+        height: 200px;
+      }
+    }
+
+    .charity-name {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Open Sans';
+      font-size: 50px;
+
+      .on-charity-spree {
+        margin-top: 20px;
+        font-size: 25px;
+      }
+
+
+
+      .information-container {
+        display: inline-block;
+        &:hover span {
+          display: block;
+        }
+        .information {
+          height: 25px;
+          margin-bottom: 25px;
+        }
+        span {
+          background-color: #F3F7F6;
+          margin-right: 20px;
+          display: none;
+          position: absolute;
+          z-index: 2;
+
+          .charity-description {
+            text-align: justify;
+            font-size: 15px;
+            padding: 10px 10px;
+          }
         }
       }
     }
   }
 }
 
-main section.charities-show {
+section.donations-wrapper {
 
-  section.charity {
-    background-color: #89bdd3;
-    border: 1px solid #000;
-    float: left;
+
+  div.donate-buttons {
+    font-family: 'Open Sans';
+    padding-left: 40px;
     width: 50%;
-    text-align: justify;
-    margin-left: 50px;
-    margin-top: 40px;
-    padding: 35px 35px;
-
-    .charity-name {
-      margin-bottom: 30px;
-      font-family: Pacifico;
-      font-size: 50px;
-      text-decoration: underline;
-    }
-
-    .choose {
-      font-size: 20px;
-      float: right;
-
-      a{
-        color: #000;
-      }
-    }
-  }
-
-  section.achievements-legend {
-    background-color: #89bdd3;
-    display: inline-block;
-    text-align: justify;
     float: right;
-    width: 20%;
-    border: 1px solid #000;
-    margin-top: 40px;
-    margin-right: 50px;
-    padding: 10px 10px;
 
-    img {
-      height: 20px;
+    h3 {
+      margin-left: 20px;
+    }
+
+  .btn-circle.btn-lg {
+    margin: 20px 20px;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: #67D8DE;
+    // border-color: #2e6da4;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 100%;
+    outline: none;
+
+    &.focus.active {
+      background-color: #1E76BD;
+    }
+
+    p {
+      line-height: 80px;
+      color: #fff;
+      margin: 0 auto;
+      vertical-align: middle;
+      text-align: center;
     }
   }
+
+
+  .btn-oblong.btn-lg {
+
+    background-color: #67D8DE;
+    // border-color: #2e6da4;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    margin-left: 20px;
+    outline: none;
+
+    &.focus.active {
+      background-color: #1E76BD;
+    }
+
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  form {
+    margin-top:10px;
+    font-size: 25px;
+    display: none;
+    text-align: right;
+    // margin: 0 auto;
+    label {
+      font-family: 'Open Sans';
+      font-weight: normal;
+    }
+  }
+
+  #donate-button {
+    display: block;
+    margin: 15px 0 0 20px;
+
+
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+}
+}
+
+
+
+  // section.achievements-legend {
+  //   background-color: #89bdd3;
+  //   display: inline-block;
+  //   text-align: justify;
+  //   float: right;
+  //   width: 20%;
+  //   border: 1px solid #000;
+  //   margin-top: 40px;
+  //   margin-right: 50px;
+  //   padding: 10px 10px;
+
+  //   img {
+  //     height: 20px;
+  //   }
+  // }
+}
+
+
+main section#charity-statistics {
+  display: none;
+  padding: 100px 0 150px 0;
+
+  .hidden {
+      display: none;
+  }
+
 }
 
 main section#about {
@@ -271,8 +432,8 @@ $duration: 30s;
 }
 
 
-body { padding-bottom: 5rem; }
-h1,h2,p {padding: 0 5%;}
+// body { padding-bottom: 5rem; }
+// h1,h2,p {padding: 0 5%;}
 
 
 
