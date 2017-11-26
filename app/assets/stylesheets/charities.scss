@@ -139,9 +139,37 @@ main section.charities-index {
 
 main section.charities-show {
 
+  form {
+    font-size: 25px;
+    display: none;
+    text-align: right;
+    // margin: 0 auto;
+  }
+
+  #donate-button {
+    float: right;
+    margin: 20px 160px 0 0;
+
+
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+
   section.charity {
-    margin: 40px 0 0 50px;
-    padding: 35px 35px;
+    margin: 0 0 0 50px;
+    padding: 35px 35px 0 35px;
+
+    .charity-details {
+      margin-top: 50px;
+      width: 50%;
+      float: left;
+      border-right: 1px solid #000;
 
     .logo {
       display: flex;
@@ -149,11 +177,10 @@ main section.charities-show {
       width: 100%;
 
       img{
-        height: 70px;
+        height: 200px;
       }
     }
-// div.click-to-top span {display: none; position: absolute; bottom: 0; left: 0; right: 0; background: #333; color: #fff; }
-// div.click-to-top:hover span {display: block; }
+
     .charity-name {
       text-align: center;
       margin-bottom: 30px;
@@ -187,23 +214,26 @@ main section.charities-show {
       }
     }
   }
+}
 
 section.donations-wrapper {
-  background-color: #F3F7F6;
 
-  form {
-    font-size: 25px;
-    display: none;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+
+  div.donate-buttons {
+    padding-left: 40px;
+    width: 50%;
+    float: right;
+
+    h3 {
+      margin-left: 20px;
+    }
 
   .btn-circle.btn-lg {
-    margin: 20px 40px;
+    margin: 20px 20px;
     line-height: 20px;
     vertical-align: middle;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+    background-color: #67D8DE;
+    // border-color: #2e6da4;
     color: #fff;
     width: 100px;
     height: 100px;
@@ -211,6 +241,11 @@ section.donations-wrapper {
     font-size: 18px;
     line-height: 1.33;
     border-radius: 100%;
+    outline: none;
+
+    &.focus.active {
+      background-color: #1E76BD;
+    }
 
     p {
       line-height: 80px;
@@ -221,22 +256,30 @@ section.donations-wrapper {
     }
   }
 
+
   .btn-oblong.btn-lg {
-    margin: 20px 40px;
-    background-color: #337ab7;
-    border-color: #2e6da4;
+
+    background-color: #67D8DE;
+    // border-color: #2e6da4;
     color: #fff;
     width: 250px;
     height: 50px;
     padding: 10px 16px;
     font-size: 18px;
     line-height: 1.33;
-    border-radius: 25px;
+    margin-left: 20px;
+    outline: none;
+
+    &.focus.active {
+      background-color: #1E76BD;
+    }
 
     p {
       margin: 0 auto;
     }
   }
+}
+
 
 
 
