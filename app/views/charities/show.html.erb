@@ -14,29 +14,24 @@
       </div>
     </h1>
 
-    <section class="donations-wrapper">
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn btn-primary active">
+    <section class="donations-wrapper container">
+      <div data-toggle="buttons">
+        <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option1" autocomplete="off" data-value="1"><p>$1</p>
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option2" autocomplete="off" data-value="5"><p>$5</p>
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option3" autocomplete="off" data-value="10"><p>$10</p>
         </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-circle btn-lg">
           <input type="radio" name="options" id="option4" autocomplete="off" data-value="20"><p>$20</p>
         </label>
-        <label class="btn btn-primary">
-          <input type="radio" name="options" id="option5" autocomplete="off" data-value="25"><p>$25</p>
-        </label>
-        <label class="btn btn-primary">
+        <label class="btn btn-oblong btn-lg">
           <input type="radio" name="options" id="option6" autocomplete="off"><p id="custom-amount">Custom Amount</p>
         </label>
       </div>
-
-
 
     <% if current_user %>
       <%= form_for [@charity, @donation] do %>
@@ -46,8 +41,8 @@
         <% end %>
       </div>
       <article id="custom-amount-input">
-        <%= label_tag(:amount, 'Donation Amount:') %>
-        <%= text_field_tag(:amount) %>
+        <%= label_tag(:amount, 'Donation Amount: $') %>
+        <%= text_field_tag :amount %>
       </article>
       <article>
         <%= hidden_field_tag(:stripeToken) %>
@@ -60,16 +55,13 @@
       </p>
     <% end %>
 
-    <div>
-      <button id='donate-button' class="btn btn-primary">Pay with Card</button>
-    </div>
-    <div>
+    <!-- <div>
       <button id="statistics" class="btn btn-primary">
         <a id="statsButton" href="#charity-statistics">
           Statistics
         </a>
       </button>
-    </div>
+    </div> -->
 
 
 
