@@ -52,6 +52,7 @@ main section#profile {
 
     #featured-achievement {
       background-color: #f6f6f6;
+      border: 1px solid #e0e0e0;
       border-radius: 10px;
       margin: 0 500px;
       padding: 5px 5px;
@@ -93,7 +94,7 @@ main section#profile {
 
     .tab-content {
       background: #f6f6f6;
-      border: 1px solid #e5e9f0;
+      border: 1px solid #e0e0e0;
       // height: 1500px;
       border-radius: 10px;
       margin: 0 auto;
@@ -237,3 +238,4 @@ main section#profile {
 .form-control {
 background-color: rgb(250,255,189)
 }
+
