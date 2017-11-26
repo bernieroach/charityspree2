@@ -139,37 +139,6 @@ main section.charities-index {
 
 main section.charities-show {
 
-
-  form {
-    margin-top:10px;
-    font-size: 25px;
-    display: none;
-    text-align: right;
-    // margin: 0 auto;
-    label {
-      font-family: 'Open Sans';
-      font-weight: normal;
-    }
-  }
-
-
-  #donate-button {
-    position: relative;
-    top: -100px;
-    float: right;
-    margin: 20px 160px 0 0;
-
-
-    background-color: #337ab7;
-    border-color: #2e6da4;
-    color: #fff;
-    width: 250px;
-    height: 50px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-  }
-
   section.charity {
     margin: 0 0 0 50px;
     padding: 35px 35px 0 35px;
@@ -315,6 +284,33 @@ section.donations-wrapper {
       margin: 0 auto;
     }
   }
+
+  form {
+    margin-top:10px;
+    font-size: 25px;
+    display: none;
+    text-align: right;
+    // margin: 0 auto;
+    label {
+      font-family: 'Open Sans';
+      font-weight: normal;
+    }
+  }
+
+  #donate-button {
+    display: block;
+    margin: 15px 0 0 20px;
+
+
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
 }
 }
 
@@ -340,7 +336,7 @@ section.donations-wrapper {
 
 main section#charity-statistics {
   display: none;
-  padding-bottom: 150px;
+  padding: 100px 0 150px 0;
 
   .hidden {
       display: none;
