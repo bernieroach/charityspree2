@@ -189,18 +189,56 @@ main section.charities-show {
   }
 
 section.donations-wrapper {
+  background-color: #F3F7F6;
 
   form {
+    font-size: 25px;
     display: none;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  .buttons-wrapper {
+  .btn-circle.btn-lg {
+    margin: 20px 40px;
+    line-height: 20px;
+    vertical-align: middle;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 100%;
 
+    p {
+      line-height: 80px;
+      color: #fff;
+      margin: 0 auto;
+      vertical-align: middle;
+      text-align: center;
+    }
   }
 
-  #donate-button {
+  .btn-oblong.btn-lg {
+    margin: 20px 40px;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+    width: 250px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
 
+    p {
+      margin: 0 auto;
+    }
   }
+
+
 
   #statistics {
 
