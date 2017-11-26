@@ -85,7 +85,7 @@
   <div>
   <!-- SEARCH BAR FOR USERS -->
   <%= form_tag(users_path, method: :get, id: "search_box") do %>
-  <%= text_field_tag :term, params[:term], placeholder: "Search users ..." %>
+  <%= text_field_tag :term, params[:term], placeholder: "Search users..." %>
   <%= submit_tag 'Search', class: "search_icon" %>
   <% end %>
   </div>
