@@ -126,6 +126,19 @@
       }
     });
 
+
+
+//Turn off submit on "Enter" key
+
+$("form").bind("keypress", function (e) {
+    if (e.keyCode == 13) {
+        $("#btnSearch").attr('value');
+        //add more buttons here
+        e.preventDefault();
+    }
+});
+
+
     // Close Checkout on page navigation
     $(window).on('popstate', function() {
       handler.close();

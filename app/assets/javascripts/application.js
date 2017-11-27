@@ -20,7 +20,26 @@
 $( document ).ready(function() {
 
 
+ $("#amount").on('keyup',function(e){
+  if(e.keyCode === 13) {
+    e.preventDefault();
+    $('#error_explanation').html('');
+    var amount = $('input#amount').val();
+    amount = amount.replace(/\$/g, '').replace(/\,/g, '')
 
+    amount = parseFloat(amount);
+
+    if (isNaN(amount) || amount == 0)  {
+      $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+    }
+    else {
+      amount = amount * 100; // Needs to be an integer!
+      handler.open({
+        amount: Math.round(amount)
+      })
+    }
+  };
+ });
 
   $(document).on('click', 'a.first[href^="#"], a.second[href^="#"]', function (event) {
     event.preventDefault();
