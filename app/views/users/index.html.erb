@@ -5,7 +5,7 @@
       <% for user in @users %>
         <tr>
           <td>
-            <%= image_tag(user.avatar, :class => 'result-avatar') %>
+            <a class="result-name" href="/users/<%=user.id%>"><%= image_tag(user.avatar, :class => 'result-avatar') %></a>
           </td>
           <td>
             <a class="result-name" href="/users/<%=user.id%>"><%= user.first_name %>  <%= user.last_name %></a>
