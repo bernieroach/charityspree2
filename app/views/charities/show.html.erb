@@ -60,7 +60,7 @@
     </article>
     <% end %>
 
-  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
+  <button id='donate-button' class="choose btn btn-primary"><i class="fa fa-heart-o" aria-hidden="true"></i> Donate Now</button>
       </div>
   <% else %>
   <div style="text-align: center;">
@@ -109,10 +109,15 @@
 
       amount = parseFloat(amount);
 
-      if (isNaN(amount) || amount == 0)  {
-        $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+        if (isNaN(amount)|| amount <= 0) {
+          $('#error_explanation').html('<div id="error_explanation" class="errormsg"><table><tbody><tr><td><p>Please enter a valid amount in CAD ($).</p></td></tr></tbody></table></div>');
       } else {
         amount = amount * 100;
+
+        if ( amount > 99999999 ) {
+          amount = 99999999;
+          $('input#amount').val(amount);
+        }
         handler.open({
         amount: Math.round(amount)
       })
@@ -127,10 +132,15 @@
         var amount = $('input#amount').val();
         amount = amount.replace(/\$/g, '').replace(/\,/g, '')
         amount = parseFloat(amount);
-        if (isNaN(amount)) {
-          $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+        if (isNaN(amount)|| amount <= 0) {
+          $('#error_explanation').html('<div id="error_explanation" class="errormsg"><table><tbody><tr><td><p>Please enter a valid amount in CAD ($).</p></td></tr></tbody></table></div>');
+          return false;
         } else {
           amount = amount * 100;
+          if ( amount > 99999999 ) {
+            amount = 99999999;
+            $('input#amount').val(amount);
+          }
           handler.open({
           amount: Math.round(amount)
         })
@@ -138,7 +148,6 @@
         }
       }
     })
-
 
 
 //Turn off submit on "Enter" key
