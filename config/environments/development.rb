@@ -31,6 +31,14 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  config.action_mailer.default_url_options = {
+    :host => 'localhost:3000',
+    :only_path => false
+  }
+
+config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_mailer.asset_host = 'http://localhost:3000'
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
@@ -41,6 +49,10 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+ config.assets.debug = false
+ config.assets.compile = false
+ config.assets.digest = true
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
