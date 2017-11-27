@@ -18,49 +18,49 @@ charity1 = Charity.create!({
   name: 'GiveDirectly',
   description: 'GiveDirectly is a nonprofit organization operating in East Africa that helps families living in extreme poverty by making unconditional cash transfers to them via mobile phone. GiveDirectly transfers funds to people in Kenya, Uganda, and Rwanda.',
   amount: 278,
-  image: '001-lifesaver.png'
+  image: '002-new-lifesaver.png'
 })
 
 charity2 = Charity.create!({
   name: 'The END Fund',
   description: 'The END Fund is a leader in the global health movement to tackle neglected tropical diseases, working collaboratively with committed partners including global health organizations, visionary investors, pharmaceutical companies, leaders from developing countries affected by NTDs, and those who suffer from the diseases themselves.',
   amount: 32,
-  image: '002-first-aid-kit.png'
+  image: '003-new-first-aid-kit.png'
 })
 
 charity3 = Charity.create!({
   name: 'Against Malaria Foundation',
   description: 'The Against Malaria Foundation (AMF) is a United Kingdom-based charity that provides long-lasting insecticidal nets (LLINs) to populations at high risk of malaria, primarily in Africa.',
   amount: 36,
-  image: '003-new-ribbon.png'
+  image: '004-new-ribbon.png'
 })
 
 charity4 = Charity.create!({
   name: 'Malaria Consortium',
   description: 'Established in 2003, Malaria Consortium is one of the world’s leading non-profit organisations specialising in the prevention, control and treatment of malaria and other communicable diseases among vulnerable populations.',
   amount: 41,
-  image: '004-medicine.png'
+  image: '005-new-medicine.png'
 })
 
 charity5 = Charity.create!({
   name: 'Deworm the World Initiative',
   description: 'The Deworm the World Initiative is a program led by the nonprofit Evidence Action that works to support governments in developing school-based deworming programs in Kenya, India, Ethiopia, and Vietnam.',
   amount: 71,
-  image: '005-heart.png'
+  image: '006-new-heart.png'
 })
 
 charity6 = Charity.create!({
   name: 'Sightsavers',
   description: 'Sightsavers is an international non-governmental organisation that works with partners in developing countries to treat and prevent avoidable blindness, and promote equality for people with visual impairments and other disabilities.',
   amount: 76,
-  image: '001-lifesaver.png'
+  image: '001-new-box.png'
 })
 
 charity7 = Charity.create!({
   name: 'Schistosomiasis Control Initiative',
   description: 'Schistosomiasis Control Initiative is an initiative that helps governments in African countries treat schistosomiasis, one of the most common neglected tropical diseases, caused by parasitic worms. It was founded in 2002 and funded via grants from the Gates Foundation and USAID.',
   amount: 66,
-  image: '006-people.png'
+  image: '007-new-people.png'
 })
 
 ## USERS
