@@ -166,70 +166,70 @@ achievement1 = Achievement.create!({
   title: 'Join Us, Join Us',
   description: 'Register on Charity Spree',
   progress: 0,
-  image: '002-medal.png'
+  image: '001-award.png'
 })
 
 achievement2 = Achievement.create!({
   title: 'Bang for Your Buck',
-  description: 'Donate your first dollar',
+  description: 'Donate 1 dollar',
   progress: 1,
+  image: '002-medal.png'
+})
+
+achievement11 = Achievement.create!({
+  title: 'High Five',
+  description: 'Donate 5 dollars',
+  progress: 5,
   image: '003-ribbon.png'
 })
 
 achievement3 = Achievement.create!({
   title: 'Loose Change',
-  description: 'Donate your tenth dollar',
+  description: 'Donate 10 dollars',
   progress: 10,
-  image: '004-medal-1.png'
+  image: '002-trophy-1.png'
+})
+
+achievement13 = Achievement.create!({
+  title: 'High Five Times Five',
+  description: 'Donate 25 dollars',
+  progress: 25,
+  image: '005-cup.png'
+})
+
+achievement12 = Achievement.create!({
+  title: 'Fifty Shades of Goodness',
+  description: 'Donate 50 dollars',
+  progress: 50,
+  image: '005-torch.png'
 })
 
 achievement4 = Achievement.create!({
-  title: 'Big Spender',
-  description: 'Donate one hundred dollars',
+  title: 'Big Generosity',
+  description: 'Donate 100 dollars',
   progress: 100,
-  image: '005-cup.png'
-})
-
-achievement5 = Achievement.create!({
-  title: 'Huge',
-  description: 'Spend even more money',
-  progress: 150,
-  image: '002-medal.png'
+  image: '001-trophy-2.png'
 })
 
 achievement6 = Achievement.create!({
-  title: 'Huger',
-  description: 'Spend even more money',
+  title: 'Super Supporter',
+  description: 'Donate 200 dollars',
   progress: 200,
-  image: '003-ribbon.png'
+  image: '007-ribbon.png'
 })
 
 achievement7 = Achievement.create!({
-  title: 'Hugest',
-  description: 'Wow, that\'t a lot of money',
+  title: 'Champion Donator',
+  description: 'Donate 250 dollars',
   progress: 250,
-  image: '004-medal-1.png'
-})
-
-achievement8 = Achievement.create!({
-  title: 'Biggest Spender',
-  description: 'Bah!',
-  progress: 300,
-  image: '005-cup.png'
-})
-
-achievement9 = Achievement.create!({
-  title: 'Biggerest Spender',
-  description: 'Crazy',
-  progress: 350,
-  image: '005-cup.png'
+  image: '006-trophy.png'
 })
 
 achievement10 = Achievement.create!({
-  title: 'Biggerester Spender',
-  description: 'Crazy',
-  progress: 400,
-  image: '005-cup.png'
+  title: 'Achievement Spree',
+  description: 'Donate 500 dollars',
+  progress: 500,
+  image: '004-crown.png'
 })
 
 ## User_Achievements
@@ -238,29 +238,36 @@ puts "Re-creating UserAchievements ..."
 
 user1.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement1.id)
 user1.user_achievements.create!(progress: 1, achieved: true, achievement_id: achievement2.id)
+user1.user_achievements.create!(progress: 5, achieved: true, achievement_id: achievement11.id)
 user1.user_achievements.create!(progress: 10,achieved: true, achievement_id: achievement3.id)
+user1.user_achievements.create!(progress: 25,achieved: true, achievement_id: achievement13.id)
+user1.user_achievements.create!(progress: 50,achieved: true, achievement_id: achievement12.id)
 user1.user_achievements.create!(progress: 90, achieved: false, achievement_id: achievement4.id)
-user1.user_achievements.create!(progress: 90, achieved: false, achievement_id: achievement5.id)
 user1.user_achievements.create!(progress: 90, achieved: false, achievement_id: achievement6.id)
 user1.user_achievements.create!(progress: 90, achieved: false, achievement_id: achievement7.id)
 
 user2.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement1.id)
 user2.user_achievements.create!(progress: 1, achieved: true, achievement_id: achievement2.id)
+user2.user_achievements.create!(progress: 5, achieved: true, achievement_id: achievement11.id)
 user2.user_achievements.create!(progress: 9, achieved: false, achievement_id: achievement3.id)
 
 user3.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement1.id)
 user3.user_achievements.create!(progress: 1, achieved: true, achievement_id: achievement2.id)
+user3.user_achievements.create!(progress: 5, achieved: true, achievement_id: achievement11.id)
 user3.user_achievements.create!(progress: 10, achieved: true, achievement_id: achievement3.id)
+user3.user_achievements.create!(progress: 25,achieved: true, achievement_id: achievement13.id)
+user3.user_achievements.create!(progress: 50,achieved: true, achievement_id: achievement12.id)
 user3.user_achievements.create!(progress: 100, achieved: true, achievement_id: achievement4.id)
-user3.user_achievements.create!(progress: 150, achieved: true, achievement_id: achievement5.id)
 user3.user_achievements.create!(progress: 200, achieved: true, achievement_id: achievement6.id)
 user3.user_achievements.create!(progress: 250, achieved: true, achievement_id: achievement7.id)
 
 user4.user_achievements.create!(progress: 0, achieved: true, achievement_id: achievement1.id)
 user4.user_achievements.create!(progress: 1, achieved: true, achievement_id: achievement2.id)
+user4.user_achievements.create!(progress: 5, achieved: true, achievement_id: achievement11.id)
 user4.user_achievements.create!(progress: 10, achieved: true, achievement_id: achievement3.id)
+user4.user_achievements.create!(progress: 25,achieved: true, achievement_id: achievement13.id)
+user4.user_achievements.create!(progress: 50,achieved: true, achievement_id: achievement12.id)
 user4.user_achievements.create!(progress: 100, achieved: true, achievement_id: achievement4.id)
-user4.user_achievements.create!(progress: 150, achieved: true, achievement_id: achievement5.id)
 user4.user_achievements.create!(progress: 200, achieved: true, achievement_id: achievement6.id)
 user4.user_achievements.create!(progress: 250, achieved: true, achievement_id: achievement7.id)
 
