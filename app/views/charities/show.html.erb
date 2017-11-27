@@ -109,7 +109,7 @@
 
       amount = parseFloat(amount);
 
-      if (isNaN(amount) || amount == 0)  {
+      if (isNaN(amount) || amount <= 0)  {
         $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
 
       } else {
@@ -133,7 +133,7 @@
         var amount = $('input#amount').val();
         amount = amount.replace(/\$/g, '').replace(/\,/g, '')
         amount = parseFloat(amount);
-        if (isNaN(amount)) {
+        if (isNaN(amount  || amount <= 0)) {
           $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
         } else {
           amount = amount * 100;
