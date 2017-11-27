@@ -43,6 +43,7 @@
         <label class="btn btn-oblong btn-lg">
           <input type="radio" name="options" id="option5" autocomplete="off"><p id="custom-amount">Custom Amount</p>
         </label>
+<<<<<<< HEAD
 
     <%= form_for [@charity, @donation] do %>
     <div id="error_explanation">
@@ -111,14 +112,33 @@
 
       if (isNaN(amount) || amount == 0)  {
         $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
-      }
-      else {
-        amount = amount * 100; // Needs to be an integer!
+      } else {
+        amount = amount * 100;
         handler.open({
+        amount: Math.round(amount)
+      })
+    }
+  });
+
+    $('form').on('keyup keypress', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode === 13) {
+        e.preventDefault();
+        $('#error_explanation').html('');
+        var amount = $('input#amount').val();
+        amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+        amount = parseFloat(amount);
+        if (isNaN(amount)) {
+          $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+        } else {
+          amount = amount * 100;
+          handler.open({
           amount: Math.round(amount)
         })
+        return false;
+        }
       }
-    });
+    })
 
 
 

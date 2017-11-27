@@ -28,11 +28,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 // Global
-body {
-  background-color: #fff;
-  // background-image: url(homepage-background.jpg);
-  background-size: 2000px;
+body.index {
+  background: url(homepage-background.jpeg);
+  background-size: 100%;
   background-repeat: no-repeat;
+  padding-top: 70px;
+  padding-bottom: 0;
+}
+
+body.show {
   padding-top: 70px;
   padding-bottom: 0;
 }
