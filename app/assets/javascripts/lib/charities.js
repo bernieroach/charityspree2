@@ -32,8 +32,6 @@ $( document ).ready(function() {
 
 
 
-    let statistics = document.getElementById('charity-statistics')
-
 
   $('#statsButton').click(function(event){
     event.preventDefault()
@@ -41,7 +39,7 @@ $( document ).ready(function() {
 
 
     $('section#charity-statistics').slideToggle('slow', function(){
-      let statistics = document.getElementById('charity-statistics')
+      let statistics = document.getElementById('charity-statistics');
       if (statistics) {
         Pizza.init();
       }
