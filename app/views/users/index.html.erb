@@ -1,17 +1,19 @@
-<div class="result-container">
-<h1>Search Results</h1>
-<table class="search-results">
-  <tbody >
-      <% for user in @users %>
+<div class="result-bg">
+  <div class="result-container">
+    <h1>Search Results</h1>
+    <table class="search-results">
+      <tbody >
+        <% for user in @users %>
         <tr>
           <td>
-            <a class="result-name" href="/users/<%=user.id%>"><%= image_tag(user.avatar, :class => 'result-avatar') %></a>
+            <a href="/users/<%=user.id%>"><%= image_tag(user.avatar, :class => 'result-avatar') %></a>
           </td>
           <td>
             <a class="result-name" href="/users/<%=user.id%>"><%= user.first_name %>  <%= user.last_name %></a>
           </td>
         </tr>
-      <% end %>
-  </tbody>
-</table>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 </div>
