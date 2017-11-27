@@ -19,260 +19,125 @@
         <a id="statsButton" href="#charity-statistics">
           <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
         </a>
-  </button>
+      </button>
     </div>
 
     <section class="donations-wrapper container">
- <% if current_user %>
-      <div class="donate-buttons" data-toggle="buttons">
-        <h3>Choose Your Amount</h3>
-        <label class="btn btn-circle btn-lg active">
-          <input type="radio" name="options" id="option1" autocomplete="off" data-value="1" checked><p>$1</p>
-        </label>
-        <label class="btn btn-circle btn-lg">
-          <input type="radio" name="options" id="option2" autocomplete="off" data-value="5"><p>$5</p>
-        </label>
-        <br>
-        <label class="btn btn-circle btn-lg">
-          <input type="radio" name="options" id="option3" autocomplete="off" data-value="10"><p>$10</p>
-        </label>
-        <label class="btn btn-circle btn-lg">
-          <input type="radio" name="options" id="option4" autocomplete="off" data-value="20"><p>$20</p>
-        </label>
-        <br>
-        <label class="btn btn-oblong btn-lg">
-          <input type="radio" name="options" id="option5" autocomplete="off"><p id="custom-amount">Custom Amount</p>
-        </label>
+    <% if current_user %>
+    <div class="donate-buttons" data-toggle="buttons">
+      <h3>Choose Your Amount</h3>
+      <label class="btn btn-circle btn-lg active">
+        <input type="radio" name="options" id="option1" autocomplete="off" data-value="1" checked><p>$1</p>
+      </label>
+      <label class="btn btn-circle btn-lg">
+        <input type="radio" name="options" id="option2" autocomplete="off" data-value="5"><p>$5</p>
+      </label>
+      <br>
+      <label class="btn btn-circle btn-lg">
+        <input type="radio" name="options" id="option3" autocomplete="off" data-value="10"><p>$10</p>
+      </label>
+      <label class="btn btn-circle btn-lg">
+        <input type="radio" name="options" id="option4" autocomplete="off" data-value="20"><p>$20</p>
+      </label>
+      <br>
+      <label class="btn btn-oblong btn-lg">
+        <input type="radio" name="options" id="option5" autocomplete="off"><p id="custom-amount">Custom Amount</p>
+      </label>
 
-    <%= form_for [@charity, @donation] do %>
-    <div id="error_explanation">
-      <% if flash[:error].present? %>
-      <p><%= flash[:error] %></p>
-      <% end %>
-    </div>
-    <article id="custom-amount-input">
-      <%= label_tag(:amount, 'Donation Amount: $') %>
-      <%= text_field_tag :amount %>
-    </article>
-    <article>
-      <%= hidden_field_tag(:stripeToken) %>
-      <%= hidden_field_tag "currentUser", current_user %>
-    </article>
-    <% end %>
-
-  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
+      <%= form_for [@charity, @donation] do %>
+      <div id="error_explanation">
+        <% if flash[:error].present? %>
+        <p><%= flash[:error] %></p>
+        <% end %>
       </div>
-  <% else %>
-  <div style="text-align: center;">
-    <p>
-      Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
-    </p>
-
-    <br><br><br>
-          <%= link_to signup_path do %>
-            <div type="button" class="choose btn btn-info"><h1><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up to Charity Spree</h1></div>
-          <% end %>
-          <br><br><br>
-
-          <%= link_to login_path do %>
-            <div type="button" class="choose btn btn-info"> <h1> <i class="fa fa-sign-in" aria-hidden="true"></i> Login to Charity Spree</h1>
-            </div>
-          <% end %>
+      <article id="custom-amount-input">
+        <%= label_tag(:amount, 'Donation Amount: $') %>
+        <%= text_field_tag :amount %>
+      </article>
+      <article>
+        <%= hidden_field_tag(:stripeToken) %>
+        <%= hidden_field_tag "currentUser", current_user %>
+      </article>
+      <% end %>
+      <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
         </div>
-  <% end %>
-
+      <% else %>
+      <div class="login-signup-buttons">
+      <%= link_to signup_path do %>
+      <div type="button" class="choose btn btn-info">
+        <h1>
+          <i class="fa fa-user-plus" aria-hidden="true"></i>
+        Sign up to Charity Spree
+        </h1>
+      </div>
+      <% end %>
+      <%= link_to login_path do %>
+      <div type="button" class="choose-2 btn btn-info"> <h1> <i class="fa fa-sign-in" aria-hidden="true"></i> Login to Charity Spree</h1>
+      </div>
+    <% end %>
+    </div>
+    <% end %>
     </section>
   </section>
 </section>
-
-<script>
-    var handler = StripeCheckout.configure({
-      key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-      locale: 'auto',
-      name: 'Charity Spree',
-      description: 'One-time donation',
-      <% if current_user %>
-        email: '<%= current_user.email %>',
-      <% end %>
-      token: function(token) {
-        $('input#stripeToken').val(token.id);
-        $('form').submit();
-      }
-    });
-
-    $('#donate-button').on('click', function(e) {
-      e.preventDefault();
-
-      $('#error_explanation').html('');
-      var amount = $('input#amount').val();
-      amount = amount.replace(/\$/g, '').replace(/\,/g, '')
-
-      amount = parseFloat(amount);
-
-      if (isNaN(amount) || amount == 0)  {
-        $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
-
-      } else {
-        amount = amount * 100;
-        handler.open({
-        amount: Math.round(amount)
-      })
-    }
-  });
-
-    $('form').on('keyup keypress', function(e) {
-      var keyCode = e.keyCode || e.which;
-      if (keyCode === 13) {
-        e.preventDefault();
-        $('#error_explanation').html('');
-        var amount = $('input#amount').val();
-        amount = amount.replace(/\$/g, '').replace(/\,/g, '')
-        amount = parseFloat(amount);
-        if (isNaN(amount)) {
-          $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
-        } else {
-          amount = amount * 100;
-          handler.open({
-          amount: Math.round(amount)
-        })
-        return false;
-        }
-      }
-    })
-
-
-//Turn off submit on "Enter" key
-
-$("form").bind("keypress", function (e) {
-    if (e.keyCode == 13) {
-        $("#btnSearch").attr('value');
-        //add more buttons here
-        e.preventDefault();
-    }
-});
-
-
-    // Close Checkout on page navigation
-    $(window).on('popstate', function() {
-      handler.close();
-    });
-    </script>
-
-
-
-
-
-
-
-
-<!-- KEEPING IN CASE WE WANT TO SHOW THE USER THEIR UPCOMING ACHIEVEMENTS -->
-  <!-- <section class="achievements-legend">
-    <h3>Achievements</h4>
-    <% @achievements.each do |achievement | %>
-      <p>
-        <a href=""><%= achievement.title %></a>
-        <br>
-        <%= achievement.description %>
-        <%= image_tag achievement.image %>
-      </p>
-    <% end %>
-  </section>
-</section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <% if @charity.donations.count > 1 %>
 <section class="charity-statistics" id="charity-statistics" >
 <div class="container">
 
-  <div class="row">
-        <div class="col-md-12">
-            <h2><%= @charity.name %> Stats</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-          <table class="table table-hover">
-            <tbody>
-              <tr>
-                <td> <h3> Total Donation amount </h3> </td>
-                <td> <h3> <%= @charity.amount %> </h3></td>
-              </tr>
-              <tr>
-                <td> <h3> Number of Donations </h3> </td>
-                <td> <h3> <%= @charity.donations.count %> </h3></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<div class="row">
+  <div class="col-md-12">
+    <h2><%= @charity.name %> Stats</h2>
   </div>
-    <div class="row" >
-
-        <div class="col-md-3">
-          <h4>
-            Donations by donation amount
-          </h4>
-          <ul data-pie-id="donations-chart">
-            <li data-value="<%= @donation_number_stats[0_4] %>">0 - 4$ Donation (<%= @donation_number_stats[0_4] %>)</li>
-            <li data-value="<%= @donation_number_stats[5_9] %>">5 - 9$ Donation (<%= @donation_number_stats[5_9] %>)</li>
-            <li data-value="<%= @donation_number_stats[10_49] %>">10 - 49$ Donation (<%= @donation_number_stats[10_49] %>)</li>
-            <li data-value="<%= @donation_number_stats[50_99] %>">50 - 99$ Donation (<%= @donation_number_stats[50_99] %>)</li>
-            <li data-value="<%= @donation_number_stats[100] %>">100$ + Donation (<%= @donation_number_stats[100] %>)</li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <div id="donations-chart"></div>
-        </div>
-        <div class="col-md-3">
-           <h4>
-            % Total by donation amount
-          </h4>
-          <ul data-pie-id="amounts-chart" data-options='{"donut": "true"}'>
-            <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
-            <li data-value="<%= @donation_quantity_stats[5_9] %>">5 - 9$ Donation (<%= @donation_quantity_stats[5_9] %>)</li>
-            <li data-value="<%= @donation_quantity_stats[10_49] %>">10 - 49$ Donation (<%= @donation_quantity_stats[10_49] %>)</li>
-            <li data-value="<%= @donation_quantity_stats[50_99] %>">50 - 99$ Donation (<%= @donation_quantity_stats[50_99] %>)</li>
-            <li data-value="<%= @donation_quantity_stats[100] %>">100$ + Donation (<%= @donation_quantity_stats[100] %>)</li>
-            </ul>
-
-        </div>
-        <div class="col-md-3">
-            <div id="amounts-chart"></div>
-        </div>
+  <div class="row">
+    <div class="col-md-12">
+    <table class="table table-hover">
+      <tbody>
+        <tr>
+          <td> <h3> Total Donation amount </h3> </td>
+          <td> <h3> <%= @charity.amount %> </h3></td>
+        </tr>
+        <tr>
+          <td> <h3> Number of Donations </h3> </td>
+          <td> <h3> <%= @charity.donations.count %> </h3></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <div class="row" >
+    <div class="col-md-3">
+      <h4>
+        Donations by donation amount
+      </h4>
+      <ul data-pie-id="donations-chart">
+        <li data-value="<%= @donation_number_stats[0_4] %>">0 - 4$ Donation (<%= @donation_number_stats[0_4] %>)</li>
+        <li data-value="<%= @donation_number_stats[5_9] %>">5 - 9$ Donation (<%= @donation_number_stats[5_9] %>)</li>
+        <li data-value="<%= @donation_number_stats[10_49] %>">10 - 49$ Donation (<%= @donation_number_stats[10_49] %>)</li>
+        <li data-value="<%= @donation_number_stats[50_99] %>">50 - 99$ Donation (<%= @donation_number_stats[50_99] %>)</li>
+        <li data-value="<%= @donation_number_stats[100] %>">100$ + Donation (<%= @donation_number_stats[100] %>)</li>
+      </ul>
     </div>
+    <div class="col-md-3">
+      <div id="donations-chart"></div>
+    </div>
+    <div class="col-md-3">
+       <h4>
+        % Total by donation amount
+      </h4>
+      <ul data-pie-id="amounts-chart" data-options='{"donut": "true"}'>
+        <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[5_9] %>">5 - 9$ Donation (<%= @donation_quantity_stats[5_9] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[10_49] %>">10 - 49$ Donation (<%= @donation_quantity_stats[10_49] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[50_99] %>">50 - 99$ Donation (<%= @donation_quantity_stats[50_99] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[100] %>">100$ + Donation (<%= @donation_quantity_stats[100] %>)</li>
+        </ul>
+
+    </div>
+    <div class="col-md-3">
+        <div id="amounts-chart"></div>
+    </div>
+  </div>
 </div>
 </section>
 <% end %>
@@ -280,12 +145,71 @@ $("form").bind("keypress", function (e) {
 <div class="ticker-wrap">
 <div class="ticker">
 <% @news_articles[0..5].each do |article| %>
-     <div class="ticker__item">
+  <div class="ticker__item">
     <%= link_to(article['title'], article['url'], target: :blank) %>
-      </div>
+  </div>
 <% end %>
 
+<script>
+var handler = StripeCheckout.configure({
+  key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+  locale: 'auto',
+  name: 'Charity Spree',
+  description: 'One-time donation',
+  <% if current_user %>
+    email: '<%= current_user.email %>',
+  <% end %>
+  token: function(token) {
+    $('input#stripeToken').val(token.id);
+    $('form').submit();
+  }
+});
 
+$('#donate-button').on('click', function(e) {
+  e.preventDefault();
+
+  $('#error_explanation').html('');
+  var amount = $('input#amount').val();
+  amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+
+  amount = parseFloat(amount);
+
+  if (isNaN(amount) || amount == 0)  {
+    $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+
+  } else {
+    amount = amount * 100;
+    handler.open({
+    amount: Math.round(amount)
+  })
+}
+});
+
+$('form').on('keyup keypress', function(e) {
+  var keyCode = e.keyCode || e.which;
+  if (keyCode === 13) {
+    e.preventDefault();
+    $('#error_explanation').html('');
+    var amount = $('input#amount').val();
+    amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+    amount = parseFloat(amount);
+    if (isNaN(amount)) {
+      $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+    } else {
+      amount = amount * 100;
+      handler.open({
+      amount: Math.round(amount)
+    })
+    return false;
+    }
+  }
+})
+
+// Close Checkout on page navigation
+$(window).on('popstate', function() {
+  handler.close();
+});
+</script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
 </div>
 </div>

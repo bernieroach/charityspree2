@@ -6,72 +6,25 @@ $( document ).ready(function() {
 
   $('#custom-amount').click(function(event){
     event.preventDefault()
-
     $('form').slideToggle('slow', function(){
-
     })
   })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   $('#statsButton').click(function(event){
     event.preventDefault()
-
-
-
     $('section#charity-statistics').slideToggle('slow', function(){
-
-        Pizza.init();
-
-
-
+      Pizza.init();
     });
-
-
-
   })
 
   $(document).on('click', '#statsButton', function (event) {
     event.preventDefault();
-
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
+      scrollTop: $($.attr(this, 'href')).offset().top
     }, 1200);
   });
-
-  // let statistics = document.getElementById('charity-statistics')
-
-  // $(document).on('click', '#statsButton[href^="#"]', function (event) {
-  //   event.preventDefault();
-
-  //   $('section#charity-statistics').toggleClass('hidden')
-
-  //   $('html, body').animate({
-  //       scrollTop: $($.attr(this, 'href')).offset().top
-  //   }, 1000);
-
-  });
-// });
-/// pie charts
+});
 
 (function ($, window, document, undefined) {
   'use strict';
@@ -440,4 +393,3 @@ $( document ).ready(function() {
   window.Pizza = Pizza;
 
 }($, this, this.document));
-
