@@ -114,6 +114,11 @@
 
       } else {
         amount = amount * 100;
+
+        if ( amount > 99999999 ) {
+          amount = 99999999;
+          $('input#amount').val(amount);
+        }
         handler.open({
         amount: Math.round(amount)
       })
@@ -132,6 +137,10 @@
           $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
         } else {
           amount = amount * 100;
+          if ( amount > 99999999 ) {
+            amount = 99999999;
+            $('input#amount').val(amount);
+          }
           handler.open({
           amount: Math.round(amount)
         })
