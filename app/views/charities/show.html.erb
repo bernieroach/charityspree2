@@ -68,25 +68,6 @@
       </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
   </section>
 </section>
@@ -106,44 +87,44 @@
       }
     });
 
-  //   $('#donate-button').on('click', function(e) {
-  //     e.preventDefault();
+    $('#donate-button').on('click', function(e) {
+      e.preventDefault();
 
-  //     $('#error_explanation').html('');
-  //     var amount = $('input#amount').val();
-  //     amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+      $('#error_explanation').html('');
+      var amount = $('input#amount').val();
+      amount = amount.replace(/\$/g, '').replace(/\,/g, '')
 
-  //     amount = parseFloat(amount);
+      amount = parseFloat(amount);
 
-  //     if (isNaN(amount)) {
-  //       $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
-  //     } else {
-  //       amount = amount * 100; // Needs to be an integer!
-  //       handler.open({
-  //       amount: Math.round(amount)
-  //     })
-  //   }
-  // });
-
-    $('form').keyup(function(event) {
-      event.preventDefault();
-      var key = event.keyCode || event.which;
-      if (key === 13) {
-        return false;
-        $('#error_explanation').html('');
-        var amount = $('input#amount').val();
-        amount = amount.replace(/\$/g, '').replace(/\,/g, '')
-        amount = parseFloat(amount);
       if (isNaN(amount)) {
         $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
       } else {
-        amount = amount * 100; // Needs to be an integer!
+        amount = amount * 100;
         handler.open({
         amount: Math.round(amount)
       })
     }
-  }
-});
+  });
+
+    $('form').on('keyup keypress', function(e) {
+      var keyCode = e.keyCode || e.which;
+      if (keyCode === 13) {
+        e.preventDefault();
+        $('#error_explanation').html('');
+        var amount = $('input#amount').val();
+        amount = amount.replace(/\$/g, '').replace(/\,/g, '')
+        amount = parseFloat(amount);
+        if (isNaN(amount)) {
+          $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
+        } else {
+          amount = amount * 100;
+          handler.open({
+          amount: Math.round(amount)
+        })
+        return false;
+        }
+      }
+    })
 
     // Close Checkout on page navigation
     $(window).on('popstate', function() {
