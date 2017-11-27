@@ -16,7 +16,7 @@
     <div class="row">
       <div class="col-sm-12">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-        <div id="featured-achievement">
+        <div class="container" id="featured-achievement">
           <h3><strong>Featured Achievement</strong></h3>
           <h4><%= @user.user_achievements[0].achievement.title %></h4>
           <h4><%= image_tag '002-medal.png' %></h4>
