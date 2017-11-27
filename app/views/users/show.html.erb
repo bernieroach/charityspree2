@@ -57,9 +57,16 @@
               <% @user.user_achievements.each do | u_a| %>
               <% if u_a.achieved == true %>
               <div class="achievement-icon col-sm-4">
-                <%= u_a.achievement.title %>
-                <br>
-                <%= image_tag u_a.achievement.image %>
+                <p><%= u_a.achievement.title %></p>
+
+                  <div class="parent">
+                    <%= image_tag u_a.achievement.image,class: 'image2' %>
+
+        <% if session[:user_id] && ( session[:time] == nil || u_a.updated_at  >= session[:time] )%>
+
+                        <%= image_tag "new.png" , class: 'image1'%>
+                      <% end %>
+                  </div>
                 <br>
                 <%= u_a.achievement.description %>
                 <% if @user.id == session[:user_id] %>

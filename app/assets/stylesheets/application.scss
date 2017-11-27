@@ -296,26 +296,25 @@ background-color: rgb(250,255,189);
 
 
 .parent {
+  position: relative;
+  display:  inline-block;
 
-  display: inline-block;
-
-
-
-.image1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 40px;
-  width: 40px;
-  z-index: 10;
+  .image1 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 40px;
+    z-index: 10;
 }
-.image2 {
-  position: absolute;
+  .image2 {
+    position: static;
 
-  top: 0;
-  left: 0;
+    top: 0;
+    left: 0;
     height: 70px;
-  width: 70px;
-  z-index: 1;
-}
+    width: 70px;
+    z-index: 1;
+    vertical-align: bottom
+  }
 }
