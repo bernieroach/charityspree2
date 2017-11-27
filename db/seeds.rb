@@ -53,14 +53,14 @@ charity6 = Charity.create!({
   name: 'Sightsavers',
   description: 'Sightsavers is an international non-governmental organisation that works with partners in developing countries to treat and prevent avoidable blindness, and promote equality for people with visual impairments and other disabilities.',
   amount: 76,
-  image: '006-people.png'
+  image: '001-lifesaver.png'
 })
 
 charity7 = Charity.create!({
   name: 'Schistosomiasis Control Initiative',
   description: 'Schistosomiasis Control Initiative is an initiative that helps governments in African countries treat schistosomiasis, one of the most common neglected tropical diseases, caused by parasitic worms. It was founded in 2002 and funded via grants from the Gates Foundation and USAID.',
   amount: 66,
-  image: '001-lifesaver.png'
+  image: '006-people.png'
 })
 
 ## USERS
