@@ -36,7 +36,7 @@ class UsersController < ApplicationController
           @user.user_achievements.create!(progress: 0, achieved: false, achievement_id: achievement.id)
         end
       end
-      redirect_to @user
+      redirect_to previous_url
     else
      render 'new'
     end

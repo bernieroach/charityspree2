@@ -23,7 +23,7 @@
     </div>
 
     <section class="donations-wrapper container">
-
+ <% if current_user %>
       <div class="donate-buttons" data-toggle="buttons">
         <h3>Choose Your Amount</h3>
         <label class="btn btn-circle btn-lg active">
@@ -43,7 +43,7 @@
         <label class="btn btn-oblong btn-lg">
           <input type="radio" name="options" id="option5" autocomplete="off"><p id="custom-amount">Custom Amount</p>
         </label>
-        <% if current_user %>
+
     <%= form_for [@charity, @donation] do %>
     <div id="error_explanation">
       <% if flash[:error].present? %>
@@ -59,33 +59,27 @@
       <%= hidden_field_tag "currentUser", current_user %>
     </article>
     <% end %>
+
+  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
+      </div>
   <% else %>
+  <div style="text-align: center;">
     <p>
       Please <a href="/signup">SIGN UP</a> or <a href="/login">LOGIN</a> to proceed with a donation.
     </p>
+
+    <br><br><br>
+          <%= link_to signup_path do %>
+            <div type="button" class="choose btn btn-info"><h1><i class="fa fa-user-plus" aria-hidden="true"></i> Sign up to Charity Spree</h1></div>
+          <% end %>
+          <br><br><br>
+
+          <%= link_to login_path do %>
+            <div type="button" class="choose btn btn-info"> <h1> <i class="fa fa-sign-in" aria-hidden="true"></i> Login to Charity Spree</h1>
+            </div>
+          <% end %>
+        </div>
   <% end %>
-  <button id='donate-button' class="choose btn btn-primary">Donate Now</button>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </section>
   </section>

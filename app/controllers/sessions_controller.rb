@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
     def new
       if session[:user_id]
-        redirect_to user
+        redirect_to previous_url
       else
 
       end
@@ -16,7 +16,8 @@ class SessionsController < ApplicationController
       # logged in when they navigate around our website.
       session[:user_id] = user.id
       session[:time] = Time.now
-      redirect_to user
+
+      redirect_to previous_url
     else
     # If user's login doesn't work, send them back to the login form.
     flash.now[:danger] = 'Invalid email/password combination'

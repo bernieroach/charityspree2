@@ -16,9 +16,9 @@ class CharitiesController < ApplicationController
     req = open(url)
     @news_json = req.read
     @news_json = JSON.parse(@news_json)
-
+    puts
     if ( @news_json['articles'].count == 0 )
-      url = "https://newsapi.org/v2/everything?q=charity #{@charity.name} &language=en&sortBy=relevancy&apiKey=#{ENV['NEWS_API_KEY']}"
+      url = "https://newsapi.org/v2/everything?q=#{@charity.name} &language=en&sortBy=relevancy&apiKey=#{ENV['NEWS_API_KEY']}"
       req = open(url)
       @news_json = req.read
       @news_json = JSON.parse(@news_json)

@@ -1,6 +1,37 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_previous_url
+  helper_method :previous_url
 
+
+
+
+  def set_previous_url
+
+    puts request.method
+
+    if request.method ==  "GET"
+puts "if passes"
+ if session[:previous_url] != session[:current_url]
+          session[:previous_url] = session[:current_url]
+          session[:current_url] = request.url
+else
+            session[:previous_url] = charities_path
+          session[:current_url] = request.url
+end
+
+puts "previous_url"
+    puts session[:previous_url]
+    puts "current_url"
+    puts session[:current_url]
+
+    end
+
+  end
+
+  def previous_url
+    session[:previous_url]
+  end
 
     def recent_activities
       @recent_donations = Donation.all.order(created_at: :desc).limit(5).map { | donation |
@@ -42,8 +73,6 @@ class ApplicationController < ActionController::Base
 
   def current_user
     if session[:user_id]
-      puts "session user id"
-      puts session[:user_id]
       if  @current_user = User.where(:id => session[:user_id]).empty?
         @current_user = nil
         session[:user_id] = nil
