@@ -39,13 +39,12 @@ $( document ).ready(function() {
 
 
     $('section#charity-statistics').slideToggle('slow', function(){
-      let statistics = document.getElementById('charity-statistics');
-      if (statistics) {
+
         Pizza.init();
-      }
 
 
-    })
+
+    });
 
 
 
