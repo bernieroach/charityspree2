@@ -303,6 +303,7 @@ background-color: rgb(250,255,189);
   position: relative;
   display:  inline-block;
 
+
   .image1 {
     position: absolute;
     top: 0px;
@@ -313,12 +314,12 @@ background-color: rgb(250,255,189);
 }
   .image2 {
     position: static;
-
+    vertical-align: bottom;
     top: 0;
     left: 0;
     height: 70px;
     width: 70px;
     z-index: 1;
-    vertical-align: bottom
+
   }
 }
