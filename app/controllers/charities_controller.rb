@@ -11,11 +11,18 @@ class CharitiesController < ApplicationController
     @donation_number_stats = { 0_4 => 0, 5_9 => 0, 10_49 => 0, 50_99 => 0, 100 => 0 }
     @donation_quantity_stats = { 0_4 => 0, 5_9 => 0, 10_49 => 0, 50_99 => 0, 100 => 0 }
     require 'open-uri'
-    url = "https://newsapi.org/v2/everything?q=#{@charity.name}&language=en&sortBy=relevancy&apiKey=#{ENV['NEWS_API_KEY']}"
+    url = "https://newsapi.org/v2/everything?q=\"#{@charity.name}\" &language=en&sortBy=relevancy&apiKey=#{ENV['NEWS_API_KEY']}"
 
     req = open(url)
     @news_json = req.read
     @news_json = JSON.parse(@news_json)
+
+    if ( @news_json['articles'].count == 0 )
+      url = "https://newsapi.org/v2/everything?q=charity #{@charity.name} &language=en&sortBy=relevancy&apiKey=#{ENV['NEWS_API_KEY']}"
+      req = open(url)
+      @news_json = req.read
+      @news_json = JSON.parse(@news_json)
+    end
     @news_articles = @news_json['articles']
 
     @charity.donations.each do | donation |
