@@ -56,7 +56,7 @@
               <h3>Achievements</h3>
               <% @user.user_achievements.each do | u_a| %>
               <% if u_a.achieved == true %>
-              <div class="achievement-icon col-sm-4">
+              <div class="achievement-icon col-md-6">
                 <p><%= u_a.achievement.title %></p>
 
                   <div class="parent">
