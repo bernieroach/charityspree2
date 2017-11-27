@@ -54,8 +54,7 @@ main section#profile {
       background-color: #f6f6f6;
       border: 1px solid #e0e0e0;
       border-radius: 10px;
-      margin: 0 500px;
-      padding: 5px 5px;
+      width: 350px;
 
       h3 {
         font-family: 'Open Sans', sans-serif;
@@ -181,21 +180,28 @@ main section#profile {
 
 
 // SEARCH RESULTS
-.result-container {
+.result-bg {
   background: #F3F7F6;  /* fallback for old browsers */
-  width: 90%;
   height: auto;
-  border-top: 1px solid #e5e9f0;
-  // background-color: #e5e9f0;
-  margin: 0 auto;
+  margin-top: -40px;
   padding: 20px 20px;
 }
 
-.search-results {
-  margin-left: 100px;
-  margin-top: 50px;
-  font-size: 20px;
+.result-container {
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px 300px;
+  padding: 20px 0;
+  h1 {
+    text-align: center;
+  }
+  .search-results {
+    margin: 0 auto;
+    font-size: 20px;
+
+  }
 }
+
 
 .result-name {
   color: black;
@@ -238,4 +244,3 @@ main section#profile {
 .form-control {
 background-color: rgb(250,255,189)
 }
-

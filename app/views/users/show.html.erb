@@ -16,7 +16,7 @@
     <div class="row">
       <div class="col-sm-12">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-        <div id="featured-achievement">
+        <div class="container" id="featured-achievement">
           <h3><strong>Featured Achievement</strong></h3>
           <h4><%= @user.user_achievements[0].achievement.title %></h4>
           <h4><%= image_tag '002-medal.png' %></h4>
@@ -24,17 +24,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-<!-- TABS AND TAB CONTENT START HERE -->
 
 
   <div id="tabs" class="container">
@@ -110,42 +99,8 @@
             </div>
           </div>
         </div>
-
-
-
-      <!-- <div class="tab-pane 2a">
-        <% @user.user_achievements.each do | u_a| %>
-          <% if u_a.achieved == false %>
-          <div class="upcoming row">
-            <div class="achievement-icon col-xs-2">
-              <%= image_tag u_a.achievement.image %>
-            </div>
-            <div class="progress">
-              <div class="progress-bar" role="progressbar" style="width: <%= u_a.progress * 100 / u_a.achievement.progress %>%" aria-valuenow="<%= u_a.progress * 100 / u_a.achievement.progress %>" aria-valuemin="0" aria-valuemax="100"><%= u_a.progress * 100 / u_a.achievement.progress %>%
-              </div>
-            </div>
-            <div class="achievement-title col-xs-3">
-              <%= u_a.achievement.title %>
-            </div>
-            <div class="achievement-description col-xs-7">
-                <%= u_a.achievement.description %>
-            </div>
-          </div>
-          <% end %>
-        <% end %>
-      </div> -->
-
-
+      </div>
     </div>
-  </div>
-
-
-
-<!-- TABS AND TAB CONTENT END HERE -->
-
-
-
-
 
 
 <!-- Load Facebook SDK for JavaScript  -->

@@ -119,6 +119,10 @@ main section.charities-index {
           text-align: left;
         }
 
+        img {
+          height: 50px;
+        }
+
         p {
           margin: 0;
           padding: 0;
@@ -224,6 +228,22 @@ main section.charities-show {
 }
 
 section.donations-wrapper {
+
+  .login-signup-buttons {
+    text-align: left;
+    width: 50%;
+    float: right;
+    margin: 85px 0 0 0;
+    .choose {
+      font-size: 20px;
+      margin: 20px 0;
+      vertical-align: center;
+    }
+    .choose-2 {
+      padding: 5px 35px;
+      vertical-align: center;
+    }
+  }
 
 
   div.donate-buttons {
