@@ -4,45 +4,36 @@
     <!-- Wrapper for slides -->
     <div class="row">
         <div class="col-xs-offset-1 col-xs-10">
-            <div class="carousel-inner">
-                  <% recent_activities.each { |activity| %>
-                  <% if activity.eql?(recent_activities.first) %>
-                      <div class="item active">
-                  <% else %>
-                      <div class="item">
-                  <% end %>
-                     <div class="carousel-content">
-
-
-
-                        <div>
-
-                            <div class="parent">
-                              <%= image_tag activity[:image], class: 'image2' %>
-                              <% if session[:user_id] && ( session[:time] == nil ||
-                            activity[:date] > session[:time] )%>
-                              <%= image_tag "new.png" , class: 'image1'%>
-                              <% end %>
-                              </div>
-
-
-                          <%= activity[:user_name].strip %>
-                          <% if activity[:activity] == "Donation" %>
-                          donated <%= activity[:quantity] %> $CAD! to <%=activity[:charity_name]%> !!
-
-                          <% else%>
-                            achieved <%= activity[:achievement] %> !!
-                          <% end %>
-
-
-                        </div>
-                      </div>
-                    </div>
-                  <% } %>
-                </div>
+          <div class="carousel-inner">
+            <% recent_activities.each { |activity| %>
+            <% if activity.eql?(recent_activities.first) %>
+              <div class="item active">
+            <% else %>
+              <div class="item">
+            <% end %>
+            <div class="carousel-content">
+            <div>
+            <div class="parent">
+              <%= image_tag activity[:image], class: 'image2' %>
+              <% if session[:user_id] && ( session[:time] == nil ||
+            activity[:date] > session[:time] )%>
+              <%= image_tag "new.png" , class: 'image1'%>
+              <% end %>
+              </div>
+              <%= activity[:user_name].strip %>
+              <% if activity[:activity] == "Donation" %>
+              donated $<%= activity[:quantity] %> to <%=activity[:charity_name]%>!
+              <% else%>
+                achieved <%= activity[:achievement] %>!
+              <% end %>
+              </div>
             </div>
-        </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
   </div>
+</div>
 
 
   <a class="left carousel-control" href="#text-carousel" data-slide="prev">

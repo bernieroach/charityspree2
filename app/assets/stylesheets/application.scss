@@ -68,16 +68,20 @@ body.show {
 
   #register, #current-user {
     font-variant: small-caps;
-    background-color: #00CAB8;
-    color: #fff;
+    background-color: #F3F7F6;
+    color: #000;
     padding-bottom: 15px;
     margin-bottom: 0;
 
     &:hover {
-      color: #FEFFEE;
-      background-color: #00AFA0;
-      transition: background 0.5s ease-in;
+      color: #a9a9a9;
     }
+
+    // &:hover {
+    //   color: #FEFFEE;
+    //   background-color: #00AFA0;
+    //   transition: background 0.5s ease-in;
+    // }
   }
 
   #bs-example-navbar-collapse-1 {
@@ -295,7 +299,7 @@ background-color: rgb(250,255,189);
 }
 
 #topscroll:hover {
-    background-color: #555;
+    background-color: transparent;
 }
 
 
