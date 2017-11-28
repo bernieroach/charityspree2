@@ -64,15 +64,20 @@
       <% else %>
       <div class="login-signup-buttons">
       <%= link_to signup_path do %>
-      <div type="button" class="choose btn btn-info">
-        <h1>
+      <div type="button" class="btn btn-info signup">
+        <h4>
           <i class="fa fa-user-plus" aria-hidden="true"></i>
-        Sign up to Charity Spree
-        </h1>
+          Sign up to Charity Spree
+        </h4>
       </div>
       <% end %>
+      <br>
       <%= link_to login_path do %>
-      <div type="button" class="choose-2 btn btn-info"> <h1> <i class="fa fa-sign-in" aria-hidden="true"></i> Login to Charity Spree</h1>
+      <div type="button" class="btn btn-info login">
+        <h4>
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Login to Charity Spree
+        </h4>
       </div>
     <% end %>
     </div>
@@ -91,7 +96,7 @@
     <h2><%= @charity.name %> Stats</h2>
   </div>
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 fill">
     <table class="table table-hover">
       <tbody>
         <tr>
@@ -106,32 +111,32 @@
     </table>
   </div>
 </div>
-  <div class="row" >
+  <div class="row charts">
     <div class="col-md-3">
-      <h4>
+      <h3>
         Donations by donation amount
-      </h4>
+      </h3>
       <ul data-pie-id="donations-chart">
-        <li data-value="<%= @donation_number_stats[0_4] %>">0 - 4$ Donation (<%= @donation_number_stats[0_4] %>)</li>
-        <li data-value="<%= @donation_number_stats[5_9] %>">5 - 9$ Donation (<%= @donation_number_stats[5_9] %>)</li>
-        <li data-value="<%= @donation_number_stats[10_49] %>">10 - 49$ Donation (<%= @donation_number_stats[10_49] %>)</li>
-        <li data-value="<%= @donation_number_stats[50_99] %>">50 - 99$ Donation (<%= @donation_number_stats[50_99] %>)</li>
-        <li data-value="<%= @donation_number_stats[100] %>">100$ + Donation (<%= @donation_number_stats[100] %>)</li>
+        <li data-value="<%= @donation_number_stats[0_4] %>">$0 - $4 (<%= @donation_number_stats[0_4] %>)</li>
+        <li data-value="<%= @donation_number_stats[5_9] %>">$5 - $9 (<%= @donation_number_stats[5_9] %>)</li>
+        <li data-value="<%= @donation_number_stats[10_49] %>">$10 - $49 (<%= @donation_number_stats[10_49] %>)</li>
+        <li data-value="<%= @donation_number_stats[50_99] %>">$50 - $99 (<%= @donation_number_stats[50_99] %>)</li>
+        <li data-value="<%= @donation_number_stats[100] %>">$100+ (<%= @donation_number_stats[100] %>)</li>
       </ul>
     </div>
     <div class="col-md-3">
       <div id="donations-chart"></div>
     </div>
     <div class="col-md-3">
-       <h4>
+       <h3>
         % Total by donation amount
-      </h4>
+      </h3>
       <ul data-pie-id="amounts-chart" data-options='{"donut": "true"}'>
-        <li data-value="<%= @donation_quantity_stats[0_4] %>">0 - 4$ Donation (<%= @donation_quantity_stats[0_4] %>)</li>
-        <li data-value="<%= @donation_quantity_stats[5_9] %>">5 - 9$ Donation (<%= @donation_quantity_stats[5_9] %>)</li>
-        <li data-value="<%= @donation_quantity_stats[10_49] %>">10 - 49$ Donation (<%= @donation_quantity_stats[10_49] %>)</li>
-        <li data-value="<%= @donation_quantity_stats[50_99] %>">50 - 99$ Donation (<%= @donation_quantity_stats[50_99] %>)</li>
-        <li data-value="<%= @donation_quantity_stats[100] %>">100$ + Donation (<%= @donation_quantity_stats[100] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[0_4] %>">$0 - $4 (<%= @donation_quantity_stats[0_4] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[5_9] %>">$5 - $9 (<%= @donation_quantity_stats[5_9] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[10_49] %>">$10 - $49 (<%= @donation_quantity_stats[10_49] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[50_99] %>">$50 - $99 (<%= @donation_quantity_stats[50_99] %>)</li>
+        <li data-value="<%= @donation_quantity_stats[100] %>">$100+ (<%= @donation_quantity_stats[100] %>)</li>
         </ul>
 
     </div>
