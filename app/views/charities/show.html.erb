@@ -64,15 +64,20 @@
       <% else %>
       <div class="login-signup-buttons">
       <%= link_to signup_path do %>
-      <div type="button" class="choose btn btn-info">
-        <h1>
+      <div type="button" class="btn btn-info signup">
+        <h4>
           <i class="fa fa-user-plus" aria-hidden="true"></i>
-        Sign up to Charity Spree
-        </h1>
+          Sign up to Charity Spree
+        </h4>
       </div>
       <% end %>
+      <br>
       <%= link_to login_path do %>
-      <div type="button" class="choose-2 btn btn-info"> <h1> <i class="fa fa-sign-in" aria-hidden="true"></i> Login to Charity Spree</h1>
+      <div type="button" class="btn btn-info login">
+        <h4>
+          <i class="fa fa-sign-in" aria-hidden="true"></i>
+          Login to Charity Spree
+        </h4>
       </div>
     <% end %>
     </div>

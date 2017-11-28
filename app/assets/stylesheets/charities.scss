@@ -230,18 +230,17 @@ main section.charities-show {
 section.donations-wrapper {
 
   .login-signup-buttons {
-    text-align: left;
+    margin-top: 200px;
     width: 50%;
     float: right;
-    margin: 85px 0 0 0;
-    .choose {
-      font-size: 20px;
-      margin: 20px 0;
-      vertical-align: center;
+
+    .signup {
+      margin: 10px 0;
     }
-    .choose-2 {
-      padding: 5px 35px;
-      vertical-align: center;
+
+    .login {
+      margin: 10px 0;
+      padding: 6px 23px;
     }
   }
 
