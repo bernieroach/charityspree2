@@ -9,42 +9,60 @@
     <div class="row">
       <div class="col-sm-12">
         <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-        <div id="featured-achievement">
+        <div class="container" id="featured-achievement">
           <h3><strong>Donated</strong></h3>
-          <h4><%= image_tag 'donate.png' %></h4>
+          <h4><%= image_tag('donate.png') %></h4>
         </div>
       </div>
-    </div>
-  </div>
-
-<div id="tabs" class="container">
-<div class="tab-content clearfix">
-  <div class="tab-pane active 1a">
-    <div class="row">
-      <div class="col-sm-12">
-
-          <h3>
-            <strong>Thanks for donating  <%= @donation.quantity %> $CAD
-            to <a href="http://www.charityspree.com/charities/<%= @charity.id %>"><%= @charity.name %></a>
-            </strong>
-            at
-            <strong>
-                <a href="http://www.charityspree.com">Charity Spree</a>
-            </strong>,  where giving is award winning!
-            <strong>
-                <a href="http://www.charityspree.com/users/<%= @user.id %>"> Visit your user profile </a>
-            </strong>
-                to keep track of your achievements and share your passion for your causes with friends and family.
-              <br>
-          </h3>
-           <h4>
-              -The Charity Spree Team
-          </h4>
-
       </div>
     </div>
-  </div>
-</div>
-</div>
+
+
+          <div id="tabs" class="container">
+          <div class="tab-content clearfix">
+            <div class="tab-pane active 1a">
+              <div class="row">
+                <div class="col-sm-12">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Charity</th>
+                <th scope="col">Date</th>
+                <th scope="col">Donation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><%= @user.first_name %> <%= @user.last_name %></th>
+                <td><%= @charity.name %></td>
+                <td><%= @donation.created_at.to_date %></td>
+                <td><%= @donation.quantity %> $CAD</td>
+              </tr>
+            </tbody>
+          </table>
+                    <h3>
+                      <strong>Thanks for donating  <%= @donation.quantity %> $CAD
+                      to <a href="http://www.charityspree.com/charities/<%= @charity.id %>"><%= @charity.name %></a>
+                      </strong>
+                      at
+                      <strong>
+                          <a href="http://www.charityspree.com">Charity Spree</a>
+                      </strong>,  where giving is award winning!
+                      <strong>
+                          <a href="http://www.charityspree.com/users/<%= @user.id %>"> Visit your user profile </a>
+                      </strong>
+                          to keep track of your achievements and share your passion for your causes with friends and family.
+                        <br>
+                    </h3>
+                     <h4>
+                        -The Charity Spree Team
+                    </h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
 
 </section>

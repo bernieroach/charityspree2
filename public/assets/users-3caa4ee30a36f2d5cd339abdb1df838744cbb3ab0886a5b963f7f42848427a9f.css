@@ -1,0 +1,236 @@
+/* line 6, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile {
+  height: 200px;
+  margin-top: -45px;
+}
+/* line 10, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .edit-cog {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+}
+/* line 17, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .update {
+  position: relative;
+  float: right;
+  background-color: transparent;
+  border: none;
+}
+/* line 23, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .update img {
+  height: 30px;
+}
+/* line 28, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header {
+  background: #74ebd5;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACB6E5, #74ebd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-size: 100% 375px;
+  background-repeat: no-repeat;
+}
+/* line 35, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header img.avatar {
+  height: 200px;
+  width: 200px;
+  margin: 20px auto;
+  display: block;
+  border: 5px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+}
+/* line 45, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header h1 {
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 5px;
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+}
+/* line 53, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header #featured-achievement {
+  background-color: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 350px;
+}
+/* line 59, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header #featured-achievement h3 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+/* line 64, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header #featured-achievement h4 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+/* line 68, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .profile-header #featured-achievement h4 img {
+  height: 50px;
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 79, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs {
+  margin-top: 30px;
+}
+/* line 82, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .nav-pills > li.active > a, main section#profile #tabs .nav-pills > li.active > a:hover {
+  background-color: #3BF1D7;
+}
+/* line 86, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tabs {
+  margin-left: 70px;
+}
+/* line 90, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .nav-pills > li > a {
+  border-radius: 4px 4px 0 0;
+}
+/* line 94, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content {
+  background: #f6f6f6;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 50px 50px;
+}
+/* line 102, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content .achieved {
+  width: 100%;
+}
+/* line 107, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content .achieved h3 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 0;
+}
+/* line 113, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content .achieved .achievement-title {
+  font-size: 10px;
+}
+/* line 117, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content .achieved .achievement-description {
+  font-size: 10px;
+}
+/* line 126, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content .upcoming {
+  width: 100%;
+  border-left: 1px solid #dcdfe5;
+}
+/* line 133, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile #tabs .tab-content .upcoming h3 {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-top: 0;
+}
+/* line 143, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .options {
+  border-bottom: 1px solid #000;
+  padding-bottom: 30px;
+}
+/* line 147, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .options .user-stats-btn {
+  text-align: right;
+}
+/* line 151, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .options .pick-charity-btn {
+  text-align: right;
+}
+/* line 153, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .options .pick-charity-btn a {
+  color: #fff;
+}
+/* line 158, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+main section#profile .options .update-btn {
+  text-align: right;
+}
+
+/* line 164, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.search-results {
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+/* line 172, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.field_with_errors {
+  background-color: #ccc;
+  border-color: #456;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* line 183, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-bg {
+  background: #F3F7F6;
+  /* fallback for old browsers */
+  height: auto;
+  margin-top: -40px;
+  padding: 20px 20px;
+}
+
+/* line 190, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-container {
+  background: #fff;
+  border-radius: 10px;
+  margin: 20px 300px;
+  padding: 20px 0;
+}
+/* line 195, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-container h1 {
+  text-align: center;
+}
+/* line 198, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-container .search-results {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+/* line 206, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-name {
+  color: black;
+  margin-left: 15px;
+}
+
+/* line 211, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-name:hover {
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #c0c3bb;
+  color: #000;
+}
+
+/* line 218, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.result-avatar {
+  height: 75px;
+  width: 75px;
+  margin: 10px auto;
+  display: block;
+  border: 2px solid #555;
+  border-radius: 100%;
+  box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+}
+
+/* line 229, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.userform {
+  background-color: #3BF1D7;
+}
+
+/* line 234, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.errormsg {
+  background-color: #f00;
+  border-color: #456;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+/* line 244, /vagrant/charityspree/app/assets/stylesheets/users.scss */
+.form-control {
+  background-color: #faffbd;
+}

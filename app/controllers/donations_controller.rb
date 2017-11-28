@@ -1,3 +1,5 @@
+
+
 class DonationsController < ApplicationController
   before_action :authorize
 
@@ -5,6 +7,9 @@ class DonationsController < ApplicationController
   end
 
   def create
+
+
+
     @amount = params[:amount]
     @amount = @amount.gsub('$', '').gsub(',', '')
 
@@ -16,8 +21,12 @@ class DonationsController < ApplicationController
       return
     end
 
-    @amount = (@amount * 100).to_i # Must be an integer!
+    @amount = (@amount * 100)
 
+    if @amount > 99999999
+        @amount = 99999999
+    end
+      @amount = @amount.to_i # Must be an integer!
      Stripe::Charge.create(
         :amount      => @amount,
         :description => 'Custom donation',

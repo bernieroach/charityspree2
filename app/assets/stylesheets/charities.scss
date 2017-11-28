@@ -87,16 +87,6 @@ main section.charities-index {
   }
 
   section#charities-list {
-
-    background-color: #F3F7F6;
-    margin: 0;
-
-    header.section-header {
-      background-color: #b0aac2;
-      border: 1px solid #000;
-      text-align: center;
-      padding: 50px 0;
-
     background-color: #fff;
     margin: 0;
 
@@ -105,7 +95,6 @@ main section.charities-index {
       // border: 1px solid #000;
       text-align: center;
       padding: 70px 0;
-
 
       h2 {
         font-family: Pacifico;
@@ -127,9 +116,11 @@ main section.charities-index {
         h3  {
           font-weight: bold;
           font-variant: small-caps;
-
           text-align: left;
+        }
 
+        img {
+          height: 50px;
         }
 
         p {
@@ -237,6 +228,22 @@ main section.charities-show {
 }
 
 section.donations-wrapper {
+
+  .login-signup-buttons {
+    text-align: left;
+    width: 50%;
+    float: right;
+    margin: 85px 0 0 0;
+    .choose {
+      font-size: 20px;
+      margin: 20px 0;
+      vertical-align: center;
+    }
+    .choose-2 {
+      padding: 5px 35px;
+      vertical-align: center;
+    }
+  }
 
 
   div.donate-buttons {
