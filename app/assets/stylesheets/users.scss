@@ -9,9 +9,8 @@ main section#profile {
 
   .edit-cog {
     position: absolute;
-    top: 0;
+    bottom: 0;
     right: 0;
-    margin-top: 10px;
   }
 
   .update {
@@ -103,9 +102,7 @@ main section#profile {
       padding: 50px 50px;
 
       .achieved {
-        // display: inline-block;
         width: 100%;
-        // margin: 20px 0;
 
         h3 {
           font-family: 'Open Sans', sans-serif;
@@ -184,18 +181,20 @@ main section#profile {
 
 // SEARCH RESULTS
 .result-bg {
-  background: #F3F7F6;  /* fallback for old browsers */
+  background: url(memphis-colorful.png);  /* fallback for old browsers */
   height: auto;
   margin-top: -40px;
   padding: 20px 20px;
 }
 
 .result-container {
-  background: #fff;
+  border: 1px solid #D1E4E0;
+  background: #F3F7F6;
   border-radius: 10px;
   margin: 20px 300px;
   padding: 20px 0;
   h1 {
+    font-family: 'Open Sans';
     text-align: center;
   }
   .search-results {
@@ -207,7 +206,8 @@ main section#profile {
 
 
 .result-name {
-  color: black;
+  font-family: 'Open Sans';
+  color: #000;
   margin-left: 15px;
 }
 
