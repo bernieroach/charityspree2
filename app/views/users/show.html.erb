@@ -39,13 +39,13 @@
 
     <div class="tab-content clearfix">
       <div class="tab-pane active 1a">
-        <div class="row">
-          <div class="col-xs-6">
+
+          <div class="col-md-6">
             <div class="achieved row">
               <h3>Achievements</h3>
               <% @user.user_achievements.each do | u_a| %>
               <% if u_a.achieved == true %>
-              <div class="achievement-icon col-md-6">
+              <div class="achievement-icon col-xs-6">
                 <p><%= u_a.achievement.title %></p>
 
                   <div class="parent">
@@ -77,12 +77,12 @@
             </div>
           </div>
 
-          <div class="col-xs-6">
+          <div class="col-md-6">
             <div class="upcoming row">
               <h3>Upcoming</h3>
               <% @user.user_achievements.each do | u_a| %>
                 <% if u_a.achieved == false %>
-                  <div class="achievement-icon col-sm-12">
+                  <div class="achievement-icon col-xs-6">
                     <%= u_a.achievement.title %>
                     <br>
                     <%= image_tag u_a.achievement.image %>
@@ -99,7 +99,7 @@
             </div>
           </div>
         </div>
-      </div>
+
     </div>
 
 

@@ -28,16 +28,23 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
 
 // Global
+.new {
+  padding-top: 70px;
+}
+body {
+ padding-top: 70px;
+ padding-bottom: 0;
+}
 body.index {
   background: url(image_path('new-background-image.jpeg'));
   background-size: 100%;
   background-repeat: no-repeat;
-  padding-top: 70px;
+
   padding-bottom: 0;
 }
 
 body.show {
-  padding-top: 70px;
+
   padding-bottom: 0;
 }
 
@@ -150,19 +157,6 @@ body.show {
   }
   // z-index: 2;
 
-  aside {
-    img {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-      }
-  }
-    .fishes
-  {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
 }
 
 #text-carousel {
