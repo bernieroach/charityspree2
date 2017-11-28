@@ -6,7 +6,7 @@ $( document ).ready(function() {
 
   $('#custom-amount').click(function(event){
     event.preventDefault()
-    $('form').slideToggle('slow', function(){
+    $('#custom-amount-input').slideToggle('slow', function(){
     })
   })
 
