@@ -1,0 +1,595 @@
+main section.charities-index {
+  margin: auto;
+
+  section.title-logo {
+    font-family: Pacifico;
+    text-align: center;
+    padding: 7px 0;
+    color: #000;
+
+    h1 {
+      font-size: 125px;
+      margin: 0;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 50px;
+    }
+
+    img {
+      margin-top: 40px;
+      height: 200px;
+    }
+  }
+
+  section#description {
+    text-align: center;
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    background-color: #F3F7F6;
+
+    .site-flow {
+      background-color: #fff;
+      margin: 40px 150px 40px 150px;
+      padding: 75px 25px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+      box-shadow: 0 10px 6px -6px #777;
+    }
+
+    img {
+      height: 55px;
+    }
+
+    h3 {
+      font-family: Pacifico;
+      font-size: 40px;
+      padding: 10px 0;
+    }
+  }
+
+  .btn-primary {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  .btn-default {
+    background-color: transparent;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  button {
+    margin: 32px auto;
+    display: block;
+    border: none;
+
+    .glyphicon-triangle-bottom {
+      font-size: 50px;
+      padding-bottom: 30px;
+    }
+
+    .first {
+      color: #00CAB8;
+    }
+
+    .second {
+      margin: 0 auto;
+      color: #00CAB8;
+    }
+  }
+
+  section#charities-list {
+    background-color: #fff;
+    margin: 0;
+
+    header.section-header {
+      background-color: #ACB3E9;
+      // border: 1px solid #000;
+      text-align: center;
+      padding: 70px 0;
+
+      h2 {
+        font-family: Pacifico;
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+    }
+
+    .charity-container {
+      padding: 10px 0 50px 0;
+      font-family: 'Open Sans', sans-serif;
+
+      .charity-box {
+        height: 300px;
+        margin-top: 40px;
+
+        h3  {
+          font-weight: bold;
+          font-variant: small-caps;
+          text-align: left;
+        }
+
+        img {
+          height: 50px;
+        }
+
+        p {
+          margin: 0;
+          padding: 0;
+        }
+      }
+
+      .choose {
+        position: absolute;
+        bottom: 0;
+        left: 5;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// CHARITY SHOW
+
+
+main section.charities-show {
+
+  section.charity {
+    margin: 0 0 0 50px;
+    padding: 35px 35px 0 35px;
+
+    .charity-details {
+      margin-top: 50px;
+      padding-top:25px;
+      width: 50%;
+      float: left;
+      border-right: 2px solid #fafafa;
+
+    .btn-info {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+      #statistics {
+        margin: 32px auto;
+        display: block;
+        border: none;
+
+      .glyphicon-triangle-bottom {
+        font-size: 30px;
+        color: #337ab7;
+      }
+
+      a#statsButton{
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      img{
+        height: 200px;
+      }
+    }
+
+    .charity-name {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Open Sans';
+      font-size: 50px;
+
+      .on-charity-spree {
+        margin-top: 20px;
+        font-size: 25px;
+      }
+
+
+
+      .information-container {
+        display: inline-block;
+        &:hover span {
+          display: block;
+        }
+        .information {
+          height: 25px;
+          margin-bottom: 25px;
+        }
+        span {
+          background-color: #F3F7F6;
+          margin-right: 20px;
+          display: none;
+          position: absolute;
+          z-index: 2;
+
+          .charity-description {
+            text-align: justify;
+            font-size: 15px;
+            float: left;
+            margin: 10px 10px;
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+  section.donations-wrapper {
+
+    .login-signup-buttons {
+      margin-top: 200px;
+      width: 50%;
+      float: right;
+
+      .signup {
+        margin: 10px 0;
+      }
+
+      .login {
+        margin: 10px 0;
+        padding: 6px 23px;
+      }
+    }
+
+
+    div.donate-buttons {
+      font-family: 'Open Sans';
+      padding-left: 40px;
+      width: 50%;
+      float: right;
+
+      h3 {
+        text-align: left;
+        margin-left: 20px;
+      }
+
+      .btn-circle.btn-lg {
+        margin: 20px 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        background-color: #67D8DE;
+        // border-color: #2e6da4;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 100%;
+        outline: none;
+
+        &.focus.active {
+          background-color: #1E76BD;
+        }
+
+        p {
+          line-height: 80px;
+          color: #fff;
+          margin: 0 auto;
+          vertical-align: middle;
+          text-align: center;
+        }
+      }
+
+
+      .btn-oblong.btn-lg {
+
+        background-color: #67D8DE;
+        // border-color: #2e6da4;
+        color: #fff;
+        width: 250px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        margin-left: 20px;
+        outline: none;
+
+        &.focus.active {
+          background-color: #1E76BD;
+        }
+
+        p {
+          margin: 0 auto;
+        }
+      }
+
+      form {
+        margin-top:10px;
+        font-size: 25px;
+        display: none;
+        text-align: right;
+        // margin: 0 auto;
+        label {
+          font-family: 'Open Sans';
+          font-weight: normal;
+        }
+      }
+
+      #donate-button {
+        display: block;
+        margin: 15px 0 0 20px;
+
+
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        color: #fff;
+        width: 250px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+      }
+    }
+  }
+}
+
+
+main section#charity-statistics {
+  display: none;
+  padding: 100px 0 150px 0;
+  font-family: 'Open Sans';
+
+
+
+  .charts {
+    background-color: #F3F7F6;
+    margin-top: 50px;
+
+    #donations-chart {
+      margin-right: 20px;
+    }
+
+    h3 {
+      text-align: left;
+    }
+    ul {
+
+      li {
+        font-size: 20px;
+      }
+
+    }
+  }
+
+  .fill {
+    background-color: #F3F7F6;
+    padding: 0;
+    height: 145px;
+
+    td {
+      border: none;
+      background: linear-gradient(to right, #337ab7 50%, #F3F7F6 50%);
+      background-size: 200% 100%;
+      background-position:right bottom;
+      margin-left:10px;
+      transition:all 2s ease;
+
+      &:hover {
+        background-position:left bottom;
+      }
+    }
+  }
+
+  h2 {
+    font-family: Pacifico;
+    font-weight: 400;
+  }
+
+  .hidden {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main section#about {
+  text-align: center;
+  margin: 5% 20%;
+
+  p {
+    text-align: justify;
+    margin: 30px 0;
+    font-family: Helvetica;
+    font-size: 20px;
+  }
+
+  img {
+    height: 300px;
+  }
+}
+
+
+$duration: 30s;
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrap {
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  background-color: rgba(#000, 0.9);
+  padding-left: 100%;  // offset items to begin
+
+}
+
+.ticker {
+
+  display: inline-block;
+  height: 4rem;
+  line-height: 4rem;
+  white-space: nowrap; // display items in a line
+  padding-right: 100%; // ensure items go before animations repeat (taken from parent due to inline-block)
+
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+ -webkit-animation-name: ticker;
+         animation-name: ticker;
+  -webkit-animation-duration: $duration;
+          animation-duration: $duration;
+
+  &__item {
+
+    display: inline-block;
+
+    padding: 0 2rem;
+    font-size: 2rem;
+    color: white;
+
+  }
+
+}
+
+
+// body { padding-bottom: 5rem; }
+// h1,h2,p {padding: 0 5%;}
+
+
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(0) {
+  color: blue;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(1) {
+  color: #4d00ff;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(2) {
+  color: #9900ff;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(3) {
+  color: #e500ff;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(4) {
+  color: #ff00cc;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(5) {
+  color: #ff0080;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(6) {
+  color: #ff0033;
+}
+
+/* line 26, ../sass/pizza.scss */
+ul[data-pie-id] {
+  list-style: none;
+  padding: 10px;
+}
+
+
+[data-pie-id='my-cool-chart'] li:nth-child(0) {
+  color: #d84200;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(1) {
+  color: #fc4d00;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(2) {
+  color: #ff6420;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(3) {
+  color: #ff7d44;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(4) {
+  color: #ff9668;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(5) {
+  color: #ffaf8b;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(6) {
+  color: #ffc8af;
+}
+
+
+ .ticker-wrap {
+    background: #74ebd5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100% 175px;
+    color: #FFFFFF;
+
+}
+
+.ticker__item, { color: #FFFFFF;
+  a {
+    color: #FFFFFF;
+  }
+}
+
