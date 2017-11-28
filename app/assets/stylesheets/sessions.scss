@@ -5,22 +5,23 @@
 $brand-danger: #456;
 $bg-danger:  #ccc;
 $gray-base: #fff;
-$bg-general: #3BF1D7;
 
-.userform{
-  background-color: $bg-general;
-}
+#user-form {
+  margin: 140px auto;
+  background-color: #F3F7F6;
+  border-radius: 10px;
+  border: 1px solid #D1E4E0;
+
+  .form-control {
+    background-color: #fff;
+  }
 
 
   #tabs {
-
-    margin-top: 50px;
-    .nav-pills > li.active > a, .nav-pills > li.active > a:hover {
-      // background-color: #3BF1D7;
-    }
+    margin-top: -40px;
+  }
 
     .tabs {
-      margin-left: 70px;
     }
 
     .nav-pills > li > a {
@@ -32,7 +33,6 @@ $bg-general: #3BF1D7;
       width: 100%;
       height: auto;
       border-top: 1px solid #e5e9f0;
-      // background-color: #e5e9f0;
       margin: 0 auto;
       padding: 20px 20px;
     }
