@@ -11,6 +11,10 @@ main section#profile {
     position: absolute;
     bottom: 0;
     right: 0;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   .update {
@@ -18,6 +22,10 @@ main section#profile {
     float: right;
     background-color: transparent;
     border: none;
+
+    &:focus{
+      outline: none;
+    }
 
     img {
       height: 30px;
