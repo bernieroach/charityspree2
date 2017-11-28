@@ -227,132 +227,114 @@ main section.charities-show {
   }
 }
 
-section.donations-wrapper {
+  section.donations-wrapper {
 
-  .login-signup-buttons {
-    margin-top: 200px;
-    width: 50%;
-    float: right;
+    .login-signup-buttons {
+      margin-top: 200px;
+      width: 50%;
+      float: right;
 
-    .signup {
-      margin: 10px 0;
+      .signup {
+        margin: 10px 0;
+      }
+
+      .login {
+        margin: 10px 0;
+        padding: 6px 23px;
+      }
     }
 
-    .login {
-      margin: 10px 0;
-      padding: 6px 23px;
-    }
-  }
 
-
-  div.donate-buttons {
-    font-family: 'Open Sans';
-    padding-left: 40px;
-    width: 50%;
-    float: right;
-
-    h3 {
-      text-align: left;
-      margin-left: 20px;
-    }
-
-  .btn-circle.btn-lg {
-    margin: 20px 20px;
-    line-height: 20px;
-    vertical-align: middle;
-    background-color: #67D8DE;
-    // border-color: #2e6da4;
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-    border-radius: 100%;
-    outline: none;
-
-    &.focus.active {
-      background-color: #1E76BD;
-    }
-
-    p {
-      line-height: 80px;
-      color: #fff;
-      margin: 0 auto;
-      vertical-align: middle;
-      text-align: center;
-    }
-  }
-
-
-  .btn-oblong.btn-lg {
-
-    background-color: #67D8DE;
-    // border-color: #2e6da4;
-    color: #fff;
-    width: 250px;
-    height: 50px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-    margin-left: 20px;
-    outline: none;
-
-    &.focus.active {
-      background-color: #1E76BD;
-    }
-
-    p {
-      margin: 0 auto;
-    }
-  }
-
-  form {
-    margin-top:10px;
-    font-size: 25px;
-    display: none;
-    text-align: right;
-    // margin: 0 auto;
-    label {
+    div.donate-buttons {
       font-family: 'Open Sans';
-      font-weight: normal;
+      padding-left: 40px;
+      width: 50%;
+      float: right;
+
+      h3 {
+        text-align: left;
+        margin-left: 20px;
+      }
+
+      .btn-circle.btn-lg {
+        margin: 20px 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        background-color: #67D8DE;
+        // border-color: #2e6da4;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 100%;
+        outline: none;
+
+        &.focus.active {
+          background-color: #1E76BD;
+        }
+
+        p {
+          line-height: 80px;
+          color: #fff;
+          margin: 0 auto;
+          vertical-align: middle;
+          text-align: center;
+        }
+      }
+
+
+      .btn-oblong.btn-lg {
+
+        background-color: #67D8DE;
+        // border-color: #2e6da4;
+        color: #fff;
+        width: 250px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        margin-left: 20px;
+        outline: none;
+
+        &.focus.active {
+          background-color: #1E76BD;
+        }
+
+        p {
+          margin: 0 auto;
+        }
+      }
+
+      form {
+        margin-top:10px;
+        font-size: 25px;
+        display: none;
+        text-align: right;
+        // margin: 0 auto;
+        label {
+          font-family: 'Open Sans';
+          font-weight: normal;
+        }
+      }
+
+      #donate-button {
+        display: block;
+        margin: 15px 0 0 20px;
+
+
+        background-color: #337ab7;
+        border-color: #2e6da4;
+        color: #fff;
+        width: 250px;
+        height: 50px;
+        padding: 10px 16px;
+        font-size: 18px;
+        line-height: 1.33;
+      }
     }
   }
-
-  #donate-button {
-    display: block;
-    margin: 15px 0 0 20px;
-
-
-    background-color: #337ab7;
-    border-color: #2e6da4;
-    color: #fff;
-    width: 250px;
-    height: 50px;
-    padding: 10px 16px;
-    font-size: 18px;
-    line-height: 1.33;
-  }
-}
-}
-
-
-
-  // section.achievements-legend {
-  //   background-color: #89bdd3;
-  //   display: inline-block;
-  //   text-align: justify;
-  //   float: right;
-  //   width: 20%;
-  //   border: 1px solid #000;
-  //   margin-top: 40px;
-  //   margin-right: 50px;
-  //   padding: 10px 10px;
-
-  //   img {
-  //     height: 20px;
-  //   }
-  // }
 }
 
 
@@ -361,9 +343,8 @@ main section#charity-statistics {
   padding: 100px 0 150px 0;
 
   .hidden {
-      display: none;
+    display: none;
   }
-
 }
 
 main section#about {
