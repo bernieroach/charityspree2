@@ -309,15 +309,18 @@ main section.charities-show {
         }
       }
 
-      form {
-        margin-top:10px;
-        font-size: 25px;
+      #custom-amount-input {
+        margin-right: 200px;
         display: none;
-        text-align: right;
-        // margin: 0 auto;
-        label {
-          font-family: 'Open Sans';
-          font-weight: normal;
+        margin-top:10px;
+
+        form {
+          font-size: 15px;
+
+          label {
+            font-family: 'Open Sans';
+            font-weight: normal;
+          }
         }
       }
 
