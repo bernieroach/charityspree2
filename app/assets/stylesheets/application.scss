@@ -24,41 +24,28 @@
 @import "charities";
 
 // Global
-.new {
+body {
   padding-top: 70px;
 }
-body {
- padding-top: 70px;
- padding-bottom: 0;
-}
+
 body.index {
   background: url(image_path('new-background-image.jpeg'));
   background-size: 100%;
   background-repeat: no-repeat;
-
   padding-bottom: 0;
 }
 
 body.show {
-
   padding-bottom: 0;
 }
 
 body.new {
-  background: url(round.png)
+  background: url(round.png);
 }
 
-// @media (max-width: 70em) {
-//   body.show {
-//     width: 100%;
-//     height: 27em;
-//   }
-// }
-// @media (max-width: 53em) {
-//   body.show {
-//     height: 20em;
-//   }
-// }
+body.edit {
+  background: url(gplaypattern.png);
+}
 
 .container-fluid {
   padding: 0;
@@ -169,6 +156,19 @@ body.new {
   }
   // z-index: 2;
 
+  aside {
+    img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+  }
+    .fishes
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 
 #text-carousel {
@@ -282,14 +282,9 @@ li a .btn:hover{
 
 }
 
-
-.form-control {
-background-color: rgb(250,255,189);
-
-}
-
-.big { height: 100%;
-       font-size: 100px;
+.big {
+  height: 100%;
+  font-size: 100px;
 }
 // scroll buttons
 #topscroll {

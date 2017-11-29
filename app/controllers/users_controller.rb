@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def index
     @users = if params[:term]
+      puts 'hello'
       User.where('first_name ILIKE ? OR last_name ILIKE ?', "%#{params[:term]}%", "%#{params[:term]}%")
     else
       User.all

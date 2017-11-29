@@ -208,6 +208,8 @@ main section.charities-show {
         .information {
           height: 25px;
           margin-bottom: 25px;
+          background-color: #A7B5E8;
+          border-radius: 15px;
         }
         span {
           background-color: #F3F7F6;
@@ -309,15 +311,18 @@ main section.charities-show {
         }
       }
 
-      form {
-        margin-top:10px;
-        font-size: 25px;
+      #custom-amount-input {
+        margin-right: 200px;
         display: none;
-        text-align: right;
-        // margin: 0 auto;
-        label {
-          font-family: 'Open Sans';
-          font-weight: normal;
+        margin-top:10px;
+
+        form {
+          font-size: 15px;
+
+          label {
+            font-family: 'Open Sans';
+            font-weight: normal;
+          }
         }
       }
 
