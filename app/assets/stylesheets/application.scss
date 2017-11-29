@@ -24,25 +24,19 @@
 @import "charities";
 
 // Global
-
-.new {
+body {
   padding-top: 70px;
 }
-
-body {
- padding-top: 70px;
- padding-bottom: 0;
-}
-
 
 body.index {
   background: url(image_path('new-background-image.jpeg'));
   background-size: 100%;
   background-repeat: no-repeat;
+  padding-bottom: 0;
 }
 
 body.show {
-
+  padding-bottom: 0;
 }
 
 body.new {
@@ -162,6 +156,19 @@ body.edit {
   }
   // z-index: 2;
 
+  aside {
+    img {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+  }
+    .fishes
+  {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 
 #text-carousel {
