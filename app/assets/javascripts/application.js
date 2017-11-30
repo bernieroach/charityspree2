@@ -15,7 +15,7 @@ $( document ).ready(function() {
 
       amount = parseFloat(amount);
 
-      if (isNaN(amount) || amount == 0)  {
+      if (isNaN(amount) || amount <= 0)  {
         $('#error_explanation').html('<p>Please enter a valid amount in CAD ($).</p>');
       }
       else {
