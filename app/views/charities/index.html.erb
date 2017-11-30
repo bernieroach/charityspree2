@@ -43,10 +43,11 @@
         <div class="charity-box col-sm-4">
           <%= image_tag charity.image %>
           <h3><%= charity.name.downcase %></h3>
-          <p><%= charity.description %></p>
+          <p><%= charity.description %></p><div class="choose">
           <%= link_to charity do %>
             <div type="button" class="choose btn btn-info">Choose</div>
           <% end %>
+        </div>
         </div>
       <% end %>
       </div>

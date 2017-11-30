@@ -1,3 +1,8 @@
+
+
+
+
+
 main section.charities-index {
   margin: auto;
 
@@ -106,7 +111,7 @@ main section.charities-index {
     }
 
     .charity-container {
-      padding: 10px 0 50px 0;
+      padding: 10px 5px 50px 5px;
       font-family: 'Open Sans', sans-serif;
 
       .charity-box {
@@ -132,8 +137,7 @@ main section.charities-index {
       .choose {
         position: absolute;
         bottom: 0;
-        left: 5;
-        margin: 0;
+        margin-left: 5;
       }
     }
   }
@@ -145,8 +149,8 @@ main section.charities-index {
 main section.charities-show {
 
   section.charity {
-    margin: 0 0 0 50px;
-    padding: 35px 35px 0 35px;
+    margin: 0 0 60px 0px;
+    padding: 0 0 0 0px;
 
     .charity-details {
       margin-top: 50px;
@@ -236,7 +240,7 @@ main section.charities-show {
     .login-signup-buttons {
       margin-top: 200px;
       width: 50%;
-      float: right;
+
 
       .signup {
         margin: 10px 0;
@@ -249,22 +253,29 @@ main section.charities-show {
     }
 
 
+
+
     div.donate-buttons {
       font-family: 'Open Sans';
-      padding-left: 40px;
-      width: 50%;
-      float: right;
+
+      width: 100%;
+
+.btn-circle.btn-lg.active{
+       background-color: #1E76BD;
+        }
 
       h3 {
         text-align: left;
         margin-left: 20px;
       }
 
+
+
       .btn-circle.btn-lg {
         margin: 20px 20px;
         line-height: 20px;
         vertical-align: middle;
-        background-color: #67D8DE;
+        background-color: #67D8DF;
         // border-color: #2e6da4;
         color: #fff;
         width: 100px;
@@ -275,9 +286,15 @@ main section.charities-show {
         border-radius: 100%;
         outline: none;
 
-        &.focus.active {
-          background-color: #1E76BD;
-        }
+          input {
+            visibility: hidden;
+                }
+
+
+
+
+
+
 
         p {
           line-height: 80px;
@@ -286,7 +303,12 @@ main section.charities-show {
           vertical-align: middle;
           text-align: center;
         }
+
+
+
       }
+
+
 
 
       .btn-oblong.btn-lg {

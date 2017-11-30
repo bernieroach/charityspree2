@@ -107,7 +107,8 @@ main section#profile {
       // height: 1500px;
       border-radius: 10px;
       margin: 0 auto;
-      padding: 50px 50px;
+      padding: 5% 5%;
+      align-content: center;
 
       .achieved {
         width: 100%;
@@ -117,7 +118,9 @@ main section#profile {
           text-align: center;
           margin-top: 0;
         }
-
+        .achievement-icon  {
+          text-align: center;
+        }
         .achievement-title {
           font-size: 10px;
         }
@@ -127,6 +130,7 @@ main section#profile {
         }
 
         .achievement-icon img {
+          text-align: center;
           // height: 40px;
         }
       }
@@ -137,7 +141,10 @@ main section#profile {
         width: 100%;
         // margin: 20px 0;
         border-left: 1px solid #dcdfe5;
-
+        .achievement-icon {
+          text-align: center;
+          // height: 40px;
+        }
         h3 {
           font-family: 'Open Sans', sans-serif;
           text-align: center;
