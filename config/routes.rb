@@ -22,3 +22,10 @@ Rails.application.routes.draw do
   end
 
 end
+
+Rails.application.routes.draw do
+  mount LetsencryptPlugin::Engine, at: '/'  # It must be at root level
+
+  # Other routes...
+
+end
