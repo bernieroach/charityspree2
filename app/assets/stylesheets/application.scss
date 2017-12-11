@@ -309,6 +309,53 @@ li a .btn:hover{
 }
 
 
+// scroll buttons
+#nextscroll {
+
+    position: fixed;
+    bottom: 50px;
+    left: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    color: #00CAB8;
+    background-color: transparent;
+    padding: 15px;
+    height:80px;
+    width:80px;
+    font-size:50px;
+    border-radius: 10px;
+}
+
+#nextscroll:hover {
+    background-color: transparent;
+}
+
+
+// scroll buttons
+#prevscroll {
+
+    position: fixed;
+    top: 50px;
+    left: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    margin: 0 auto;
+    color: #00CAB8;
+    background-color: transparent;
+    padding: 15px;
+    height:80px;
+    width:80px;
+    font-size:50px;
+    border-radius: 10px;
+}
+
+#prevscroll:hover {
+    background-color: transparent;
+}
+
 
 .parent {
   position: relative;
