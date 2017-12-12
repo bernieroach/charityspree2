@@ -106,13 +106,13 @@ $( document ).ready(function() {
       let currentHeight = $(this).scrollTop();
       let sections = $('section');
       let newActive = sections.map(function(){
-        if ($(this).offset().top < currentHeight)
+        if ($(this).offset().top <= currentHeight)
        return this;
       });
 
       $('.active-section').removeClass('active-section');
       $(newActive.last()).addClass('active-section');
-  console.log(newActive.last());
+
 
   });
 
