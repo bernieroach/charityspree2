@@ -95,7 +95,7 @@ body.edit {
 
   .navbar-brand {
     color: #000;
-    font-family: Pacifico;
+
     padding-bottom: 30px;
     padding-left: 5px;;
 
@@ -286,11 +286,25 @@ li a .btn:hover{
   font-size: 100px;
 }
 // scroll buttons
+.nav-scroll-wrap {
+  display: inline;
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  background-color: transparent;
+
+
+}
+
+
 #topscroll {
     display: none;
-    position: fixed;
-    bottom: 50px;
-    right: 20px;
+    position: relative;
+    width: 100%;
     z-index: 99;
     border: none;
     outline: none;
@@ -312,9 +326,8 @@ li a .btn:hover{
 // scroll buttons
 #nextscroll {
 
-    position: fixed;
-    bottom: 50px;
-    left: 20px;
+    position: relative;
+    float: right;
     z-index: 99;
     border: none;
     outline: none;
@@ -336,9 +349,8 @@ li a .btn:hover{
 // scroll buttons
 #prevscroll {
 
-    position: fixed;
-    top: 50px;
-    left: 20px;
+    position: relative;
+    float: left;
     z-index: 99;
     border: none;
     outline: none;

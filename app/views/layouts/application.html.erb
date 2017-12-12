@@ -37,12 +37,14 @@
     </main>
 
     <%= yield :end_of_body %>
-    <button id="topscroll" type="button" class="btn btn-primary" title="Go to Top">  <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
-    </button>
-    <button id="nextscroll" type="button" class="btn btn-primary next-section" title="Next">  <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
-    </button>
-    <button id="prevscroll" type="button" class="btn btn-primary prev-section" title="Prev">  <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
-    </button>
+    <div class="nav-scroll-wrap">
+      <button id="topscroll" type="button" class="btn btn-primary" title="Go to Top">  <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+      </button>
+      <button id="nextscroll" type="button" class="btn btn-primary next-section" title="Next">  <span class="glyphicon glyphicon-step-forward" aria-hidden="true"></span>
+      </button>
+      <button id="prevscroll" type="button" class="btn btn-primary prev-section" title="Prev">  <span class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>
+      </button>
+    </div>
 
 
     <script src="https://checkout.stripe.com/checkout.js"></script>

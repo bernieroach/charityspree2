@@ -19,6 +19,11 @@ $( document ).ready(function() {
 
       if( nextSection.offset()){
         $('html, body').animate({ scrollTop: nextSection.offset().top + 'px'},600);
+      } else {
+        next = sections.get(0);
+        nextSection = $(next);
+        $(nextSection).addClass('active-section');
+        $('html, body').animate({ scrollTop: 0 + 'px'},600);
       }
 
       e.preventDefault();
@@ -37,8 +42,10 @@ $( document ).ready(function() {
       $(selected).removeClass('active-section');
       $(prevSection).addClass('active-section');
 
-      if( prevSection.offset()){
+      if( prevSection.offset() && pos !== 1 ){
         $('html, body').animate({ scrollTop: prevSection.offset().top + 'px'},600);
+      } else {
+        $('html, body').animate({ scrollTop: 0 + 'px'},600);
       }
 
       e.preventDefault();
@@ -83,7 +90,7 @@ $( document ).ready(function() {
 
   $(window).scroll(function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("topscroll").style.display = "block";
+        document.getElementById("topscroll").style.display = "inline";
     } else {
         document.getElementById("topscroll").style.display = "none";
     }
@@ -97,9 +104,9 @@ $( document ).ready(function() {
       let firstSection = $(first);
       $(selected).removeClass('active-section');
       $(firstSection).addClass('active-section');
-      if( firstSection.offset()){
-        $('html, body').animate({ scrollTop: firstSection.offset().top + 'px'},600);
-      }
+
+        $('html, body').animate({ scrollTop: 0 + 'px'},600);
+
 
   })
 });
