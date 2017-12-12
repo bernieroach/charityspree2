@@ -42,7 +42,7 @@ $( document ).ready(function() {
       $(selected).removeClass('active-section');
       $(prevSection).addClass('active-section');
 
-      if( prevSection.offset() && pos !== 1 ){
+      if( prevSection.offset() && pos !== 1 && sections.length !== 1){
         $('html, body').animate({ scrollTop: prevSection.offset().top + 'px'},600);
       } else {
         $('html, body').animate({ scrollTop: 0 + 'px'},600);
@@ -90,9 +90,15 @@ $( document ).ready(function() {
 
   $(window).scroll(function() {
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       $("#prevscroll").show(600);
+        $("#nextscroll").show(600);
+        $("#topscroll").show(600);
         document.getElementById("topscroll").style.display = "inline";
     } else {
-        document.getElementById("topscroll").style.display = "none";
+      $("#prevscroll").hide(600);
+      $("#nextscroll").hide(600);
+      $("#topscroll").hide(600);
+         // document.getElementById("topscroll").style.display = "none";
     }
   });
 

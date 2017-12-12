@@ -290,7 +290,7 @@ li a .btn:hover{
   display: inline;
   text-align: center;
   position: fixed;
-  bottom: 50px;
+  bottom: 40px;
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
@@ -327,6 +327,7 @@ li a .btn:hover{
 #nextscroll {
 
     position: relative;
+    display: none;
     float: right;
     z-index: 99;
     border: none;
@@ -350,6 +351,7 @@ li a .btn:hover{
 #prevscroll {
 
     position: relative;
+    display: none;
     float: left;
     z-index: 99;
     border: none;
