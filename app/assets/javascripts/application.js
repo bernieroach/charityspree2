@@ -6,6 +6,8 @@
 
 $( document ).ready(function() {
 
+
+
   $('.next-section').click((e)=>{
       let selected = $('.active-section');
       let sections = $('section');
@@ -37,7 +39,6 @@ $( document ).ready(function() {
       let pos = sections.index(selected);
       let next = sections.get(pos +1);
       let prev = sections.get(pos -1);
-
       let prevSection = $(prev);
       $(selected).removeClass('active-section');
       $(prevSection).addClass('active-section');
@@ -100,6 +101,19 @@ $( document ).ready(function() {
       $("#topscroll").hide(600);
          // document.getElementById("topscroll").style.display = "none";
     }
+  // keep track of active-section
+  //  if active section scrollTop is less then this is the new
+      let currentHeight = $(this).scrollTop();
+      let sections = $('section');
+      let newActive = sections.map(function(){
+        if ($(this).offset().top < currentHeight)
+       return this;
+      });
+
+      $('.active-section').removeClass('active-section');
+      $(newActive.last()).addClass('active-section');
+  console.log(newActive.last());
+
   });
 
   $("#topscroll").click(function(e) {
@@ -114,6 +128,10 @@ $( document ).ready(function() {
         $('html, body').animate({ scrollTop: 0 + 'px'},600);
 
 
-  })
+  });
+
+
 });
+
+
 
