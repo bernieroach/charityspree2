@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+if ($(".charts").length) {
+  console.log("pizza init")
+
+Pizza.init();
+}
+
   $('label').click(function(event){
     $('input#amount').val($(this).find('input').data('value'))
   })
