@@ -39,11 +39,11 @@ body.show {
 }
 
 body.new {
-  background: url(image_path('round.png'));
+  background: transparent;
 }
 
 body.edit {
-  background: url(image_path('gplaypattern.png'));
+  background: transparent;
 }
 
 .container-fluid {
@@ -287,7 +287,8 @@ li a .btn:hover{
 }
 // scroll buttons
 .nav-scroll-wrap {
-  display: inline;
+
+  z-index: 99;
   text-align: center;
   position: fixed;
   bottom: 40px;
@@ -302,7 +303,8 @@ li a .btn:hover{
 
 
 #topscroll {
-    display: none;
+    display: inline;
+
     position: relative;
     width: 100%;
     z-index: 99;
@@ -327,7 +329,7 @@ li a .btn:hover{
 #nextscroll {
 
     position: relative;
-    display: none;
+    display: inline;
     float: right;
     z-index: 99;
     border: none;
@@ -351,7 +353,7 @@ li a .btn:hover{
 #prevscroll {
 
     position: relative;
-    display: none;
+    display: inline;
     float: left;
     z-index: 99;
     border: none;

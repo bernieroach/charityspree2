@@ -4,9 +4,24 @@
 //= require rails-ujs
 //= require_tree .
 
+scrollButtonsFadeTimer = ()=>{
+  $(".nav-scroll-wrap").fadeIn(600);
+  return setTimeout(()=>{ $(".nav-scroll-wrap").fadeOut(600);},2000);
+}
+
 $( document ).ready(function() {
 
+let timer = 0;
 
+setFadeTimer = ()=>{
+  if (timer) {
+  clearTimeout(timer);
+  timer = 0;
+  }
+  timer = scrollButtonsFadeTimer();
+};
+
+setFadeTimer();
 
   $('.next-section').click((e)=>{
       let selected = $('.active-section');
@@ -27,7 +42,7 @@ $( document ).ready(function() {
         $(nextSection).addClass('active-section');
         $('html, body').animate({ scrollTop: 0 + 'px'},600);
       }
-
+      setFadeTimer();
       e.preventDefault();
 
   });
@@ -48,7 +63,7 @@ $( document ).ready(function() {
       } else {
         $('html, body').animate({ scrollTop: 0 + 'px'},600);
       }
-
+      setFadeTimer();
       e.preventDefault();
 
   });
@@ -90,17 +105,9 @@ $( document ).ready(function() {
   });
 
   $(window).scroll(function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       $("#prevscroll").show(600);
-        $("#nextscroll").show(600);
-        $("#topscroll").show(600);
-        document.getElementById("topscroll").style.display = "inline";
-    } else {
-      $("#prevscroll").hide(600);
-      $("#nextscroll").hide(600);
-      $("#topscroll").hide(600);
-         // document.getElementById("topscroll").style.display = "none";
-    }
+     setFadeTimer();
+
+
   // keep track of active-section
   //  if active section scrollTop is less then this is the new
       let currentHeight = $(this).scrollTop();
@@ -120,13 +127,11 @@ $( document ).ready(function() {
       let selected = $('.active-section');
       let sections = $('section');
       let first = sections.get(0);
-
       let firstSection = $(first);
       $(selected).removeClass('active-section');
       $(firstSection).addClass('active-section');
-
-        $('html, body').animate({ scrollTop: 0 + 'px'},600);
-
+      $('html, body').animate({ scrollTop: 0 + 'px'},600);
+      setFadeTimer();
 
   });
 
