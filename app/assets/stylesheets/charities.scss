@@ -143,18 +143,17 @@
 // CHARITY SHOW
 
 
-section.charities-show {
+.charities-show {
 
-  section.charity {
+  .charity {
     margin: 0 0 60px 0px;
     padding: 0 0 0 0px;
 
     .charity-details {
-      margin-top: 50px;
+
       padding-top:25px;
-      width: 50%;
+      width: 100%;
       float: left;
-      border-right: 2px solid #fafafa;
 
     .btn-info {
       background-color: transparent;
@@ -254,17 +253,14 @@ section.charities-show {
 
     div.donate-buttons {
       font-family: 'Open Sans';
-
+      text-align: center;
       width: 100%;
 
 .btn-circle.btn-lg.active{
        background-color: #1E76BD;
         }
 
-      h3 {
-        text-align: left;
-        margin-left: 20px;
-      }
+
 
 
 
@@ -309,7 +305,7 @@ section.charities-show {
 
 
       .btn-oblong.btn-lg {
-
+        position: relative;
         background-color: #67D8DE;
         // border-color: #2e6da4;
         color: #fff;
@@ -318,7 +314,7 @@ section.charities-show {
         padding: 10px 16px;
         font-size: 18px;
         line-height: 1.33;
-        margin-left: 20px;
+        margin: auto;
         outline: none;
 
         &.focus.active {
@@ -347,7 +343,9 @@ section.charities-show {
 
       #donate-button {
         display: block;
-        margin: 15px 0 0 20px;
+        position: relative;
+        margin: auto;
+
 
 
         background-color: #337ab7;
@@ -379,9 +377,7 @@ main section#charity-statistics {
       margin-right: 20px;
     }
 
-    h3 {
-      text-align: left;
-    }
+
     ul {
 
       li {
